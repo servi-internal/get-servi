@@ -141,7 +141,10 @@ export function Header() {
             >
               About
             </Link>
-            <button className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2">
+            <button 
+              className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <span className="truncate">Book a Demo</span>
             </button>
           </nav>

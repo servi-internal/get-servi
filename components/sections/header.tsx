@@ -94,6 +94,59 @@ export function Header() {
           <Menu className="w-6 h-6" />
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-b border-gray-100 shadow-lg">
+          <nav className="flex flex-col px-4 py-4 space-y-3">
+            <Link
+              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              href="/online-ordering"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Online Ordering
+            </Link>
+            <Link
+              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              href="/self-service"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Self-Service
+            </Link>
+            <Link
+              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              href="/integrated-pos"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Integrated POS
+            </Link>
+            <Link
+              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              href="/marketing-services"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Marketing Services
+            </Link>
+            <Link
+              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              href="/pricing"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Pricing
+            </Link>
+            <Link
+              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              href="/about"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <button className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2">
+              <span className="truncate">Book a Demo</span>
+            </button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

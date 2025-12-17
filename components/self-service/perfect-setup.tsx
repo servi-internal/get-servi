@@ -12,7 +12,7 @@ export function PerfectSetup() {
           <div className="rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow">
             <div className="h-48 bg-gray-200 relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpYJMqtlV3O27j796XynQME-Cqll9FXdja7tT08JS9p1xYB4fooFGd3Zv9_GZkFoQurnKF4-lm_s2GpAS73AeZsdDX2K0DK6E-pydE_uMIJAKcbgG756NIYJUiO_o9Pt-U04GAO-z9x5quHkAfc4vcj0hK4ZjBk394IG2J95LZXa76iPP82u-XczCt_k1z2ea0wZcxeEBi5DLhc8PsQEsX16qbcFU74Vid5rd-NA_UDUfe8BFLNsAGyWFIrgL1SzVYgsEzdD0elLU"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/table-service.png"
                 alt="Table service restaurant interior"
                 fill
                 className="object-cover"
@@ -34,7 +34,7 @@ export function PerfectSetup() {
           <div className="rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow">
             <div className="h-48 bg-gray-200 relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK9bKuNkF_jSCvewC_PAfVZptZF64uQXXwRC6ymiQDDiFcs8mrU4nT2YMPxtFjbV4gwJDPS6JjRsSnMemmquFigolC4EA0pZsGw7Y1cwU3dlaF3jIW7IVU9WyFI9Kqcm483BTmkOLIYfFLckauSqmdLDAOPBs_ANfK4MwNYwc5ohfEcIMYXMGjW8H-EHD26p2kzNEehlAG6Ncjw1xPMm8p_iUi4kluD8V7vnnm6rDXILlDw5Crw7XMafkt8RuDY4k1421HtVdcmBY"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/bar-counter.png"
                 alt="Bar counter with stools"
                 fill
                 className="object-cover"
@@ -56,7 +56,7 @@ export function PerfectSetup() {
           <div className="rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow">
             <div className="h-48 bg-gray-200 relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdtJ8zcVe6gKROVPy0Ei6vn8s7ITmiBHhClfXkk6j4NVs4D-xNwaJi7yHFNsBx7CHe9ez8xW-kTc-EsFMNzpA8B00ChJEu96Yb7KHAlpzaLVI4beomm1j_xAPJRM6o7phiL2LSu2OCqSXkLqZbSTFYBoJLeRo-RXtzAjqLrTQaFKpbJHace_x0aREhZY17ieS4PUFOWOZ_8jOT0Xf5E3TQyCcNHKROskhZi9wM2_wSmqizLSfOEiDJ2kd5W7w2sDlBu5L9IoK_gaY"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/quick-service.png"
                 alt="Fast casual burger joint"
                 fill
                 className="object-cover"

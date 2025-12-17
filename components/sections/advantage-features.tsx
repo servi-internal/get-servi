@@ -17,7 +17,7 @@ export function AdvantageFeatures() {
           <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-xl border border-transparent hover:border-[#FF6600]/10">
             <div className="h-56 w-full bg-gray-200 relative overflow-hidden">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiqChGtpq_OAIE4NStOlXODfzmyGDF4A57GtdICWse1VGxj-GKec2qQ7AGsEijIJEtFCTtGTln0pGju-KM2Nr3pcMLKSp6Fa-nrZCTwdBxnp2gjcGvYKt8-E21_Uj8OoZzqVQyrcTN4aeWMsMAsZkNR75dXUsZrjPkxvdXsP4GHdeAtQwsS3PBUSlwNzlp0Fcb6HvVkf2fb_1hoC_MRnZdloLGMi1Q0QdOoaA0jDQx85ypLLCck7RSQfMLDt1bQxAIcaSblvIUPx8"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/kds-h.jpeg"
                 alt="Chef preparing food in a modern kitchen"
                 fill
                 className="object-cover"
@@ -43,7 +43,7 @@ export function AdvantageFeatures() {
           <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-xl border border-transparent hover:border-[#FF6600]/10">
             <div className="h-56 w-full bg-gray-200 relative overflow-hidden">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNEmsPQVBq_G-6kZzZ0lFfKFKIk74RjaTvG51IkqsjSOo_dFfdVxk9J8AfRjJjlu2oIq_SkEuyTvzc65WKt3BpArstCJtUhazI27kcyIMhdq7xDsh7AK4LdDcRuVH-YUPE4n6IiUE8mL_LEX3NSrJwWmsos-3I-0haVSDGsetLUekCKHyUmPjSQycfbZCk3ebHnDeFT7bqz8TWRp7w5lBOgVdI0rJTtsH-H2D5FvpI8y68xI1kBh0A6VCHZNMYvNeLPm8AjSLJIyc"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/table-side.png"
                 alt="Customers ordering food using a digital kiosk"
                 fill
                 className="object-cover"
@@ -69,7 +69,7 @@ export function AdvantageFeatures() {
           <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-xl border border-transparent hover:border-[#FF6600]/10">
             <div className="h-56 w-full bg-gray-200 relative overflow-hidden">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdD05-XsY-flqtErMQUifsVO-QnTviPs7qgXRy29K_VDDDMqwDwCJE6INinvXwHrR91G7g0ud2Ob8st8gk0CZFgmtVXrN1irg0HNQ7sM-U1lBUBwJADTomDKKEftjYID_bNSJkTRGSLzJpC-1mYfcRL_kjs5ZcA2WLUDzmfafMUiXinhyN2eIeY2ap9DO5zopmHw9fgfH4z633-yl6R4z8slYWMqkijjPY-lIz96_gbwJ2pCYOt0zk6HFQqKOty9KGLVBc7kQu5t4"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/loyalty.png"
                 alt="Happy customers enjoying a meal at a restaurant table"
                 fill
                 className="object-cover"

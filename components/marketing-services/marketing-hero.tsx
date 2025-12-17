@@ -27,7 +27,7 @@ export function MarketingHero() {
           <div className="relative w-full lg:h-[600px] flex items-center justify-center select-none">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#FF6600]/20 via-orange-50 to-blue-50/50 rounded-full blur-[100px] opacity-60"></div>
             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)] z-0"></div>
-            <div className="relative w-[340px] sm:w-[420px] bg-white/90 backdrop-blur-xl border border-white/60 rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 z-10 transform transition-transform duration-700 hover:scale-[1.02] hover:-rotate-1 border-t-white/80">
+            <div className="relative w-[340px] sm:w-[420px] bg-white/90 backdrop-blur-xl border border-white/60 rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 z-10 border-t-white/80">
               <div className="flex items-center justify-between mb-8 border-b border-gray-100 pb-4">
                 <div className="flex items-center gap-3">
                   <div className="size-10 bg-[#FF6600]/10 rounded-lg flex items-center justify-center shadow-sm">
@@ -88,7 +88,7 @@ export function MarketingHero() {
                 </div>
               </div>
             </div>
-            <div className="absolute top-[5%] left-[5%] sm:-left-4 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-48 animate-float z-20 backdrop-blur-sm bg-white/95">
+            <div className="absolute top-[25%] left-[5%] sm:-left-4 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-48 animate-float z-20 backdrop-blur-sm bg-white/95">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <div className="size-6 bg-white border border-gray-100 rounded-full flex items-center justify-center shadow-sm">
@@ -108,7 +108,7 @@ export function MarketingHero() {
                 Converted in 2m 30s
               </p>
             </div>
-            <div className="absolute bottom-[10%] right-0 sm:-right-8 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-60 animate-float-delayed z-20 backdrop-blur-sm bg-white/95">
+            <div className="absolute bottom-[2%] right-0 sm:-right-8 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-60 animate-float-delayed z-20 backdrop-blur-sm bg-white/95">
               <div className="flex gap-3 items-start">
                 <div className="size-10 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-xs shadow-md ring-2 ring-white overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-black"></div>

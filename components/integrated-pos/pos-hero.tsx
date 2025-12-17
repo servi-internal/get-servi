@@ -55,7 +55,7 @@ export function POSHero() {
               <Image
                 alt="Collection of devices showing POS interface floating in 3D space"
                 className="rounded-xl w-full h-auto object-cover aspect-[4/3]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQgXAz78yk5lGfujaXSR1jYSx_Nj8ARd0BXJ9H-Uy_bEiw0t3InpKHKrw9aPYBvTrt4CRRzliKCmoDNvnx9cRDGlvjLxkjmVYyeEhkOZK0rDph_1v8WO0kY22m666B7ipvmx-o7KWaN5EmUf81tL55JhD_tTRShz7UzkiyYlpZQaLJ7hxUh9jE2qhHJ6m_PEHyPlhRl20x5cnhTHtqwFUk29TLM9QblkKy4bwH9H1hzeLNJNZjQ7fRDAYzhTLQSDh2_V-SzTO6fc"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/pos.png"
                 width={800}
                 height={600}
                 priority

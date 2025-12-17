@@ -111,7 +111,7 @@ export function HandleScenario() {
             </div>
           </div>
           <div className="flex justify-center items-center relative z-10 order-1 lg:order-2 mb-12 lg:mb-0">
-            <div className="relative w-[280px] h-[500px] bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl shadow-[#FF6600]/20 border-4 border-gray-800 transform hover:scale-[1.02] transition-transform duration-500">
+            <div className="relative w-[280px] h-[500px] bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl shadow-[#FF6600]/20 border-4 border-gray-800">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-xl z-20"></div>
               <div className="w-full h-full bg-gray-100 dark:bg-gray-900 rounded-[2rem] overflow-hidden flex flex-col relative">
                 <div className="h-24 bg-[#FF6600] p-4 pt-10 flex flex-col justify-between text-white">

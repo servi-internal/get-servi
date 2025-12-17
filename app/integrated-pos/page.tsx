@@ -63,10 +63,7 @@ export default function IntegratedPOSPage() {
               <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
                 Everything you need,
                 <br className="hidden md:block" />
-                <span className="relative inline-block">
-                  built into one platform.
-                  <span className="absolute bottom-1 left-0 w-full h-3 bg-[#FF6600]/20 -z-10 rounded-sm"></span>
-                </span>
+                built into one platform.
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(280px,auto)]">

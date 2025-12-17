@@ -58,7 +58,7 @@ export function Hero() {
               <Image
                 alt="Restaurant POS Tablet"
                 className="h-full w-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGxvxJSpvf4vMyVjs9gjvT4Oq6tPhMYsxDP0eQmUXE-MmPzrkXZ5CRRy4u3hD4gc4s81SiMe9k_l2EYn75b89_pczZ4dZO0EbFTJBkxDq68r8PB5Rpf1Nm7NZadrzQn99XMlRcHddJ72ME1nu1co83pd4d_myaHHPhAr1CUN311DgKONP4naGyOElmlxh_Tm4__2_Cp5-_MdE4Q31y3wDIzId6iG9OWJughreOnxR2oQfffDC_3q3A9VKRs3sjoFnj4YE78EdMN5U"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/hero-pos.jpeg"
                 width={800}
                 height={600}
                 priority

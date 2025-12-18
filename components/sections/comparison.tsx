@@ -10,7 +10,7 @@ export function Comparison() {
               <FrownIcon className="w-7 h-7" />
             </div>
             <h3 className="mb-6 text-2xl font-bold text-gray-900">
-              Delivery Apps Hijack Traffic
+              Delivery Apps Hijack Your Business
             </h3>
             <ul className="space-y-5">
               <li className="flex items-start gap-4">
@@ -18,7 +18,7 @@ export function Comparison() {
                   <X className="w-4 h-4" />
                 </span>
                 <span className="text-gray-600 font-medium">
-                  High commissions (up to 30%)
+                  Pay up to 30% commission on every order
                 </span>
               </li>
               <li className="flex items-start gap-4">
@@ -26,14 +26,14 @@ export function Comparison() {
                   <X className="w-4 h-4" />
                 </span>
                 <span className="text-gray-600 font-medium">
-                  No access to customer data
+                  Never own your customer data
                 </span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="mt-0.5 text-red-500 bg-red-50 rounded-full p-1">
                   <X className="w-4 h-4" />
                 </span>
-                <span className="text-gray-600 font-medium">Brand dilution</span>
+                <span className="text-gray-600 font-medium">Customers don&apos;t remember your brand</span>
               </li>
             </ul>
             <div className="absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 translate-x-1/2 rounded-full bg-[#FF6600] p-3 shadow-lg shadow-[#FF6600]/20 md:flex ring-4 ring-white">
@@ -45,7 +45,7 @@ export function Comparison() {
               <SmileIcon className="w-7 h-7" />
             </div>
             <h3 className="mb-6 text-2xl font-bold text-gray-900">
-              Direct Ordering Unlocks Value
+              Direct Ordering Grows Your Business
             </h3>
             <ul className="space-y-5">
               <li className="flex items-start gap-4">
@@ -61,7 +61,7 @@ export function Comparison() {
                   <Check className="w-4 h-4" />
                 </span>
                 <span className="text-gray-800 font-medium">
-                  Own your customer relationships
+                  Build your own customer database
                 </span>
               </li>
               <li className="flex items-start gap-4">
@@ -69,7 +69,7 @@ export function Comparison() {
                   <Check className="w-4 h-4" />
                 </span>
                 <span className="text-gray-800 font-medium">
-                  Build brand loyalty instantly
+                  Create loyal repeat customers
                 </span>
               </li>
             </ul>

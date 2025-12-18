@@ -10,8 +10,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ser.vi - Boost Restaurant Profits",
-  description: "Maximize your revenue and streamline operations with cutting-edge tools designed for modern hospitality. Zero commission, increased orders, contactless payments.",
+  title: "Ser.vi - Helping Restaurants Grow",
+  description: "Helping independent restaurants grow their customer list, manage reviews, and offer competitive pricing while reducing dependency on expensive delivery apps",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="light scroll-smooth">
       <body
         className={`${plusJakartaSans.variable} antialiased`}
       >

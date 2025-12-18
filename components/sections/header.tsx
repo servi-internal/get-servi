@@ -4,10 +4,12 @@ import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,45 +49,70 @@ export function Header() {
         <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
           <nav className="flex items-center gap-8">
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/online-ordering" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
               href="/online-ordering"
             >
               Online Ordering
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/self-service" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
               href="/self-service"
             >
               Self-Service
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/integrated-pos" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
               href="/integrated-pos"
             >
               Integrated POS
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/marketing-services" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
               href="/marketing-services"
             >
               Marketing Services
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/pricing" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
               href="/pricing"
             >
               Pricing
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+                pathname === "/about" ? "text-[#FF6600]" : "text-[#333333]"
+              }`}
               href="/about"
             >
               About
             </Link>
           </nav>
-          <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20">
-            <span className="truncate">Book a Demo</span>
-          </button>
+          <a 
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20"
+          >
+            <span className="truncate">Book a Meeting</span>
+          </a>
         </div>
         <button
           className="md:hidden p-2 text-[#333333]"
@@ -100,53 +127,77 @@ export function Header() {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-b border-gray-100 shadow-lg">
           <nav className="flex flex-col px-4 py-4 space-y-3">
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/online-ordering" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
               href="/online-ordering"
               onClick={() => setMobileMenuOpen(false)}
             >
               Online Ordering
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/self-service" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
               href="/self-service"
               onClick={() => setMobileMenuOpen(false)}
             >
               Self-Service
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/integrated-pos" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
               href="/integrated-pos"
               onClick={() => setMobileMenuOpen(false)}
             >
               Integrated POS
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/marketing-services" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
               href="/marketing-services"
               onClick={() => setMobileMenuOpen(false)}
             >
               Marketing Services
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/pricing" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
               href="/pricing"
               onClick={() => setMobileMenuOpen(false)}
             >
               Pricing
             </Link>
             <Link
-              className="text-[#333333] text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50"
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+                pathname === "/about" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
+              }`}
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
-            <button 
+            <a 
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="truncate">Book a Demo</span>
-            </button>
+              <span className="truncate">Book a Meeting</span>
+            </a>
           </nav>
         </div>
       )}

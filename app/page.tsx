@@ -1,5 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
+import { TrustedBrands } from "@/components/sections/trusted-brands";
 import { Features } from "@/components/sections/features";
 import { AdvantageFeatures } from "@/components/sections/advantage-features";
 import { Comparison } from "@/components/sections/comparison";
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="h-[72px]"></div> {/* Spacer for fixed header */}
       <main>
         <Hero />
+        <TrustedBrands />
         <Features />
         <AdvantageFeatures />
         <Comparison />

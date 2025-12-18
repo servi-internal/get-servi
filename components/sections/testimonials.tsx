@@ -1,4 +1,4 @@
-import { Star, Croissant, Soup, Coffee, Drumstick, IceCream } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
 
 export function Testimonials() {
@@ -6,7 +6,7 @@ export function Testimonials() {
     <section className="w-full overflow-hidden bg-gray-50 py-24">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mb-12 text-3xl font-bold text-[#333333]">
-          Loved by Restaurant Owners
+          What Our Clients <span className="text-[#FF6600]">Say</span> About Us
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <div className="flex flex-col rounded-xl bg-white p-8 text-left shadow-sm border border-gray-100">
@@ -16,22 +16,21 @@ export function Testimonials() {
               ))}
             </div>
             <p className="mb-6 flex-1 text-base leading-relaxed text-gray-700 italic">
-              &quot;Since switching to ser.vi, our margins have improved by 15%. The
-              QR ordering system is a game changer for our lunch rush.&quot;
+              &quot;I&apos;m busier than ever. Customers love the ordering and the app. Customers come in and say they have an online order and we just hand it to them. It&apos;s fast and easy since It&apos;s already paid.&quot;
             </p>
             <div className="flex items-center gap-4 pt-4 border-t border-gray-50">
               <Image
-                alt="Sarah Jenkins"
+                alt="Gaetano Gisone"
                 className="h-10 w-10 rounded-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeUxIQX4TVgPuYVzhSjBmg-9UHkEauhEL3HZYP1M4cphXb4aWZbzdUqXSA2Rbx4R88872009WhjyMsXTmovlACHQz7haVRqwkMtgf9UAadYBZHBHx44ERGhfxZ4mGSsBwmyqmESYZ_4RhZB7whOMhVN3F6NXXoMVxDyACWlmJQkxD_q-GHKKp_a52DXNuYD9OLQUoe2ujq_3r1keovafwbLEG9IlcQYk8BZwWwprn8WLk3VsyTKZpydJ1Jpgp_E3UfJrC8S7xkNG8"
+                src="/testimonials/testimonial_rosas.webp"
                 width={40}
                 height={40}
               />
               <div>
                 <p className="text-sm font-bold text-[#333333]">
-                  Sarah Jenkins
+                  Gaetano Gisone
                 </p>
-                <p className="text-xs text-gray-500">Owner, The Burger Joint</p>
+                <p className="text-xs text-gray-500">Rosa&apos;s Pizzeria</p>
               </div>
             </div>
           </div>
@@ -42,21 +41,19 @@ export function Testimonials() {
               ))}
             </div>
             <p className="mb-6 flex-1 text-base leading-relaxed text-gray-700 italic">
-              &quot;I was skeptical about the marketing automation, but it actually
-              brings people back. We saw a huge bump in repeat customers last
-              month.&quot;
+              &quot;Their online ordering met our separate weekend menu requirements that others could not. Our customers are happy and love the new platform, and it works with our pickup lockers.&quot;
             </p>
             <div className="flex items-center gap-4 pt-4 border-t border-gray-50">
               <Image
-                alt="David Lee"
+                alt="Andrew Dimatos"
                 className="h-10 w-10 rounded-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASVy6d-NJYCAGzel9zwF20EeNhV1SRxfQXQO3qdE0rJzubOgXeq7KAOZPBBiGx2JHgee0XQth87WdEC9PIwqwxNnmGwPCD9AxHZlLW1_niv6OZGMw9RX8ypMZyot4Alyvr7h1G85DxItbgI1EwxELiH8_4tUNyHhyjOI55lZ6DkuVjSAIoXiWWKrowEGBxBQlwE_ZuIJVdYAJMMW60Q8dSBs5UT2d69MrGFxLmQa-aRt-l54SHTBxnh70UrYCl0DINrpepnY834Xo"
+                src="/testimonials/testimonial_midland.webp"
                 width={40}
                 height={40}
               />
               <div>
-                <p className="text-sm font-bold text-[#333333]">David Lee</p>
-                <p className="text-xs text-gray-500">Manager, Pasta House</p>
+                <p className="text-sm font-bold text-[#333333]">Andrew Dimatos</p>
+                <p className="text-xs text-gray-500">Midland Bagels</p>
               </div>
             </div>
           </div>
@@ -67,45 +64,22 @@ export function Testimonials() {
               ))}
             </div>
             <p className="mb-6 flex-1 text-base leading-relaxed text-gray-700 italic">
-              &quot;The support team is incredible. Setup was easy, and now
-              everything just runs smoothly. No more tablet chaos.&quot;
+              &quot;The menu is better looking than any menu out there. The Google ads increase my online and call in business. We take pickup and in-house delivery orders. Ser.vi provides us a customized geo fenced area for our delivery service.&quot;
             </p>
             <div className="flex items-center gap-4 pt-4 border-t border-gray-50">
               <Image
-                alt="Elena Rodriguez"
+                alt="Pablo Rosales"
                 className="h-10 w-10 rounded-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzKJsgamZyqUm0EMIV5MO9bqyxL2xIphVQPwv0Zoe-fO55wdFpHWoZxt3YixrfluQFasQXklrCxfnwV5iK_R-nCnIs9GZ8tGG4eFYGRDX7a0zblJmLNVY5u8QkS2SAkHjG-qg64tisAWXK0_ZY7h_ZiyPSY1TpiojRzmQcChnrgR-z0up8wVWqHjiOqjMPKNQavzjFopqB63LwwK_UNffJLOCF0t9rxVkONEIVBuDl1vGlkPlRxhQkDFJjlYkN5PiRdGJzPRarf2U"
+                src="/testimonials/testimonial_dangelos.webp"
                 width={40}
                 height={40}
               />
               <div>
                 <p className="text-sm font-bold text-[#333333]">
-                  Elena Rodriguez
+                  Pablo Rosales
                 </p>
-                <p className="text-xs text-gray-500">Owner, Tapas &amp; Co.</p>
+                <p className="text-xs text-gray-500">D&apos;Angelos Gun Hill</p>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="mt-20 border-t border-gray-200 pt-10">
-          <p className="mb-8 text-sm font-bold uppercase tracking-widest text-gray-400">
-            TRUSTED BY INNOVATIVE BRANDS
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60 grayscale transition-all hover:grayscale-0 sm:gap-16">
-            <div className="flex items-center gap-2 font-bold text-xl text-[#333333]">
-              <Croissant className="w-6 h-6 text-[#FF6600]" /> BakerCo
-            </div>
-            <div className="flex items-center gap-2 font-bold text-xl text-[#333333]">
-              <Soup className="w-6 h-6 text-[#FF6600]" /> NoodleBar
-            </div>
-            <div className="flex items-center gap-2 font-bold text-xl text-[#333333]">
-              <Coffee className="w-6 h-6 text-[#FF6600]" /> DailyBrew
-            </div>
-            <div className="flex items-center gap-2 font-bold text-xl text-[#333333]">
-              <Drumstick className="w-6 h-6 text-[#FF6600]" /> GrillSpot
-            </div>
-            <div className="flex items-center gap-2 font-bold text-xl text-[#333333]">
-              <IceCream className="w-6 h-6 text-[#FF6600]" /> SweetTreats
             </div>
           </div>
         </div>

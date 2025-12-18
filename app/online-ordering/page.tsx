@@ -5,7 +5,6 @@ import { WhyChooseUs } from "@/components/online-ordering/why-choose-us";
 import { ScaleFeatures } from "@/components/online-ordering/scale-features";
 import { OrderingProcess } from "@/components/online-ordering/ordering-process";
 import { PricingSection } from "@/components/online-ordering/pricing-section";
-import { DemoSection } from "@/components/online-ordering/demo-section";
 
 export default function OnlineOrderingPage() {
   return (
@@ -18,7 +17,6 @@ export default function OnlineOrderingPage() {
         <ScaleFeatures />
         <OrderingProcess />
         <PricingSection />
-        <DemoSection />
       </main>
       <Footer />
     </div>

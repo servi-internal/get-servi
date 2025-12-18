@@ -10,8 +10,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ser.vi - Helping Restaurants Grow",
-  description: "Helping independent restaurants grow their customer list, manage reviews, and offer competitive pricing while reducing dependency on expensive delivery apps",
+  title: "Ser.vi - Restaurant POS, Online Ordering & Management Platform",
+  description: "All-in-one restaurant management platform with POS system, online ordering, table service, and marketing automation.",
 };
 
 export default function RootLayout({

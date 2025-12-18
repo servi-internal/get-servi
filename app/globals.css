@@ -164,3 +164,107 @@
 .animate-scroll-logos:hover {
   animation-play-state: paused;
 }
+
+/* Ordering Process Animations */
+@keyframes scroll-menu {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-60px);
+  }
+}
+
+.animate-scroll-menu {
+  animation: scroll-menu 2s ease-in-out infinite;
+}
+
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 20;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-checkmark {
+  animation: checkmark 0.6s ease-out forwards;
+}
+
+@keyframes confetti-1 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-30px, -40px) rotate(-45deg);
+  }
+}
+
+@keyframes confetti-2 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30px, -40px) rotate(45deg);
+  }
+}
+
+@keyframes confetti-3 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-30px, 40px) rotate(45deg);
+  }
+}
+
+@keyframes confetti-4 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30px, 40px) rotate(-45deg);
+  }
+}
+
+.animate-confetti-1 {
+  animation: confetti-1 0.8s ease-out forwards;
+}
+
+.animate-confetti-2 {
+  animation: confetti-2 0.8s ease-out 0.1s forwards;
+}
+
+.animate-confetti-3 {
+  animation: confetti-3 0.8s ease-out 0.2s forwards;
+}
+
+.animate-confetti-4 {
+  animation: confetti-4 0.8s ease-out 0.3s forwards;
+}
+
+/* Checkmark stroke animation */
+.group:hover .group-hover\:stroke-dashoffset-0 {
+  stroke-dashoffset: 0 !important;
+}

@@ -1,13 +1,13 @@
 import {
-  Wallet,
-  Zap,
-  Database,
   Palette,
+  UtensilsCrossed,
+  Database,
+  Truck,
+  Gift,
   Cable,
-  Headset,
   Smartphone,
-  Clock,
-  Heart,
+  MousePointer,
+  RotateCcw,
 } from "lucide-react";
 
 export function WhyChooseUs() {
@@ -19,32 +19,32 @@ export function WhyChooseUs() {
             For Your Business
           </span>
           <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-10">
-            Why Restaurants Choose Us
+            Why Restaurants Choose Our Online Ordering
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col gap-3 group">
               <div className="size-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-colors">
-                <Wallet className="w-5 h-5" />
+                <Palette className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="font-bold text-zinc-900 dark:text-white">
-                  Commission Free
+                  Showcase Your Brand
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Keep 100% of your profits. No hidden 30% fees.
+                  Fully customized ordering site with your colors, photos, and style.
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-3 group">
               <div className="size-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-colors">
-                <Zap className="w-5 h-5" />
+                <UtensilsCrossed className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="font-bold text-zinc-900 dark:text-white">
-                  Instant Payouts
+                  Unlimited Menu Options
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Get paid daily directly to your bank account.
+                  Add unlimited items, modifiers, and upsells. We handle setup.
                 </p>
               </div>
             </div>
@@ -54,23 +54,36 @@ export function WhyChooseUs() {
               </div>
               <div>
                 <h3 className="font-bold text-zinc-900 dark:text-white">
-                  Data Ownership
+                  Built-In Customer Database
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Own your customer list for retargeting.
+                  Auto-capture customer data to grow your marketing list effortlessly.
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-3 group">
               <div className="size-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-colors">
-                <Palette className="w-5 h-5" />
+                <Truck className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="font-bold text-zinc-900 dark:text-white">
-                  Custom Branding
+                  Delivery Made Simple
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Your logo, your colors, your domain.
+                  Integrate DoorDash or Uber for delivery—no driver management.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 group">
+              <div className="size-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-colors">
+                <Gift className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold text-zinc-900 dark:text-white">
+                  Customer Engagement Tools
+                </h3>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Boost repeat orders with loyalty rewards and digital gift cards.
                 </p>
               </div>
             </div>
@@ -83,20 +96,7 @@ export function WhyChooseUs() {
                   POS Integration
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Syncs menus and orders with your POS.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3 group">
-              <div className="size-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-colors">
-                <Headset className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-bold text-zinc-900 dark:text-white">
-                  24/7 Support
-                </h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Real humans available anytime you need help.
+                  Seamlessly sync menus and orders with your existing POS system.
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ export function WhyChooseUs() {
             For Your Customers
           </span>
           <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-10">
-            Why Customers Love It
+            Why Customers Choose Our Online Ordering
           </h2>
           <div className="flex flex-col gap-8">
             <div className="flex gap-6 items-start">
@@ -119,39 +119,36 @@ export function WhyChooseUs() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  No App Download Needed
+                  Order Without Installing Apps
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-300">
-                  Frictionless ordering directly from their browser. Higher
-                  conversion rates than app-forced flows.
+                  Direct ordering from any browser—no app downloads or logins required.
                 </p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
               <div className="size-14 rounded-xl bg-white dark:bg-zinc-900 shadow-sm flex items-center justify-center text-[#FF6600] shrink-0">
-                <Clock className="w-7 h-7" />
+                <MousePointer className="w-7 h-7" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Real-time Order Tracking
+                  Simple & Easy Interface
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-300">
-                  Customers can see exactly when their food is being prepared
-                  and when it&apos;s out for delivery.
+                  Clean, intuitive ordering experience with zero ads or distractions.
                 </p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
               <div className="size-14 rounded-xl bg-white dark:bg-zinc-900 shadow-sm flex items-center justify-center text-[#FF6600] shrink-0">
-                <Heart className="w-7 h-7" />
+                <RotateCcw className="w-7 h-7" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
                   One-Click Reordering
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-300">
-                  Repeat customers can re-order their favorites in seconds,
-                  boosting your retention.
+                  Save favorite orders and reorder in seconds for faster checkout.
                 </p>
               </div>
             </div>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Online Ordering Platform - Ser.vi",
+  title: "Restaurant Online Ordering System - Website & Mobile App | Ser.vi",
   description:
-    "Direct online ordering that builds your brand. Stop paying 30% commissions. Take control with commission-free ordering, instant payouts, and full customer data ownership.",
+    "Launch your own branded restaurant online ordering website and mobile app. Accept orders directly, build customer loyalty, and grow your digital presence.",
 };
 
 export default function OnlineOrderingLayout({

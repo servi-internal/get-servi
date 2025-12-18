@@ -1,11 +1,14 @@
 import {
-  Brush,
-  Star,
-  Truck,
-  UtensilsCrossed,
-  Users,
+  BarChart3,
+  Mail,
+  Store,
+  Percent,
+  Smartphone,
   Gift,
   ArrowRight,
+  Send,
+  MessageSquare,
+  Bell,
 } from "lucide-react";
 
 export function ScaleFeatures() {
@@ -22,137 +25,127 @@ export function ScaleFeatures() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(280px,auto)]">
-          {/* Showcase Your Brand - Large Card */}
+          {/* Analytics Dashboard - Large Card */}
           <div className="md:col-span-2 rounded-[2rem] bg-zinc-900 text-white p-8 relative overflow-hidden group border border-zinc-800 hover:border-zinc-700 transition-all duration-300 hover:shadow-2xl">
             <div className="relative z-20 flex flex-col h-full justify-between">
               <div>
                 <div className="size-12 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Brush className="w-6 h-6 text-[#FF6600]" />
+                  <BarChart3 className="w-6 h-6 text-[#FF6600]" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Showcase Your Brand</h3>
+                <h3 className="text-2xl font-bold mb-2">Real-Time Analytics Dashboard</h3>
                 <p className="text-zinc-400 max-w-md">
-                  Customize every pixel. Your colors, your fonts, your identity.
-                  No cookie-cutter templates.
+                  Track sales, popular items, peak hours, and customer behavior with actionable insights to optimize your menu and operations.
                 </p>
               </div>
               <div className="mt-8 inline-flex items-center text-[#FF6600] font-semibold text-sm group-hover:gap-2 transition-all">
-                Start Designing{" "}
+                View Dashboard{" "}
                 <ArrowRight className="w-4 h-4 ml-1" />
               </div>
             </div>
             <div className="absolute top-0 right-0 w-3/5 h-full bg-gradient-to-l from-zinc-800 to-transparent z-0 opacity-50"></div>
-            <div className="absolute -right-10 -bottom-10 w-3/4 h-3/4 bg-gradient-to-br from-orange-200 to-orange-400 rounded-tl-3xl shadow-2xl transform rotate-3 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500 border-4 border-zinc-800"></div>
+            <div className="absolute -right-10 -bottom-10 w-3/4 h-3/4 bg-gradient-to-br from-blue-400 to-blue-600 rounded-tl-3xl shadow-2xl transform rotate-3 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500 border-4 border-zinc-800"></div>
           </div>
 
-          {/* Review Management */}
+          {/* Zero Commission */}
           <div className="rounded-[2rem] bg-white dark:bg-zinc-900 p-8 border border-zinc-200 dark:border-zinc-800 relative overflow-hidden group hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Star className="w-32 h-32 text-emerald-500" />
+              <Percent className="w-32 h-32 text-emerald-500" />
             </div>
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
                 <div className="size-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-6 text-emerald-600 dark:text-emerald-400">
-                  <Star className="w-6 h-6" />
+                  <Percent className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Review Management
+                  Zero Commission Fees
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-sm">
-                  Direct happy customers to Google, handle issues privately.
+                  Keep 100% of your revenue. No hidden fees or commissions on orders.
                 </p>
               </div>
-              <div className="mt-6 flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 text-emerald-500 fill-emerald-500"
-                  />
-                ))}
-                <span className="text-xs font-bold text-zinc-900 dark:text-white ml-2">
-                  5.0
+              <div className="mt-6 flex items-center gap-2">
+                <span className="text-3xl font-black text-emerald-500">0%</span>
+                <span className="text-xs font-bold text-zinc-900 dark:text-white">
+                  Commission
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Delivery Made Simple */}
+          {/* Marketing Automation */}
           <div className="rounded-[2rem] bg-white dark:bg-zinc-900 p-8 border border-zinc-200 dark:border-zinc-800 relative overflow-hidden group hover:border-[#FF6600]/50 transition-all duration-300 hover:shadow-lg">
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
                 <div className="size-12 rounded-xl bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center mb-6 text-[#FF6600]">
-                  <Truck className="w-6 h-6" />
+                  <Mail className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Delivery Made Simple
+                  Marketing Automation
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-sm">
-                  Manage in-house drivers or connect with DoorDash Drive.
+                  Automated email and SMS campaigns to bring customers back.
                 </p>
               </div>
-              <div className="mt-6 w-full h-12 relative">
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-zinc-100 dark:bg-zinc-800"></div>
-                <div className="absolute top-1/2 left-0 w-1/3 h-0.5 bg-[#FF6600]"></div>
-                <div className="absolute top-1/2 left-1/3 size-3 bg-[#FF6600] rounded-full -translate-y-1/2 -translate-x-1/2 shadow-lg shadow-[#FF6600]/30"></div>
-                <div className="absolute top-1/2 right-0 size-3 bg-zinc-200 dark:bg-zinc-700 rounded-full -translate-y-1/2"></div>
+              <div className="mt-6 flex gap-2">
+                <div className="h-8 w-8 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
+                  <Send className="w-4 h-4" />
+                </div>
+                <div className="h-8 w-8 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
+                  <MessageSquare className="w-4 h-4" />
+                </div>
+                <div className="h-8 w-8 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
+                  <Bell className="w-4 h-4" />
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Unlimited Menu Options */}
+          {/* Multi-Location Support */}
           <div className="rounded-[2rem] bg-white dark:bg-zinc-900 p-8 border border-zinc-200 dark:border-zinc-800 relative overflow-hidden group hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg">
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
                 <div className="size-12 rounded-xl bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
-                  <UtensilsCrossed className="w-6 h-6" />
+                  <Store className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Unlimited Menu Options
+                  Multi-Location Support
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-sm">
-                  Add modifiers, variations, and upsells without limits.
+                  Manage multiple restaurant locations from one central dashboard.
                 </p>
               </div>
-              <div className="mt-4 space-y-2">
-                <div className="flex items-center gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                  <div className="size-2 rounded-full bg-blue-500"></div>
-                  <div className="h-2 w-16 bg-zinc-200 dark:bg-zinc-700 rounded"></div>
+              <div className="mt-4 flex gap-2">
+                <div className="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs">
+                  L1
                 </div>
-                <div className="flex items-center gap-2 opacity-30 group-hover:opacity-80 transition-opacity delay-75">
-                  <div className="size-2 rounded-full bg-blue-500"></div>
-                  <div className="h-2 w-12 bg-zinc-200 dark:bg-zinc-700 rounded"></div>
+                <div className="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs">
+                  L2
                 </div>
-                <div className="flex items-center gap-2 opacity-20 group-hover:opacity-60 transition-opacity delay-150">
-                  <div className="size-2 rounded-full bg-blue-500"></div>
-                  <div className="h-2 w-20 bg-zinc-200 dark:bg-zinc-700 rounded"></div>
+                <div className="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs">
+                  L3
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Customer Database */}
-          <div className="rounded-[2rem] bg-gradient-to-br from-blue-600 to-blue-700 text-white p-8 relative overflow-hidden group hover:shadow-blue-500/30 hover:shadow-xl transition-all duration-300">
+          {/* Custom Mobile Apps */}
+          <div className="rounded-[2rem] bg-gradient-to-br from-purple-600 to-purple-700 text-white p-8 relative overflow-hidden group hover:shadow-purple-500/30 hover:shadow-xl transition-all duration-300">
             <div className="relative z-20 flex flex-col h-full justify-between">
               <div>
                 <div className="size-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-white" />
+                  <Smartphone className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Customer Database</h3>
-                <p className="text-blue-100 text-sm">
-                  Build detailed profiles for every order.
+                <h3 className="text-xl font-bold mb-2">Custom Mobile Apps</h3>
+                <p className="text-purple-100 text-sm">
+                  Branded iOS and Android apps for your restaurant.
                 </p>
               </div>
-              <div className="mt-6 flex -space-x-3">
-                <div className="size-8 rounded-full bg-white/20 border-2 border-blue-600 flex items-center justify-center text-[10px] font-bold">
-                  JD
+              <div className="mt-6 flex gap-3">
+                <div className="px-3 py-1 rounded-lg bg-white/20 backdrop-blur-sm text-xs font-bold flex items-center gap-1.5">
+                  <i className="bi bi-apple"></i> iOS
                 </div>
-                <div className="size-8 rounded-full bg-white/20 border-2 border-blue-600 flex items-center justify-center text-[10px] font-bold">
-                  AS
-                </div>
-                <div className="size-8 rounded-full bg-white/20 border-2 border-blue-600 flex items-center justify-center text-[10px] font-bold">
-                  MR
-                </div>
-                <div className="size-8 rounded-full bg-white/20 border-2 border-blue-600 flex items-center justify-center text-[10px] font-bold">
-                  +
+                <div className="px-3 py-1 rounded-lg bg-white/20 backdrop-blur-sm text-xs font-bold flex items-center gap-1.5">
+                  <i className="bi bi-android2"></i> Android
                 </div>
               </div>
             </div>
@@ -173,12 +166,10 @@ export function ScaleFeatures() {
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                  Loyalty &amp; Gift Cards
+                  Loyalty &amp; Shareable Gift Cards
                 </h3>
                 <p className="text-zinc-400">
-                  Keep them coming back with an integrated rewards program.
-                  Customers earn points for every dollar spent and can redeem
-                  them for discounts or free items.
+                  Drive repeat business with loyalty points and digital gift cards that customers can earn, redeem, and share.
                 </p>
               </div>
               <div className="flex-shrink-0 relative">

@@ -1,6 +1,7 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { POSHero } from "@/components/integrated-pos/pos-hero";
+import { AllOrderTypes } from "@/components/integrated-pos/all-order-types";
 import { HandleScenario } from "@/components/integrated-pos/handle-scenario";
 import { ConnectedHub } from "@/components/integrated-pos/connected-hub";
 import { 
@@ -16,6 +17,9 @@ export default function IntegratedPOSPage() {
       <div className="h-[72px]"></div> {/* Spacer for fixed header */}
       <main className="flex flex-col w-full">
         <POSHero />
+        
+        {/* All Order Types */}
+        <AllOrderTypes />
         
         {/* Device Support */}
         <section className="py-20 bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">

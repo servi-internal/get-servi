@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Self-Service Ordering - Ser.vi",
+  title: "QR Code Self-Service Ordering for Restaurants | Ser.vi",
   description:
-    "Revolutionize your restaurant service with seamless QR code ordering. No apps, no waiting, just happy customers and faster table turnover. Zero wait times start here.",
+    "Tableside QR code ordering system for restaurants. Contactless mobile ordering, instant payment, and faster table turnover.",
 };
 
 export default function SelfServiceLayout({

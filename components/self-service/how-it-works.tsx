@@ -2,7 +2,7 @@ import { QrCode, Monitor } from "lucide-react";
 
 export function HowItWorks() {
   return (
-    <section className="py-24 bg-white dark:bg-zinc-950 relative overflow-hidden">
+    <section id="how-it-works" className="py-24 bg-white dark:bg-zinc-950 relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{

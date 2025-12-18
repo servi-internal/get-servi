@@ -1,6 +1,6 @@
 export function VideoDemo() {
   return (
-    <section className="py-20 bg-white dark:bg-zinc-950">
+    <section id="video-demo" className="py-20 bg-white dark:bg-zinc-950">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-2">
           See It In Action

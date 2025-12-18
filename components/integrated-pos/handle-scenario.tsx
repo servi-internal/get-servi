@@ -43,7 +43,7 @@ export function HandleScenario() {
           >
             <path
               className="opacity-20"
-              d="M 250 150 C 350 150, 400 300, 500 300"
+              d="M 300 150 C 380 150, 440 300, 500 300"
               fill="none"
               stroke="#FF6600"
               strokeDasharray="6 6"
@@ -51,7 +51,7 @@ export function HandleScenario() {
             ></path>
             <path
               className="opacity-20"
-              d="M 250 450 C 350 450, 400 300, 500 300"
+              d="M 300 450 C 380 450, 440 300, 500 300"
               fill="none"
               stroke="#FF6600"
               strokeDasharray="6 6"
@@ -59,7 +59,7 @@ export function HandleScenario() {
             ></path>
             <path
               className="opacity-20"
-              d="M 750 150 C 650 150, 600 300, 500 300"
+              d="M 700 150 C 620 150, 560 300, 500 300"
               fill="none"
               stroke="#FF6600"
               strokeDasharray="6 6"
@@ -67,7 +67,7 @@ export function HandleScenario() {
             ></path>
             <path
               className="opacity-20"
-              d="M 750 450 C 650 450, 600 300, 500 300"
+              d="M 700 450 C 620 450, 560 300, 500 300"
               fill="none"
               stroke="#FF6600"
               strokeDasharray="6 6"

@@ -1,4 +1,4 @@
-import { ArrowRight, PlayCircle, QrCode, Check, Star } from "lucide-react";
+import { ArrowRight, PlayCircle, Check } from "lucide-react";
 
 export function SelfServiceHero() {
   return (
@@ -8,12 +8,6 @@ export function SelfServiceHero() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col gap-6 max-w-2xl z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-100 dark:bg-orange-900/20 dark:border-orange-800/30 w-fit shadow-sm">
-              <span className="text-[#FF6600] text-xs font-bold uppercase tracking-wider flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#FF6600] rounded-full animate-pulse"></span>
-                The Future of Dining
-              </span>
-            </div>
             <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-white">
               Zero Wait.
               <br />
@@ -24,35 +18,16 @@ export function SelfServiceHero() {
               Enjoy.
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
-              Revolutionize your restaurant service with our seamless QR code
-              ordering system. No apps to download, no waiting for servers, just
-              happy customers and faster table turnover.
+              QR code ordering for dine-in guests. No apps, no wait staff needed—just scan, order, and pay from their phone. Faster service, happier customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="flex items-center justify-center h-14 px-8 bg-[#FF6600] hover:bg-[#E65C00] text-white text-base font-bold rounded-full transition-all shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5">
+              <a href="#how-it-works" className="flex items-center justify-center h-14 px-8 bg-[#FF6600] hover:bg-[#E65C00] text-white text-base font-bold rounded-full transition-all shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5">
                 See How It Works <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="group flex items-center justify-center h-14 px-8 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 text-gray-900 dark:text-white text-base font-bold rounded-full transition-all hover:border-[#FF6600] hover:text-[#FF6600] dark:hover:border-[#FF6600] dark:hover:text-[#FF6600]">
+              </a>
+              <a href="#video-demo" className="group flex items-center justify-center h-14 px-8 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 text-gray-900 dark:text-white text-base font-bold rounded-full transition-all hover:border-[#FF6600] hover:text-[#FF6600] dark:hover:border-[#FF6600] dark:hover:text-[#FF6600]">
                 <PlayCircle className="mr-2 w-5 h-5 text-[#FF6600] group-hover:scale-110 transition-transform" />{" "}
                 View Demo
-              </button>
-            </div>
-            <div className="flex items-center gap-4 text-sm text-gray-500 font-medium pt-4">
-              <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-blue-400 to-blue-600 shadow-sm"></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-purple-400 to-purple-600 shadow-sm"></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-green-400 to-green-600 shadow-sm"></div>
-              </div>
-              <div className="flex flex-col">
-                <div className="flex text-yellow-400 text-base">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-[18px] h-[18px] fill-current" />
-                  ))}
-                </div>
-                <span className="text-xs font-semibold text-gray-400">
-                  Trusted by 500+ restaurants
-                </span>
-              </div>
+              </a>
             </div>
           </div>
           <div className="relative lg:h-[600px] flex items-center justify-center">

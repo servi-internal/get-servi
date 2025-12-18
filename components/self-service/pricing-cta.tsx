@@ -35,7 +35,7 @@ export function PricingCTA() {
               <div className="bg-white text-[#FF6600] p-0.5 rounded-full">
                 <Check className="w-4 h-4 font-bold" />
               </div>
-              <span className="font-bold text-sm">Free Hardware Setup</span>
+              <span className="font-bold text-sm">Free QR Code Setup</span>
             </div>
             <div className="flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
               <div className="bg-white text-[#FF6600] p-0.5 rounded-full">

@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export function MissionSection() {
   return (
-    <section className="py-24 px-6 bg-white overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5 relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-[#FF6600]/5 rounded-full -z-10"></div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
@@ -25,18 +25,18 @@ export function MissionSection() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 space-y-8">
-            <div className="flex items-center gap-4 mb-2">
-              <span className="h-px w-12 bg-[#FF6600]"></span>
-              <span className="text-[#FF6600] font-bold uppercase tracking-wider text-sm">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+            <div className="flex items-center gap-3 sm:gap-4 mb-2">
+              <span className="h-px w-8 sm:w-12 bg-[#FF6600]"></span>
+              <span className="text-[#FF6600] font-bold uppercase tracking-wider text-xs sm:text-sm">
                 Our Mission
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold font-display text-[#1F2937] leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display text-[#1F2937] leading-tight">
               "We believe technology should serve hospitality,{" "}
               <span className="text-[#FF6600]">not replace it</span>."
             </h2>
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed">
               <p>
                 We started Ser.vi with a simple belief: independent restaurants are the
                 soul of our communities. In a world dominated by chains, we provide the
@@ -49,21 +49,21 @@ export function MissionSection() {
                 the food and the people.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-6 pt-4">
-              <div className="flex gap-4 items-start p-4 rounded-xl bg-gray-50 border border-gray-100">
-                <Settings className="w-6 h-6 text-[#FF6600] mt-1 flex-shrink-0" />
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 pt-2 sm:pt-4">
+              <div className="flex gap-3 sm:gap-4 items-start p-4 sm:p-5 rounded-xl bg-gray-50 border border-gray-100">
+                <Settings className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600] mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-bold text-[#1F2937]">Accessible Tech</h4>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <h4 className="font-bold text-sm sm:text-base text-[#1F2937]">Accessible Tech</h4>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-1">
                     Built for everyone, from head chefs to new servers.
                   </p>
                 </div>
               </div>
-              <div className="flex gap-4 items-start p-4 rounded-xl bg-gray-50 border border-gray-100">
-                <TrendingUp className="w-6 h-6 text-[#FF6600] mt-1 flex-shrink-0" />
+              <div className="flex gap-3 sm:gap-4 items-start p-4 sm:p-5 rounded-xl bg-gray-50 border border-gray-100">
+                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600] mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-bold text-[#1F2937]">Data Driven</h4>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <h4 className="font-bold text-sm sm:text-base text-[#1F2937]">Data Driven</h4>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-1">
                     Turn orders into insights that grow your business.
                   </p>
                 </div>

@@ -23,30 +23,30 @@ export function ValuesSection() {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-10">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-[#1f2937] dark:text-white mb-4">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2937] dark:text-white mb-3 sm:mb-4">
             Core Values
           </h2>
-          <p className="text-[#6b7280] dark:text-gray-400">
+          <p className="text-sm sm:text-base text-[#6b7280] dark:text-gray-400">
             The principles that guide every feature we build and every support ticket we
             answer.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {values.map((value, index) => (
             <div
               key={index}
-              className="bg-[#f9fafb] dark:bg-[#18181b] p-8 rounded-xl border border-gray-100 dark:border-white/5 hover:border-[#ff6b00]/30 transition-colors group"
+              className="bg-[#f9fafb] dark:bg-[#18181b] p-6 sm:p-8 rounded-xl border border-gray-100 dark:border-white/5 hover:border-[#ff6b00]/30 transition-colors group"
             >
-              <div className="size-14 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex items-center justify-center text-[#ff6b00] mb-6 group-hover:scale-110 transition-transform">
-                <value.icon className="w-8 h-8" />
+              <div className="size-12 sm:size-14 bg-white dark:bg-gray-800 rounded-lg shadow-sm flex items-center justify-center text-[#ff6b00] mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                <value.icon className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-xl font-bold text-[#1f2937] dark:text-white mb-3">
+              <h3 className="text-lg sm:text-xl font-bold text-[#1f2937] dark:text-white mb-2 sm:mb-3">
                 {value.title}
               </h3>
-              <p className="text-[#6b7280] dark:text-gray-400 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#6b7280] dark:text-gray-400 leading-relaxed">
                 {value.description}
               </p>
             </div>

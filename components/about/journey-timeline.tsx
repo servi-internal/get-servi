@@ -37,9 +37,9 @@ export function JourneyTimeline() {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-10 overflow-hidden bg-gray-50/50 dark:bg-black/10">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-10 overflow-hidden bg-gray-50/50 dark:bg-black/10">
       <div className="max-w-[1000px] mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#1f2937] dark:text-white text-center mb-20 tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1f2937] dark:text-white text-center mb-12 sm:mb-16 lg:mb-20 tracking-tight">
           Our Journey
         </h2>
         <div className="relative">
@@ -49,7 +49,7 @@ export function JourneyTimeline() {
           {milestones.map((milestone, index) => (
             <div
               key={index}
-              className={`relative flex flex-col md:flex-row items-center justify-between mb-16 md:mb-24 group ${
+              className={`relative flex flex-col md:flex-row items-center justify-between mb-12 sm:mb-16 md:mb-24 group ${
                 index === milestones.length - 1 ? "mb-0" : ""
               }`}
             >
@@ -59,14 +59,14 @@ export function JourneyTimeline() {
                   milestone.side === "right" ? "md:pr-16 md:text-right" : "md:pl-16"
                 } ${milestone.side === "left" ? "md:order-3" : ""}`}
               >
-                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative group-hover:border-[#ff6b00]/30">
-                  <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ff6b00] text-xs font-bold mb-4">
+                <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative group-hover:border-[#ff6b00]/30">
+                  <span className="inline-flex items-center justify-center px-2.5 sm:px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ff6b00] text-xs font-bold mb-3 sm:mb-4">
                     {milestone.year}
                   </span>
-                  <h3 className="text-2xl font-bold text-[#1f2937] dark:text-white mb-3">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1f2937] dark:text-white mb-2 sm:mb-3">
                     {milestone.title}
                   </h3>
-                  <p className="text-[#6b7280] dark:text-gray-400 text-sm leading-relaxed">
+                  <p className="text-[#6b7280] dark:text-gray-400 text-xs sm:text-sm leading-relaxed">
                     {milestone.description}
                   </p>
                 </div>

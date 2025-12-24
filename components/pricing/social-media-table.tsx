@@ -15,104 +15,85 @@ export function SocialMediaTable() {
                   scope="col"
                   className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-left text-xs sm:text-sm font-bold text-[#263238]"
                 >
-                  Features
+                  Plan Name
+                </th>
+                <th
+                  scope="col"
+                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-left text-xs sm:text-sm font-bold text-[#263238]"
+                >
+                  Best For
                 </th>
                 <th
                   scope="col"
                   className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-center text-xs sm:text-sm font-bold text-[#263238]"
                 >
-                  Basic
-                  <br />
-                  <span className="text-base sm:text-lg font-black">$99</span>/mo
+                  Monthly Price
                 </th>
                 <th
                   scope="col"
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-center text-xs sm:text-sm font-bold text-[#ff7043] bg-[#ff7043]/5 border-x border-[#ff7043]/10 relative"
+                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-left text-xs sm:text-sm font-bold text-[#263238]"
                 >
-                  <span className="absolute top-0 left-0 w-full h-1 bg-[#ff7043]"></span>
-                  Pro
-                  <br />
-                  <span className="text-base sm:text-lg font-black">$199</span>/mo
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-center text-xs sm:text-sm font-bold text-[#263238]"
-                >
-                  Premium
-                  <br />
-                  <span className="text-base sm:text-lg font-black">$399</span>/mo
+                  Content per Month
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#e2e8f0] bg-white">
               <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-[#263238]">
-                  Posts per month
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238]">
+                  Basic
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b] text-center">8</td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center bg-[#ff7043]/5 border-x border-[#ff7043]/10">
-                  12
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  Simple presence and activity
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b] text-center">20</td>
-              </tr>
-              <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-[#263238]">
-                  Reels / Video Content
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
+                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$99</span>/mo
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-300 text-center">
-                  <Minus className="w-3 h-3 sm:w-4 sm:h-4 inline-block" />
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center bg-[#ff7043]/5 border-x border-[#ff7043]/10">
-                  2 Videos
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b] text-center">
-                  4 Videos
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  10 posts, 10 Stories, comment responses, 1 network
                 </td>
               </tr>
               <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-[#263238]">
-                  Ad Spend Included
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#263238]">
+                  <span className="font-bold">Pro</span>
+                  <br />
+                  <span className="italic text-[10px] sm:text-xs text-[#64748b]">(Popular)</span>
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-300 text-center">
-                  <Minus className="w-3 h-3 sm:w-4 sm:h-4 inline-block" />
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  Adding video to boost engagement
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center bg-[#ff7043]/5 border-x border-[#ff7043]/10">
-                  $50 Credit
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
+                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$199</span>/mo
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b] text-center">
-                  $100 Credit
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  10 posts, 10 Stories, 10 videos, responses, 2 networks
                 </td>
               </tr>
               <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-[#263238]">
-                  Community Management
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238]">
+                  Premium
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-center">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 inline-block" />
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  More content + some ad boosting
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-center bg-[#ff7043]/5 border-x border-[#ff7043]/10">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] inline-block" />
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
+                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$399</span>/mo
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-center">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 inline-block" />
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  15 posts, 15 Stories, 15 videos, responses, 3 networks, 1 ad boost (extra boosts +$99)
                 </td>
               </tr>
-              <tr className="bg-gray-50">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4"></td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-center">
-                  <button className="text-xs sm:text-sm font-bold text-[#263238] hover:text-[#ff7043] transition-colors">
-                    Add Basic
-                  </button>
+              <tr className="hover:bg-gray-50 transition-colors">
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238]">
+                  Max
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-center bg-[#ff7043]/5 border-x border-[#ff7043]/10">
-                  <button className="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#ff7043] text-white text-xs font-bold rounded shadow-md hover:bg-[#e64a19] transition-colors">
-                    Add Pro
-                  </button>
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  Maximum content, reach & boosts
                 </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-center">
-                  <button className="text-xs sm:text-sm font-bold text-[#263238] hover:text-[#ff7043] transition-colors">
-                    Add Premium
-                  </button>
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
+                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$799</span>/mo
+                </td>
+                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
+                  20 posts, 20 Stories, 20 videos, responses, 4 networks, 4 ad boosts
                 </td>
               </tr>
             </tbody>

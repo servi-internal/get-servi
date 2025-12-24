@@ -10,12 +10,12 @@ export function ComparisonFAQ() {
     {
       question: "Is it really free?",
       answer:
-        "Yes. The core software platform (POS, KDS, Inventory, Online Ordering) has zero monthly fees for the restaurant. We charge a small convenience fee to the customer on each transaction to cover our costs.",
+        "Yes. You pay $0 in monthly software fees. The platform runs on devices you already own. A small convenience fee (4.0% for POS, 5.0% for Online & Self-Service) is added at checkout and paid by your customer. This includes both the Ser.vi fee and Zift card processing.",
     },
     {
       question: "Can I use my own hardware?",
       answer:
-        "Absolutely. Ser.vi is browser-based. It runs on any iPad, Android tablet, laptop, or smartphone you already own. We also support standard thermal printers.",
+        "Absolutely. Use your iPads, Android tablets, phones, or PCs. No forced hardware purchases. We also offer a complete line of robust wired POS hardware to suit your needs and budget if you prefer.",
     },
     {
       question: "What happens if my internet goes down?",
@@ -25,7 +25,7 @@ export function ComparisonFAQ() {
     {
       question: "Are there hidden credit card fees?",
       answer:
-        "No hidden fees. You pay standard Stripe processing rates (typically around 2.9% + 30¢) directly to the payment processor. We don't mark this up.",
+        "No hidden fees. The customer pays a transparent convenience fee that covers everything: Ser.vi platform fee (1.5%-2.5%) + Zift card processing (2.5%). The breakdown is clearly shown in our pricing plans.",
     },
   ];
 
@@ -121,18 +121,18 @@ export function ComparisonFAQ() {
               {faqs.map((faq, index) => (
                 <details
                   key={index}
-                  className="group bg-white rounded-xl border border-[#e2e8f0] overflow-hidden open:shadow-md transition-all"
+                  className="group bg-white rounded-xl border border-[#e2e8f0] overflow-hidden open:shadow-md transition-all duration-300"
                   open={openFAQ === index}
                   onToggle={(e) => {
                     const target = e.target as HTMLDetailsElement;
                     setOpenFAQ(target.open ? index : null);
                   }}
                 >
-                  <summary className="flex justify-between items-center p-4 sm:p-5 cursor-pointer text-sm sm:text-base font-bold text-[#263238] hover:bg-gray-50 transition-colors list-none">
+                  <summary className="flex justify-between items-center p-4 sm:p-5 cursor-pointer text-sm sm:text-base font-bold text-[#263238] hover:bg-gray-50 transition-colors duration-200 list-none">
                     {faq.question}
-                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" />
+                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-2" />
                   </summary>
-                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-[#64748b] text-xs sm:text-sm leading-relaxed border-t border-[#e2e8f0] pt-3 sm:pt-4">
+                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-[#64748b] text-xs sm:text-sm leading-relaxed border-t border-[#e2e8f0] pt-3 sm:pt-4 animate-in fade-in slide-in-from-top-2 duration-300">
                     {faq.answer}
                   </div>
                 </details>

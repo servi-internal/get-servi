@@ -27,22 +27,22 @@ export function LeadershipTeam() {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 lg:mb-12 gap-4 sm:gap-6">
           <div>
-            <h2 className="text-3xl font-bold text-[#1f2937] dark:text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2937] dark:text-white mb-2">
               Meet the Leadership
             </h2>
-            <p className="text-[#6b7280] dark:text-gray-400">
+            <p className="text-sm sm:text-base text-[#6b7280] dark:text-gray-400">
               A mix of restaurant veterans and tech pioneers.
             </p>
           </div>
           <a
-            className="text-[#ff6b00] font-bold hover:underline flex items-center gap-1"
+            className="text-sm sm:text-base text-[#ff6b00] font-bold hover:underline flex items-center gap-1"
             href="#"
           >
-            View all positions <ArrowRight className="w-4 h-4" />
+            View all positions <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -61,24 +61,24 @@ export function LeadershipTeam() {
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
-              <div className="absolute bottom-0 left-0 w-full p-6 text-white translate-y-2 group-hover:translate-y-0 transition-transform">
-                <h3 className="text-lg font-bold leading-tight">{member.name}</h3>
-                <p className="text-[#ff6b00] text-sm font-medium mb-2">{member.role}</p>
-                <p className="text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity delay-100 line-clamp-3">
+              <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 text-white translate-y-2 group-hover:translate-y-0 transition-transform">
+                <h3 className="text-base sm:text-lg font-bold leading-tight">{member.name}</h3>
+                <p className="text-[#ff6b00] text-xs sm:text-sm font-medium mb-1 sm:mb-2">{member.role}</p>
+                <p className="text-[10px] sm:text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity delay-100 line-clamp-3">
                   {member.bio}
                 </p>
               </div>
             </div>
           ))}
           {/* Join Team Card */}
-          <div className="group relative overflow-hidden rounded-xl bg-[#ff6b00]/5 dark:bg-white/5 border-2 border-dashed border-[#ff6b00]/30 flex flex-col justify-center items-center text-center p-6 hover:bg-[#ff6b00]/10 transition-colors cursor-pointer">
-            <div className="size-16 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-[#ff6b00] mb-4 shadow-sm group-hover:scale-110 transition-transform">
-              <Plus className="w-8 h-8" />
+          <div className="group relative overflow-hidden rounded-xl bg-[#ff6b00]/5 dark:bg-white/5 border-2 border-dashed border-[#ff6b00]/30 flex flex-col justify-center items-center text-center p-6 hover:bg-[#ff6b00]/10 transition-colors cursor-pointer min-h-[200px]">
+            <div className="size-12 sm:size-16 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-[#ff6b00] mb-3 sm:mb-4 shadow-sm group-hover:scale-110 transition-transform">
+              <Plus className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h3 className="text-lg font-bold text-[#1f2937] dark:text-white mb-1">
+            <h3 className="text-base sm:text-lg font-bold text-[#1f2937] dark:text-white mb-1">
               Join Our Team
             </h3>
-            <p className="text-sm text-[#6b7280] dark:text-gray-400 px-4">
+            <p className="text-xs sm:text-sm text-[#6b7280] dark:text-gray-400 px-2 sm:px-4">
               We are always looking for passionate people to join the kitchen.
             </p>
           </div>

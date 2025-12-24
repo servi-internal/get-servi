@@ -70,7 +70,7 @@ export function SavingsCalculator() {
                 <input
                   type="range"
                   min="100"
-                  max="5000"
+                  max="10000"
                   step="50"
                   value={orderVolume}
                   onChange={(e) => setOrderVolume(parseInt(e.target.value))}
@@ -78,7 +78,7 @@ export function SavingsCalculator() {
                 />
                 <div className="flex justify-between mt-1 text-xs text-gray-500">
                   <span>100</span>
-                  <span>5,000+</span>
+                  <span>10,000+</span>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export function SavingsCalculator() {
                 <input
                   type="range"
                   min="10"
-                  max="200"
+                  max="500"
                   step="5"
                   value={ticketSize}
                   onChange={(e) => setTicketSize(parseInt(e.target.value))}
@@ -101,7 +101,7 @@ export function SavingsCalculator() {
                 />
                 <div className="flex justify-between mt-1 text-xs text-gray-500">
                   <span>$10</span>
-                  <span>$200+</span>
+                  <span>$500+</span>
                 </div>
               </div>
 
@@ -144,10 +144,15 @@ export function SavingsCalculator() {
                 <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
                 That&apos;s pure profit
               </div>
-              <button className="w-full py-3 sm:py-4 bg-[#ff7043] hover:bg-[#e64a19] text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg shadow-[#ff7043]/20">
-                Start Saving Today
-              </button>
-              <p className="mt-3 sm:mt-4 text-xs text-gray-500">
+              <a 
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-3 sm:py-4 bg-[#ff7043] hover:bg-[#e64a19] text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg shadow-[#ff7043]/20"
+              >
+                Book a Meeting
+              </a>
+              <p className="mt-3 sm:mt-4 text-xs text-gray-400">
                 *Estimates based on converting 3rd party delivery volume to Ser.vi direct
                 ordering.
               </p>

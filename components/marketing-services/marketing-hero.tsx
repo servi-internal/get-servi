@@ -3,31 +3,31 @@ import { TrendingUp, UserPlus, Repeat } from "lucide-react";
 
 export function MarketingHero() {
   return (
-    <section className="relative py-12 md:py-20 lg:py-28 overflow-hidden bg-white">
+    <section className="relative py-10 sm:py-12 md:py-20 lg:py-28 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6 text-center lg:text-left z-10">
-            <h1 className="text-gray-900 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+          <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 text-center lg:text-left z-10">
+            <h1 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
               Grow &amp; Retain: Marketing That Actually Works
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Drive direct orders and turn one-time diners into loyal regulars
               with our automated marketing engine that connects the dots for
               you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-              <button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white text-base font-bold h-12 px-8 rounded-lg shadow-lg shadow-orange-500/30 transition-all transform hover:-translate-y-0.5">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
+              <button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white text-sm sm:text-base font-bold h-11 sm:h-12 px-6 sm:px-8 rounded-lg shadow-lg shadow-orange-500/30 transition-all transform hover:-translate-y-0.5">
                 See Plans &amp; Pricing
               </button>
-              <button className="bg-white border border-gray-200 text-gray-900 text-base font-bold h-12 px-8 rounded-lg hover:bg-gray-50 transition-colors">
+              <button className="bg-white border border-gray-200 text-gray-900 text-sm sm:text-base font-bold h-11 sm:h-12 px-6 sm:px-8 rounded-lg hover:bg-gray-50 transition-colors">
                 Book a Demo
               </button>
             </div>
           </div>
-          <div className="relative w-full lg:h-[600px] flex items-center justify-center select-none">
+          <div className="relative w-full lg:h-[600px] flex items-center justify-center select-none mt-8 lg:mt-0">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#FF6600]/20 via-orange-50 to-blue-50/50 rounded-full blur-[100px] opacity-60"></div>
             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)] z-0"></div>
-            <div className="relative w-[340px] sm:w-[420px] bg-white/90 backdrop-blur-xl border border-white/60 rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 z-10 border-t-white/80">
+            <div className="relative w-full max-w-[340px] sm:max-w-[420px] bg-white/90 backdrop-blur-xl border border-white/60 rounded-xl sm:rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-5 sm:p-6 z-10 border-t-white/80">
               <div className="flex items-center justify-between mb-8 border-b border-gray-100 pb-4">
                 <div className="flex items-center gap-3">
                   <div className="size-10 bg-[#FF6600]/10 rounded-lg flex items-center justify-center shadow-sm">

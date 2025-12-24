@@ -14,7 +14,7 @@ export default function MarketingServicesPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
       <Header />
-      <div className="h-[72px]"></div> {/* Spacer for fixed header */}
+      <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
       <main>
         <MarketingHero />
         <GrowthTriad />

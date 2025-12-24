@@ -2,7 +2,7 @@ import { CheckCircle, Calendar, ShoppingBag, Menu as MenuIcon, CreditCard, Star 
 
 export function OrderingHero() {
   return (
-    <section className="relative pt-20 pb-24 overflow-hidden">
+    <section className="relative pt-16 sm:pt-20 pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 z-0 bg-[#FAFAFA] dark:bg-zinc-950">
         <div
           className="absolute inset-0 opacity-25"
@@ -15,37 +15,37 @@ export function OrderingHero() {
       </div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF6600]/5 to-transparent"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6 text-center lg:text-left">
-            <h1 className="text-4xl lg:text-6xl font-black leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
               Restaurant Online Ordering System That{" "}
               <span className="text-[#FF6600]">Grows Your Business</span>
             </h1>
-            <p className="text-lg text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0">
               Launch your own branded online ordering website and mobile app. Accept orders directly, build customer loyalty, and take control of your restaurant's digital presence.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-              <a href="/pricing" className="h-12 px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
+              <a href="/pricing" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
                 Get Started Free
               </a>
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-12 px-8 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 hover:border-[#FF6600] text-zinc-900 dark:text-white font-bold text-base flex items-center gap-2 transition-all">
-                <Calendar className="w-5 h-5 text-[#FF6600]" />
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 hover:border-[#FF6600] text-zinc-900 dark:text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6600]" />
                 Book a Meeting
               </a>
             </div>
-            <div className="pt-6 flex items-center justify-center lg:justify-start gap-4 text-sm text-zinc-500">
+            <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 text-xs sm:text-sm text-zinc-500">
               <div className="flex items-center gap-1">
-                <CheckCircle className="w-[18px] h-[18px] text-[#FF6600]" />
+                <CheckCircle className="w-4 h-4 sm:w-[18px] sm:h-[18px] text-[#FF6600] flex-shrink-0" />
                 <span>Free setup & training</span>
               </div>
               <div className="flex items-center gap-1">
-                <CheckCircle className="w-[18px] h-[18px] text-[#FF6600]" />
+                <CheckCircle className="w-4 h-4 sm:w-[18px] sm:h-[18px] text-[#FF6600] flex-shrink-0" />
                 <span>No monthly fees</span>
               </div>
             </div>
           </div>
-          <div className="relative flex justify-center">
-            <div className="relative w-[300px] h-[600px] bg-zinc-900 rounded-[2.5rem] border-[8px] border-zinc-900 overflow-hidden shadow-2xl z-10 rotate-[-5deg] lg:rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
+          <div className="relative flex justify-center mt-8 lg:mt-0">
+            <div className="relative w-[240px] sm:w-[280px] md:w-[300px] h-[480px] sm:h-[560px] md:h-[600px] bg-zinc-900 rounded-[2rem] sm:rounded-[2.5rem] border-[6px] sm:border-[8px] border-zinc-900 overflow-hidden shadow-2xl z-10 rotate-[-5deg] lg:rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
               <div className="absolute top-0 w-full h-full bg-white overflow-hidden flex flex-col">
                 <div className="h-14 bg-[#FF6600] flex items-center justify-between px-4">
                   <MenuIcon className="w-6 h-6 text-white" />
@@ -69,24 +69,24 @@ export function OrderingHero() {
                 </div>
               </div>
             </div>
-            <div className="absolute top-20 left-8 lg:left-8 bg-white dark:bg-zinc-900 p-3 rounded-xl shadow-xl flex items-center gap-3 z-20 animate-bounce">
-              <div className="size-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-600 dark:text-zinc-300">
-                <CreditCard className="w-5 h-5" />
+            <div className="absolute top-12 sm:top-16 md:top-20 left-4 sm:left-6 md:left-8 lg:left-8 bg-white dark:bg-zinc-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-xl flex items-center gap-2 sm:gap-3 z-20 animate-bounce">
+              <div className="size-8 sm:size-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-600 dark:text-zinc-300">
+                <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <div className="text-xs text-zinc-500">New Order</div>
-                <div className="text-sm font-bold text-zinc-900 dark:text-white">
+                <div className="text-[10px] sm:text-xs text-zinc-500">New Order</div>
+                <div className="text-xs sm:text-sm font-bold text-zinc-900 dark:text-white">
                   +$42.50
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-32 -right-4 lg:-right-8 bg-white dark:bg-zinc-900 p-3 rounded-xl shadow-xl flex items-center gap-3 z-20">
-              <div className="size-10 rounded-full bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
-                <Star className="w-5 h-5" />
+            <div className="absolute bottom-24 sm:bottom-28 md:bottom-32 -right-2 sm:-right-4 lg:-right-8 bg-white dark:bg-zinc-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-xl flex items-center gap-2 sm:gap-3 z-20">
+              <div className="size-8 sm:size-10 rounded-full bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
+                <Star className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <div className="text-xs text-zinc-500">New Review</div>
-                <div className="text-sm font-bold text-zinc-900 dark:text-white">
+                <div className="text-[10px] sm:text-xs text-zinc-500">New Review</div>
+                <div className="text-xs sm:text-sm font-bold text-zinc-900 dark:text-white">
                   5.0 Stars!
                 </div>
               </div>

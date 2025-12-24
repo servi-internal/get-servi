@@ -87,18 +87,38 @@ export function ServicesDetail() {
   const currentContent = content[activeTab];
 
   return (
-    <section className="py-20 bg-[#f9fafb]" id="services">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#f9fafb]" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
             Everything You Need to Scale
           </h2>
-          <p className="text-gray-600 mt-2">
+          <p className="text-gray-600 mt-2 text-sm sm:text-base">
             Comprehensive tools included in our marketing plans.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-1/3 flex flex-col gap-2">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Mobile: Horizontal scrolling tabs */}
+          <div className="lg:hidden overflow-x-auto pb-2 -mx-4 px-4">
+            <div className="flex gap-2 min-w-max">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-4 py-2 rounded-lg whitespace-nowrap text-sm font-medium transition-all ${
+                    activeTab === tab.id
+                      ? "bg-[#FF6600] text-white shadow-md"
+                      : "bg-white text-gray-600 border border-gray-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop: Vertical tabs */}
+          <div className="hidden lg:flex lg:w-1/3 flex-col gap-2">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -124,14 +144,16 @@ export function ServicesDetail() {
               </button>
             ))}
           </div>
-          <div className="lg:w-2/3 bg-white rounded-2xl p-8 border border-gray-200 shadow-sm min-h-[400px]">
+
+          {/* Content area */}
+          <div className="lg:w-2/3 bg-white rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-200 shadow-sm">
             <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-gray-900">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                   {currentContent.title}
                 </h3>
                 <span
-                  className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide ${
+                  className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide w-fit ${
                     currentContent.badge === "Premium Add-on"
                       ? "bg-purple-100 text-purple-800"
                       : "bg-orange-100 text-orange-800"
@@ -140,9 +162,9 @@ export function ServicesDetail() {
                   {currentContent.badge}
                 </span>
               </div>
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="flex flex-col gap-6">
                 <div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-5 leading-relaxed text-sm sm:text-base">
                     {currentContent.description}
                   </p>
                   <ul className="space-y-3">

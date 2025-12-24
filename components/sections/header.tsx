@@ -26,12 +26,12 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md px-4 sm:px-10 transition-all duration-300 ${
-        isScrolled ? "py-2 shadow-md" : "py-4"
+      className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md px-4 sm:px-6 lg:px-10 transition-all duration-300 ${
+        isScrolled ? "py-2 sm:py-2 shadow-md" : "py-3 sm:py-4"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <div className="flex items-center gap-4 text-[#333333]">
+        <div className="flex items-center gap-2 sm:gap-4 text-[#333333]">
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/servi-logo-black.png"
@@ -39,17 +39,17 @@ export function Header() {
               width={240}
               height={80}
               className={`w-auto transition-all duration-300 ${
-                isScrolled ? "h-6" : "h-8"
+                isScrolled ? "h-5 sm:h-6" : "h-6 sm:h-8"
               }`}
               priority
               quality={100}
             />
           </Link>
         </div>
-        <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
-          <nav className="flex items-center gap-8">
+        <div className="hidden lg:flex flex-1 justify-end gap-6 xl:gap-8 items-center">
+          <nav className="flex items-center gap-4 xl:gap-6">
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/"
@@ -57,7 +57,7 @@ export function Header() {
               Home
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/online-ordering" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/online-ordering"
@@ -65,7 +65,7 @@ export function Header() {
               Online Ordering
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/self-service" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/self-service"
@@ -73,7 +73,7 @@ export function Header() {
               Self-Service
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/integrated-pos" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/integrated-pos"
@@ -81,7 +81,7 @@ export function Header() {
               Integrated POS
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/marketing-services" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/marketing-services"
@@ -89,7 +89,7 @@ export function Header() {
               Marketing Services
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/pricing" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/pricing"
@@ -97,7 +97,7 @@ export function Header() {
               Pricing
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors ${
+              className={`text-xs xl:text-sm font-semibold hover:text-[#FF6600] transition-colors whitespace-nowrap ${
                 pathname === "/about" ? "text-[#FF6600]" : "text-[#333333]"
               }`}
               href="/about"
@@ -109,25 +109,29 @@ export function Header() {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20"
+            className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 xl:h-10 px-4 xl:px-5 bg-[#FF6600] text-white text-xs xl:text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20"
           >
             <span className="truncate">Book a Meeting</span>
           </a>
         </div>
         <button
-          className="md:hidden p-2 text-[#333333]"
+          className="lg:hidden p-1.5 sm:p-2 text-[#333333] hover:bg-gray-50 rounded-lg transition-all duration-200 active:scale-95"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
-          <Menu className="w-6 h-6" />
+          <Menu className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 ${mobileMenuOpen ? "rotate-90" : "rotate-0"}`} />
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-b border-gray-100 shadow-lg">
-          <nav className="flex flex-col px-4 py-4 space-y-3">
+      <div
+        className={`lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-b border-gray-100 shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 border-b-0"
+        }`}
+      >
+        <nav className="flex flex-col px-4 py-3 sm:py-4 space-y-2 sm:space-y-3">
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/"
@@ -136,7 +140,7 @@ export function Header() {
               Home
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/online-ordering" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/online-ordering"
@@ -145,7 +149,7 @@ export function Header() {
               Online Ordering
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/self-service" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/self-service"
@@ -154,7 +158,7 @@ export function Header() {
               Self-Service
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/integrated-pos" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/integrated-pos"
@@ -163,7 +167,7 @@ export function Header() {
               Integrated POS
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/marketing-services" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/marketing-services"
@@ -172,7 +176,7 @@ export function Header() {
               Marketing Services
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/pricing" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/pricing"
@@ -181,7 +185,7 @@ export function Header() {
               Pricing
             </Link>
             <Link
-              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 px-3 rounded-lg hover:bg-gray-50 ${
+              className={`text-sm font-semibold hover:text-[#FF6600] transition-colors py-2 sm:py-2.5 px-3 rounded-lg hover:bg-gray-50 ${
                 pathname === "/about" ? "text-[#FF6600] bg-orange-50" : "text-[#333333]"
               }`}
               href="/about"
@@ -193,14 +197,13 @@ export function Header() {
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2"
+              className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 sm:h-11 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="truncate">Book a Meeting</span>
             </a>
           </nav>
-        </div>
-      )}
+      </div>
     </header>
   );
 }

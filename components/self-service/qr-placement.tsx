@@ -3,17 +3,17 @@ import Image from "next/image";
 
 export function QRPlacement() {
   return (
-    <section className="py-20 bg-white dark:bg-zinc-950">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-zinc-950">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           <div>
-            <span className="inline-block py-1 px-3 rounded-full bg-orange-50 text-[#FF6600] font-bold tracking-wider uppercase text-xs mb-4">
+            <span className="inline-block py-1 px-2.5 sm:px-3 rounded-full bg-orange-50 text-[#FF6600] font-bold tracking-wider uppercase text-[10px] sm:text-xs mb-3 sm:mb-4">
               Easy Setup
             </span>
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-4 sm:mb-6">
               QR Codes on Every Table
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-5 sm:mb-6 leading-relaxed">
               We provide QR codes on every table and convenient stickers throughout your restaurant, making ordering faster and easier than ever.
             </p>
             <div className="space-y-4">

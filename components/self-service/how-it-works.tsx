@@ -2,7 +2,7 @@ import { QrCode, Monitor } from "lucide-react";
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-white dark:bg-zinc-950 relative overflow-hidden">
+    <section id="how-it-works" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -11,15 +11,15 @@ export function HowItWorks() {
         }}
       ></div>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <span className="inline-block py-1 px-3 rounded-full bg-orange-50 text-[#FF6600] font-bold tracking-wider uppercase text-xs mb-4">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <span className="inline-block py-1 px-2.5 sm:px-3 rounded-full bg-orange-50 text-[#FF6600] font-bold tracking-wider uppercase text-[10px] sm:text-xs mb-3 sm:mb-4">
             Simple Process
           </span>
-          <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white">
             From Scan to Kitchen in Seconds
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-8 relative items-start">
           <div className="hidden md:block absolute top-[60px] left-[20%] right-[20%] h-1 bg-gray-100 dark:bg-gray-800 z-0 rounded-full">
             <div className="h-full w-full bg-gradient-to-r from-transparent via-[#FF6600]/50 to-transparent animate-pulse"></div>
           </div>

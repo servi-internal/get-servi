@@ -12,9 +12,6 @@ export function SocialMediaTable() {
         "10 Stories",
         "Comment responses",
         "1 Network"
-      ],
-      costs: [
-        "Design 20"
       ]
     },
     {
@@ -28,9 +25,6 @@ export function SocialMediaTable() {
         "10 Videos",
         "Comment responses",
         "2 Networks"
-      ],
-      costs: [
-        "Design 20"
       ]
     },
     {
@@ -46,10 +40,6 @@ export function SocialMediaTable() {
         "3 Networks",
         "1 Network Ad Boost",
         "Add'l boost $99"
-      ],
-      costs: [
-        "Design 30",
-        "Ad cost 30"
       ]
     },
     {
@@ -64,10 +54,6 @@ export function SocialMediaTable() {
         "Comment responses",
         "4 Networks",
         "4 Network Ad Boosts"
-      ],
-      costs: [
-        "Design 40",
-        "Ad cost 120"
       ]
     }
   ];
@@ -128,19 +114,6 @@ export function SocialMediaTable() {
                     <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-[#263238]">
                       <Check className="w-4 h-4 text-[#ff7043] flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pt-4 border-t border-[#e2e8f0]">
-                <div className="text-xs font-bold text-[#263238] uppercase tracking-wide mb-2">
-                  Cost Breakdown
-                </div>
-                <ul className="space-y-1">
-                  {plan.costs.map((cost, i) => (
-                    <li key={i} className="text-xs sm:text-sm text-[#64748b]">
-                      {cost}
                     </li>
                   ))}
                 </ul>

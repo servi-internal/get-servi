@@ -2,7 +2,7 @@ import { ArrowDown, Calculator, CheckCircle } from "lucide-react";
 
 export function PricingHero() {
   return (
-    <section className="relative pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-40 lg:pb-32 overflow-hidden">
+    <section className="relative pt-12 pb-12 sm:pt-16 sm:pb-16 lg:pt-24 lg:pb-24 overflow-hidden">
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-[#ff7043]/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bg-[#ff7043]/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

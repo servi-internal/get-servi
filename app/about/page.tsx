@@ -1,7 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { AboutHero } from "@/components/about/about-hero";
-import { StatsSection } from "@/components/about/stats-section";
 import { MissionSection } from "@/components/about/mission-section";
 import { ValuesSection } from "@/components/about/values-section";
 import { JourneyTimeline } from "@/components/about/journey-timeline";
@@ -16,7 +15,6 @@ export default function AboutPage() {
       <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
       <main>
         <AboutHero />
-        <StatsSection />
         <MissionSection />
         <ValuesSection />
         <JourneyTimeline />

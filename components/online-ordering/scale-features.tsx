@@ -37,10 +37,6 @@ export function ScaleFeatures() {
                   Track sales, popular items, peak hours, and customer behavior with actionable insights to optimize your menu and operations.
                 </p>
               </div>
-              <div className="mt-6 sm:mt-8 inline-flex items-center text-[#FF6600] font-semibold text-xs sm:text-sm group-hover:gap-2 transition-all">
-                View Dashboard{" "}
-                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
-              </div>
             </div>
             <div className="absolute top-0 right-0 w-3/5 h-full bg-gradient-to-l from-zinc-800 to-transparent z-0 opacity-50"></div>
             <div className="absolute -right-10 -bottom-10 w-3/4 h-3/4 bg-gradient-to-br from-blue-400 to-blue-600 rounded-tl-3xl shadow-2xl transform rotate-3 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500 border-4 border-zinc-800"></div>

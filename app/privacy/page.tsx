@@ -1,5 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
+import Link from "next/link";
 
 export default function PrivacyPage() {
   return (
@@ -8,6 +9,20 @@ export default function PrivacyPage() {
       <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div>
       <main className="flex-1">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <Link 
+            href="/"
+            className="inline-flex items-center gap-2 text-[#ff7043] hover:text-[#e64a19] transition-colors mb-6 sm:mb-8 group"
+          >
+            <svg 
+              className="w-5 h-5 transition-transform group-hover:-translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span className="font-semibold">Back to Home</span>
+          </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#263238] mb-6 sm:mb-8">
             Privacy Policy
           </h1>

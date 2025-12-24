@@ -51,8 +51,17 @@ export function Footer() {
                 <i className="bi bi-facebook text-base sm:text-lg"></i>
               </a>
               <a
+                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:text-white transition-all"
+                href="https://api.whatsapp.com/send?phone=16156633663"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat with us on WhatsApp"
+              >
+                <i className="bi bi-whatsapp text-base sm:text-lg"></i>
+              </a>
+              <a
                 className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
-                href="mailto:contact@ser.vi"
+                href="mailto:hello@ser.vi"
                 title="Email us"
               >
                 <i className="bi bi-envelope text-base sm:text-lg"></i>

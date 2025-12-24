@@ -1,103 +1,152 @@
-import { Check, Minus } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
 export function SocialMediaTable() {
+  const plans = [
+    {
+      name: "Basic",
+      popular: false,
+      bestFor: "Posts and Stories to get started",
+      price: "$99",
+      features: [
+        "10 Posts",
+        "10 Stories",
+        "Comment responses",
+        "1 Network"
+      ],
+      costs: [
+        "Design 20"
+      ]
+    },
+    {
+      name: "Pro",
+      popular: true,
+      bestFor: "Add videos to engage and extend your reach",
+      price: "$199",
+      features: [
+        "10 Posts",
+        "10 Stories",
+        "10 Videos",
+        "Comment responses",
+        "2 Networks"
+      ],
+      costs: [
+        "Design 20"
+      ]
+    },
+    {
+      name: "Premium",
+      popular: false,
+      bestFor: "Increase your content, reach and boost with ads",
+      price: "$399",
+      features: [
+        "15 posts a month",
+        "15 Stories a month",
+        "15 Videos",
+        "Comment responses",
+        "3 Networks",
+        "1 Network Ad Boost",
+        "Add'l boost $99"
+      ],
+      costs: [
+        "Design 30",
+        "Ad cost 30"
+      ]
+    },
+    {
+      name: "Max",
+      popular: false,
+      bestFor: "Best value and honestly the most we could imagine",
+      price: "$799",
+      features: [
+        "20 posts a month",
+        "20 Stories a month",
+        "20 Videos",
+        "Comment responses",
+        "4 Networks",
+        "4 Network Ad Boosts"
+      ],
+      costs: [
+        "Design 40",
+        "Ad cost 120"
+      ]
+    }
+  ];
+
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white border-y border-[#e2e8f0]">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#263238] text-center mb-8 sm:mb-10 lg:mb-12">
-          Social Media Management Add-ons
-        </h2>
-        <div className="overflow-x-auto border border-[#e2e8f0] rounded-2xl shadow-sm">
-          <table className="min-w-full divide-y divide-[#e2e8f0]">
-            <thead className="bg-[#f8fafc]">
-              <tr>
-                <th
-                  scope="col"
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-left text-xs sm:text-sm font-bold text-[#263238]"
-                >
-                  Plan Name
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-left text-xs sm:text-sm font-bold text-[#263238]"
-                >
-                  Best For
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-center text-xs sm:text-sm font-bold text-[#263238]"
-                >
-                  Monthly Price
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 text-left text-xs sm:text-sm font-bold text-[#263238]"
-                >
-                  Content per Month
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[#e2e8f0] bg-white">
-              <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238]">
-                  Basic
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  Simple presence and activity
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
-                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$99</span>/mo
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  10 posts, 10 Stories, comment responses, 1 network
-                </td>
-              </tr>
-              <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#263238]">
-                  <span className="font-bold">Pro</span>
-                  <br />
-                  <span className="italic text-[10px] sm:text-xs text-[#64748b]">(Popular)</span>
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  Adding video to boost engagement
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
-                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$199</span>/mo
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  10 posts, 10 Stories, 10 videos, responses, 2 networks
-                </td>
-              </tr>
-              <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238]">
-                  Premium
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  More content + some ad boosting
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
-                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$399</span>/mo
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  15 posts, 15 Stories, 15 videos, responses, 3 networks, 1 ad boost (extra boosts +$99)
-                </td>
-              </tr>
-              <tr className="hover:bg-gray-50 transition-colors">
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238]">
-                  Max
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  Maximum content, reach & boosts
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold text-[#263238] text-center">
-                  <span className="text-base sm:text-lg font-black text-[#ff7043]">$799</span>/mo
-                </td>
-                <td className="px-3 sm:px-4 lg:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#64748b]">
-                  20 posts, 20 Stories, 20 videos, responses, 4 networks, 4 ad boosts
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#263238] mb-3 sm:mb-4">
+            Social Media Plans
+          </h2>
+          <p className="text-sm sm:text-base text-[#64748b] max-w-2xl mx-auto">
+            Professional social media management to grow your online presence and engage with customers
+          </p>
+        </div>
+        
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`relative flex flex-col rounded-2xl border-2 p-6 sm:p-8 transition-all hover:shadow-xl ${
+                plan.popular
+                  ? "border-[#ff7043] bg-white shadow-lg scale-100 sm:scale-105"
+                  : "border-[#e2e8f0] bg-white hover:border-[#ff7043]/30"
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff7043] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md flex items-center gap-1">
+                  <Star className="w-3 h-3 fill-current" />
+                  MOST POPULAR
+                </div>
+              )}
+              
+              <div className="mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#263238] mb-2">
+                  {plan.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-[#64748b] leading-relaxed min-h-[40px]">
+                  {plan.bestFor}
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl sm:text-4xl font-black text-[#ff7043]">
+                    {plan.price}
+                  </span>
+                  <span className="text-sm text-[#64748b]">/mo</span>
+                </div>
+              </div>
+
+              <div className="mb-6 flex-1">
+                <div className="text-xs font-bold text-[#263238] uppercase tracking-wide mb-3">
+                  What's Included
+                </div>
+                <ul className="space-y-2.5">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-[#263238]">
+                      <Check className="w-4 h-4 text-[#ff7043] flex-shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-4 border-t border-[#e2e8f0]">
+                <div className="text-xs font-bold text-[#263238] uppercase tracking-wide mb-2">
+                  Cost Breakdown
+                </div>
+                <ul className="space-y-1">
+                  {plan.costs.map((cost, i) => (
+                    <li key={i} className="text-xs sm:text-sm text-[#64748b]">
+                      {cost}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

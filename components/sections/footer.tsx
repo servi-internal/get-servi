@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Globe, MessageCircle, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -26,26 +25,37 @@ export function Footer() {
             <div className="flex gap-3 sm:gap-4">
               <a
                 className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
-                href="https://get.ser.vi"
+                href="https://ser.vi/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Visit our website"
+                title="Ordering Platform"
               >
-                <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
+                <i className="bi bi-globe text-base sm:text-lg"></i>
               </a>
               <a
                 className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
-                href="/contact"
-                title="Contact us"
+                href="https://www.instagram.com/ser.vi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow us on Instagram"
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <i className="bi bi-instagram text-base sm:text-lg"></i>
+              </a>
+              <a
+                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
+                href="https://www.facebook.com/serviworldwide/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow us on Facebook"
+              >
+                <i className="bi bi-facebook text-base sm:text-lg"></i>
               </a>
               <a
                 className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
                 href="mailto:contact@ser.vi"
                 title="Email us"
               >
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <i className="bi bi-envelope text-base sm:text-lg"></i>
               </a>
             </div>
           </div>
@@ -133,14 +143,11 @@ export function Footer() {
             <p>© 2025 Ser.vi Worldwide LLC. All rights reserved.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-            <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="#">
+            <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="/privacy">
               Privacy Policy
             </a>
-            <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="#">
+            <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="/terms">
               Terms of Service
-            </a>
-            <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="#">
-              Cookie Settings
             </a>
           </div>
         </div>

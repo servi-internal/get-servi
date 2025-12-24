@@ -2,6 +2,15 @@ import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Privacy Policy | Ser.vi",
+  description: "Read Ser.vi's privacy policy to understand how we collect, use, and protect your personal information.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function PrivacyPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-white">

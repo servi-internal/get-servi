@@ -10,6 +10,16 @@ import {
   Check, Image as ImageIcon
 } from "lucide-react";
 
+export const metadata = {
+  title: "Restaurant POS System - Works on Any Device | Ser.vi",
+  description: "Flexible POS system that works on iPads, Android tablets, phones, and PCs. Offline mode, kitchen display, and integrated payments. No monthly fees.",
+  openGraph: {
+    title: "Flexible Restaurant POS System | Ser.vi",
+    description: "Use your existing devices as a powerful POS system. Works offline with integrated kitchen display and payments.",
+    url: "https://get.ser.vi/integrated-pos",
+  },
+};
+
 export default function IntegratedPOSPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">

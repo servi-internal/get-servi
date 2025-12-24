@@ -7,6 +7,16 @@ import { SocialMediaTable } from "@/components/pricing/social-media-table";
 import { ComparisonFAQ } from "@/components/pricing/comparison-faq";
 import { Check, Info, Verified } from "lucide-react";
 
+export const metadata = {
+  title: "Pricing - Zero Monthly Fees | Ser.vi Restaurant Platform",
+  description: "Transparent pricing with zero monthly subscription fees. Pay only 4-5% per transaction. No setup fees, no contracts. Compare and save thousands vs traditional POS systems.",
+  openGraph: {
+    title: "Ser.vi Pricing - Zero Monthly Fees Restaurant Platform",
+    description: "No monthly subscription. Pay only per transaction. Save thousands compared to traditional restaurant POS systems.",
+    url: "https://get.ser.vi/pricing",
+  },
+};
+
 export default function PricingPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-[#f8fafc]">

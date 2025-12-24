@@ -2,6 +2,15 @@ import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Terms of Service | Ser.vi",
+  description: "Read Ser.vi's terms of service to understand the terms and conditions for using our restaurant management platform.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function TermsPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-white">

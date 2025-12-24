@@ -8,6 +8,16 @@ import { LeadershipTeam } from "@/components/about/leadership-team";
 import { PartnershipSection } from "@/components/about/partnership-section";
 import { FinalCTAAbout } from "@/components/about/final-cta-about";
 
+export const metadata = {
+  title: "About Us - Empowering Independent Restaurants | Ser.vi",
+  description: "Learn about Ser.vi's mission to help independent restaurants compete with zero-commission technology. Discover our story, values, and commitment to restaurant success.",
+  openGraph: {
+    title: "About Ser.vi - Empowering Independent Restaurants",
+    description: "Our mission is to help independent restaurants thrive with affordable, zero-commission technology solutions.",
+    url: "https://get.ser.vi/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="relative flex flex-col min-h-screen w-full bg-[#f9fafb] dark:bg-[#18181b]">

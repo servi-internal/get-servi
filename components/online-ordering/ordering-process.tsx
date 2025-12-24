@@ -173,9 +173,9 @@ export function OrderingProcess() {
                 <div className="w-40 sm:w-44 md:w-48 h-64 sm:h-72 md:h-80 bg-zinc-100 dark:bg-zinc-800 rounded-2xl sm:rounded-[2rem] border-3 sm:border-4 border-zinc-200 dark:border-zinc-700 shadow-lg group-hover:lg:shadow-2xl lg:group-hover:shadow-2xl group-hover:lg:shadow-emerald-500/20 lg:group-hover:shadow-emerald-500/20 flex flex-col items-center justify-center overflow-hidden transition-all duration-500">
                   {/* Success checkmark with animation */}
                   <div className="relative">
-                    <div className="size-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-3 group-hover:lg:scale-110 lg:group-hover:scale-110 group-hover:lg:bg-emerald-200 lg:group-hover:bg-emerald-200 dark:group-hover:lg:bg-emerald-900/50 dark:lg:group-hover:bg-emerald-900/50 transition-all duration-500">
+                    <div className="size-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-3 group-hover:lg:scale-110 lg:group-hover:scale-110 group-hover:lg:bg-emerald-200 lg:group-hover:bg-emerald-200 dark:group-hover:lg:bg-emerald-900/50 dark:lg:group-hover:bg-emerald-900/50 transition-all duration-500 animate-checkmark-bg-mobile lg:animate-none">
                       <div className="relative w-12 h-12">
-                        <Check className="w-12 h-12 text-emerald-500 opacity-0 scale-0 group-hover:lg:opacity-100 group-hover:lg:scale-100 lg:group-hover:opacity-100 lg:group-hover:scale-100 transition-all duration-500 ease-out animate-checkmark-appear-mobile lg:animate-none" strokeWidth={3} />
+                        <Check className="w-12 h-12 text-emerald-500 animate-checkmark-appear-mobile lg:opacity-0 lg:scale-0 group-hover:lg:opacity-100 group-hover:lg:scale-100 lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:transition-all lg:duration-500 lg:ease-out" strokeWidth={3} />
                       </div>
                     </div>
                     {/* Confetti effect */}

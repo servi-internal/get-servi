@@ -390,6 +390,7 @@
     transform: scale(0);
   }
   55% {
+    opacity: 1;
     transform: scale(1.1);
   }
   60%, 95% {
@@ -399,6 +400,32 @@
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+
+@keyframes checkmark-bg-mobile {
+  0%, 50% {
+    background-color: rgb(209 250 229);
+  }
+  55%, 95% {
+    background-color: rgb(167 243 208);
+  }
+  100% {
+    background-color: rgb(209 250 229);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @keyframes checkmark-bg-mobile {
+    0%, 50% {
+      background-color: rgba(6, 78, 59, 0.3);
+    }
+    55%, 95% {
+      background-color: rgba(6, 78, 59, 0.5);
+    }
+    100% {
+      background-color: rgba(6, 78, 59, 0.3);
+    }
   }
 }
 
@@ -472,6 +499,10 @@
 
 .animate-checkmark-appear-mobile {
   animation: checkmark-appear-mobile 6s ease-in-out infinite;
+}
+
+.animate-checkmark-bg-mobile {
+  animation: checkmark-bg-mobile 6s ease-in-out infinite;
 }
 
 .animate-confetti-1-mobile {

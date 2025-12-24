@@ -10,6 +10,16 @@ import { MobileAppShowcase } from "@/components/marketing-services/mobile-app-sh
 import { MarketingTestimonials } from "@/components/marketing-services/marketing-testimonials";
 import { MarketingCTA } from "@/components/marketing-services/marketing-cta";
 
+export const metadata = {
+  title: "Restaurant Marketing Services - Grow & Retain Customers | Ser.vi",
+  description: "Fully managed Google Ads, branded mobile apps, and retargeting campaigns. Drive new customers and build loyalty. Performance-based pricing starting at 20% of new revenue.",
+  openGraph: {
+    title: "Restaurant Marketing Services - Grow & Retain | Ser.vi",
+    description: "Managed marketing program to drive new customers and build loyalty. Google Ads, mobile apps, and retargeting.",
+    url: "https://get.ser.vi/marketing-services",
+  },
+};
+
 export default function MarketingServicesPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">

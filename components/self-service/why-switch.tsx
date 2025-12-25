@@ -42,13 +42,9 @@ export function WhySwitch() {
                 <br />
                 With Less Staff
               </h3>
-              <p className="text-sm sm:text-base text-white/90 leading-relaxed mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-white/90 leading-relaxed">
                 Serve peak hours seamlessly even when short-staffed. Let technology handle order-taking while your team focuses on food quality.
               </p>
-              <div className="flex items-center gap-2 text-white font-bold group-hover:gap-3 transition-all text-xs sm:text-sm">
-                <span>Learn More</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </div>
             </div>
           </div>
 

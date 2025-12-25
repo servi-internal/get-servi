@@ -4,7 +4,6 @@ import { OrderingHero } from "@/components/online-ordering/ordering-hero";
 import { WhyChooseUs } from "@/components/online-ordering/why-choose-us";
 import { ScaleFeatures } from "@/components/online-ordering/scale-features";
 import { OrderingProcess } from "@/components/online-ordering/ordering-process";
-import { PricingSection } from "@/components/online-ordering/pricing-section";
 
 export const metadata = {
   title: "Online Ordering Platform - Zero Commission | Ser.vi",
@@ -26,7 +25,6 @@ export default function OnlineOrderingPage() {
         <WhyChooseUs />
         <ScaleFeatures />
         <OrderingProcess />
-        <PricingSection />
       </main>
       <Footer />
     </div>

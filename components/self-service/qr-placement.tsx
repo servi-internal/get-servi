@@ -45,27 +45,47 @@ export function QRPlacement() {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-100 dark:border-gray-700">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
-                <div className="w-48 h-48 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 flex items-center justify-center border-4 border-[#FF6600]/20">
-                  <div className="text-center">
-                    <QrCode className="w-32 h-32 text-[#FF6600] mx-auto mb-3" />
-                    <p className="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">
-                      Scan to Order
-                    </p>
-                    <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-1">
+          <div className="relative flex items-center justify-center">
+            {/* Main QR Card with 3D perspective */}
+            <div className="relative w-full max-w-xs">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-5 sm:p-6 border border-gray-100 dark:border-gray-700 transform hover:rotate-1 transition-all duration-500 hover:shadow-[#FF6600]/20 hover:shadow-2xl">
+                {/* QR Code Icon - Large and Clean */}
+                <div className="relative mb-4">
+                  <div className="aspect-square bg-gradient-to-br from-[#FF6600]/5 to-[#FF6600]/10 rounded-xl p-5 flex items-center justify-center border-2 border-dashed border-[#FF6600]/30">
+                    <QrCode className="w-full h-full text-[#FF6600]" strokeWidth={1.5} />
+                  </div>
+                  {/* Scan indicator dots */}
+                  <div className="absolute -top-1.5 -right-1.5 flex gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF6600] animate-pulse"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF6600] animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF6600] animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                  </div>
+                </div>
+                
+                {/* Text Content */}
+                <div className="text-center space-y-2">
+                  <h3 className="text-lg sm:text-xl font-black text-gray-900 dark:text-white uppercase tracking-tight">
+                    Scan to Order
+                  </h3>
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-full">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></div>
+                    <p className="text-xs font-bold text-gray-600 dark:text-gray-300">
                       Table 12
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700">
-              <p className="text-xs font-bold text-[#FF6600] mb-1">No App Needed</p>
-              <p className="text-[10px] text-gray-500 dark:text-gray-400">
-                Works with native camera
-              </p>
+              
+              {/* Floating badge */}
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-gradient-to-br from-[#FF6600] to-[#FF8533] text-white p-3 sm:p-3.5 rounded-xl shadow-xl shadow-[#FF6600]/30 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <Smartphone className="w-3.5 h-3.5" />
+                  <p className="text-xs sm:text-sm font-bold">No App Needed</p>
+                </div>
+                <p className="text-[10px] text-white/90">
+                  Works with native camera
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -393,25 +393,24 @@
     opacity: 1;
     transform: scale(1.1);
   }
-  60%, 95% {
+  60%, 100% {
     opacity: 1;
     transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
   }
 }
 
 @keyframes checkmark-bg-mobile {
   0%, 50% {
     background-color: rgb(209 250 229);
+    transform: scale(1);
   }
-  55%, 95% {
+  55% {
     background-color: rgb(167 243 208);
+    transform: scale(1.1);
   }
-  100% {
-    background-color: rgb(209 250 229);
+  60%, 100% {
+    background-color: rgb(167 243 208);
+    transform: scale(1);
   }
 }
 
@@ -419,12 +418,15 @@
   @keyframes checkmark-bg-mobile {
     0%, 50% {
       background-color: rgba(6, 78, 59, 0.3);
+      transform: scale(1);
     }
-    55%, 95% {
+    55% {
       background-color: rgba(6, 78, 59, 0.5);
+      transform: scale(1.1);
     }
-    100% {
-      background-color: rgba(6, 78, 59, 0.3);
+    60%, 100% {
+      background-color: rgba(6, 78, 59, 0.5);
+      transform: scale(1);
     }
   }
 }
@@ -519,6 +521,98 @@
 
 .animate-confetti-4-mobile {
   animation: confetti-4 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.8s infinite;
+}
+
+/* Checkout animations */
+.animate-checkout-item-1-mobile {
+  animation: checkout-item-mobile 8s ease-in-out infinite;
+}
+
+.animate-checkout-item-2-mobile {
+  animation: checkout-item-mobile 8s ease-in-out 0.2s infinite;
+}
+
+.animate-checkout-total-mobile {
+  animation: checkout-total-mobile 8s ease-in-out infinite;
+}
+
+.animate-payment-card-mobile {
+  animation: payment-card-mobile 8s ease-in-out infinite;
+}
+
+.animate-payment-button-mobile {
+  animation: payment-button-mobile 8s ease-in-out infinite;
+}
+
+@keyframes checkout-item-mobile {
+  0%, 20% {
+    background-color: transparent;
+  }
+  25%, 35% {
+    background-color: rgba(255, 102, 0, 0.05);
+  }
+  40%, 100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes checkout-total-mobile {
+  0%, 35% {
+    transform: scale(1);
+  }
+  40%, 50% {
+    transform: scale(1.05);
+  }
+  55%, 100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes payment-card-mobile {
+  0%, 50% {
+    border-color: rgb(212 212 216);
+    background-color: transparent;
+  }
+  55%, 70% {
+    border-color: rgb(255, 102, 0);
+    background-color: rgba(255, 102, 0, 0.05);
+  }
+  75%, 100% {
+    border-color: rgb(212 212 216);
+    background-color: transparent;
+  }
+}
+
+@keyframes payment-button-mobile {
+  0%, 70% {
+    transform: scale(1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  75%, 85% {
+    transform: scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(255, 102, 0, 0.5);
+  }
+  90%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @keyframes payment-card-mobile {
+    0%, 50% {
+      border-color: rgb(82 82 91);
+      background-color: transparent;
+    }
+    55%, 70% {
+      border-color: rgb(255, 102, 0);
+      background-color: rgba(255, 102, 0, 0.05);
+    }
+    75%, 100% {
+      border-color: rgb(82 82 91);
+      background-color: transparent;
+    }
+  }
 }
 
 /* Disable mobile animations on desktop */

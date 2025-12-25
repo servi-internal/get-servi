@@ -25,11 +25,8 @@ export function OrderingHero() {
               Launch your own branded online ordering website and mobile app. Accept orders directly, build customer loyalty, and take control of your restaurant's digital presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
-              <a href="/pricing" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
-                Get Started Free
-              </a>
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 hover:border-[#FF6600] text-zinc-900 dark:text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all">
-                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6600]" />
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 Book a Meeting
               </a>
             </div>
@@ -80,7 +77,7 @@ export function OrderingHero() {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-24 sm:bottom-28 md:bottom-32 -right-2 sm:-right-4 lg:-right-8 bg-white dark:bg-zinc-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-xl flex items-center gap-2 sm:gap-3 z-20">
+            <div className="absolute bottom-24 sm:bottom-28 md:bottom-32 -right-2 sm:-right-4 lg:right-8 bg-white dark:bg-zinc-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-xl flex items-center gap-2 sm:gap-3 z-20">
               <div className="size-8 sm:size-10 rounded-full bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
                 <Star className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>

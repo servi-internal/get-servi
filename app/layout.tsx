@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -86,6 +88,8 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} antialiased`}
       >
         {children}
+        <Analytics />
+        <SpeedInsights />
         <Script
           src="https://embed.small.chat/T0G8W0N84C01KUK31DM2.js"
           strategy="afterInteractive"

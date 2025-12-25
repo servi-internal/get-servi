@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Mail, Phone } from "lucide-react";
 
 export function CTA() {
   const [formData, setFormData] = useState({
@@ -44,189 +44,194 @@ export function CTA() {
   };
 
   return (
-    <section id="contact-us" className="relative w-full overflow-hidden bg-gradient-to-br from-[#fff5f0] via-white to-[#fff5f0] py-16 sm:py-20 lg:py-24">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, #ff7043 1px, transparent 0)`,
-        backgroundSize: '40px 40px'
-      }}></div>
-      
-      {/* Gradient Orbs */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#ff7043]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#ff7043]/5 rounded-full blur-3xl"></div>
-      
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#263238] mb-3 sm:mb-4">
-            Let's Talk About Your <span className="text-[#ff7043]">Growth</span>
-          </h2>
-          <p className="text-base sm:text-lg text-[#64748b] max-w-2xl mx-auto mb-6">
-            Get in touch with our team to see how Ser.vi can transform your restaurant business.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base">
-            <a href="mailto:hello@ser.vi" className="flex items-center gap-2 text-[#64748b] hover:text-[#ff7043] transition-colors">
-              <span className="font-semibold">hello@ser.vi</span>
-            </a>
-            <span className="text-[#cbd5e1]">•</span>
-            <a href="https://api.whatsapp.com/send?phone=16156633663" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#64748b] hover:text-[#ff7043] transition-colors">
-              <span className="font-semibold">+1 (615) 663-3663</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="max-w-4xl mx-auto">
-          {/* Form Card */}
-          <div className="bg-white rounded-2xl shadow-2xl border border-[#e2e8f0] overflow-hidden">
-            {/* Form Header */}
-            <div className="bg-gradient-to-r from-[#ff7043] to-[#ff8a65] p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">Send us a message</h3>
-              <p className="text-sm sm:text-base text-white/90">We typically respond within 24 hours</p>
+    <section id="contact-us" className="relative w-full bg-gradient-to-b from-white via-[#FFF3EE]/30 to-white py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
+          {/* Left Column - Info */}
+          <div className="flex flex-col gap-4 sm:gap-6">
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#333333] mb-3 sm:mb-4 leading-tight">
+                Ready to Transform Your <span className="text-[#FF6600]">Restaurant?</span>
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                Get in touch with our team to see how Ser.vi can help you boost revenue, reduce costs, and delight your customers.
+              </p>
             </div>
 
-            {/* Form Body */}
-            <div className="p-6 sm:p-8">
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-[#263238] font-medium">
-                      Full Name *
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                      className="h-11 border border-[#cbd5e1] focus:border-[#ff7043] focus:ring-1 focus:ring-[#ff7043] rounded-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-[#263238] font-medium">
-                      Email Address *
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="john@restaurant.com"
-                      className="h-11 border border-[#cbd5e1] focus:border-[#ff7043] focus:ring-1 focus:ring-[#ff7043] rounded-lg"
-                    />
-                  </div>
+            {/* Contact Info Cards */}
+            <div className="flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-4">
+              <a 
+                href="mailto:hello@ser.vi"
+                className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white border border-gray-200 hover:border-[#FF6600] hover:shadow-lg transition-all group"
+              >
+                <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FF6600]/10 text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-all flex-shrink-0">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-[#263238] font-medium">
-                      Phone Number
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
-                      className="h-11 border border-[#cbd5e1] focus:border-[#ff7043] focus:ring-1 focus:ring-[#ff7043] rounded-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="restaurant" className="text-[#263238] font-medium">
-                      Restaurant Name
-                    </Label>
-                    <Input
-                      id="restaurant"
-                      name="restaurant"
-                      type="text"
-                      value={formData.restaurant}
-                      onChange={handleChange}
-                      placeholder="Your Restaurant"
-                      className="h-11 border border-[#cbd5e1] focus:border-[#ff7043] focus:ring-1 focus:ring-[#ff7043] rounded-lg"
-                    />
-                  </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-medium text-gray-500">Email us</p>
+                  <p className="text-sm sm:text-base font-bold text-[#333333] truncate">hello@ser.vi</p>
                 </div>
+              </a>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-[#263238] font-medium">
-                    Message *
+              <a 
+                href="https://api.whatsapp.com/send?phone=16156633663"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white border border-gray-200 hover:border-[#FF6600] hover:shadow-lg transition-all group"
+              >
+                <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#FF6600]/10 text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-all flex-shrink-0">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-medium text-gray-500">Call or WhatsApp</p>
+                  <p className="text-sm sm:text-base font-bold text-[#333333]">+1 (615) 663-3663</p>
+                </div>
+              </a>
+            </div>
+
+            {/* Quick CTA */}
+            <div className="mt-2 sm:mt-4 p-4 sm:p-6 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#FF6600] to-[#FF8533] text-white">
+              <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Prefer to schedule a call?</h3>
+              <p className="text-xs sm:text-sm text-white/90 mb-3 sm:mb-4">Book a time that works best for you</p>
+              <a
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-10 sm:h-11 px-5 sm:px-6 rounded-lg bg-white text-[#FF6600] font-bold text-xs sm:text-sm hover:bg-gray-50 transition-all shadow-lg"
+              >
+                Book a Meeting
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column - Form */}
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl border border-gray-200 p-4 sm:p-6 lg:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#333333] mb-4 sm:mb-6">Send us a message</h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <Label htmlFor="name" className="text-[#333333] font-medium text-xs sm:text-sm">
+                    Full Name *
                   </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
                     required
-                    value={formData.message}
+                    value={formData.name}
                     onChange={handleChange}
-                    placeholder="Tell us about your restaurant and how we can help..."
-                    rows={5}
-                    className="border border-[#cbd5e1] focus:border-[#ff7043] focus:ring-1 focus:ring-[#ff7043] resize-none rounded-lg"
+                    placeholder="John Doe"
+                    className="h-10 sm:h-11 text-sm sm:text-base border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
                   />
                 </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full h-12 bg-[#ff7043] hover:bg-[#e64a19] text-white font-semibold text-base rounded-lg shadow-lg transition-all hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center gap-2">
-                      <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      Sending...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      Send Message
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  )}
-                </Button>
+                <div className="space-y-1.5 sm:space-y-2">
+                  <Label htmlFor="email" className="text-[#333333] font-medium text-xs sm:text-sm">
+                    Email Address *
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="john@restaurant.com"
+                    className="h-10 sm:h-11 text-sm sm:text-base border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                  />
+                </div>
+              </div>
 
-                {submitStatus === "success" && (
-                  <div className="flex items-start gap-3 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-emerald-900 text-sm">Message sent successfully!</p>
-                      <p className="text-emerald-700 text-sm">We'll get back to you within 24 hours.</p>
-                    </div>
-                  </div>
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <Label htmlFor="phone" className="text-[#333333] font-medium text-xs sm:text-sm">
+                    Phone Number
+                  </Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+1 (555) 123-4567"
+                    className="h-10 sm:h-11 text-sm sm:text-base border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                  />
+                </div>
+
+                <div className="space-y-1.5 sm:space-y-2">
+                  <Label htmlFor="restaurant" className="text-[#333333] font-medium text-xs sm:text-sm">
+                    Restaurant Name
+                  </Label>
+                  <Input
+                    id="restaurant"
+                    name="restaurant"
+                    type="text"
+                    value={formData.restaurant}
+                    onChange={handleChange}
+                    placeholder="Your Restaurant"
+                    className="h-10 sm:h-11 text-sm sm:text-base border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1.5 sm:space-y-2">
+                <Label htmlFor="message" className="text-[#333333] font-medium text-xs sm:text-sm">
+                  Message *
+                </Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell us about your restaurant and how we can help..."
+                  rows={4}
+                  className="text-sm sm:text-base border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600] resize-none"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full h-11 sm:h-12 bg-[#FF6600] hover:bg-[#FF6600]/90 text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center gap-2">
+                    <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    Sending...
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <Send className="w-4 h-4" />
+                    Send Message
+                  </span>
                 )}
+              </Button>
 
-                {submitStatus === "error" && (
-                  <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-red-900 text-sm">Something went wrong</p>
-                      <p className="text-red-700 text-sm">Please try again or email us at hello@ser.vi</p>
-                    </div>
+              {submitStatus === "success" && (
+                <div className="flex items-start gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-green-900 text-sm">Message sent successfully!</p>
+                    <p className="text-green-700 text-sm">We'll get back to you within 24 hours.</p>
                   </div>
-                )}
-              </form>
-            </div>
-          </div>
+                </div>
+              )}
 
-          {/* Bottom CTA */}
-          <div className="mt-6 sm:mt-8 text-center">
-            <p className="text-sm sm:text-base text-[#64748b] mb-3 sm:mb-4">Prefer to schedule a call?</p>
-            <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-white border-2 border-[#e2e8f0] rounded-lg font-semibold text-sm sm:text-base text-[#263238] hover:border-[#ff7043] hover:text-[#ff7043] transition-all shadow-sm hover:shadow-md"
-            >
-              Book a Meeting
-              <ArrowRight className="w-4 h-4" />
-            </a>
+              {submitStatus === "error" && (
+                <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-red-900 text-sm">Something went wrong</p>
+                    <p className="text-red-700 text-sm">Please try again or email us at hello@ser.vi</p>
+                  </div>
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

@@ -129,25 +129,33 @@ export function OrderingProcess() {
                     
                     {/* Order summary */}
                     <div className="space-y-2 py-2">
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-between items-center group-hover:lg:bg-[#FF6600]/5 lg:group-hover:bg-[#FF6600]/5 animate-checkout-item-1-mobile lg:animate-none rounded px-1 py-0.5 transition-all duration-300">
                         <div className="h-2 w-20 bg-zinc-200 dark:bg-zinc-500 rounded"></div>
                         <div className="h-2 w-10 bg-zinc-300 dark:bg-zinc-600 rounded"></div>
                       </div>
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-between items-center group-hover:lg:bg-[#FF6600]/5 lg:group-hover:bg-[#FF6600]/5 animate-checkout-item-2-mobile lg:animate-none rounded px-1 py-0.5 transition-all duration-500">
                         <div className="h-2 w-16 bg-zinc-200 dark:bg-zinc-500 rounded"></div>
                         <div className="h-2 w-8 bg-zinc-300 dark:bg-zinc-600 rounded"></div>
                       </div>
-                      <div className="border-t border-zinc-300 dark:border-zinc-600 pt-2 mt-2">
-                        <div className="flex justify-between items-center">
+                      <div className="border-t border-zinc-300 dark:border-zinc-600 pt-2 mt-2 group-hover:lg:border-[#FF6600]/30 lg:group-hover:border-[#FF6600]/30 transition-colors duration-500">
+                        <div className="flex justify-between items-center group-hover:lg:scale-105 lg:group-hover:scale-105 animate-checkout-total-mobile lg:animate-none transition-transform duration-500">
                           <div className="h-2.5 w-12 bg-zinc-400 dark:bg-zinc-500 rounded"></div>
                           <div className="h-2.5 w-12 bg-zinc-400 dark:bg-zinc-600 rounded"></div>
                         </div>
                       </div>
                     </div>
+                    
+                    {/* Payment card mockup */}
+                    <div className="mt-4 p-2.5 border-2 border-dashed border-zinc-300 dark:border-zinc-600 rounded-lg group-hover:lg:border-[#FF6600] lg:group-hover:border-[#FF6600] group-hover:lg:bg-[#FF6600]/5 lg:group-hover:bg-[#FF6600]/5 animate-payment-card-mobile lg:animate-none transition-all duration-500">
+                      <div className="space-y-1.5">
+                        <div className="h-1.5 w-full bg-zinc-200 dark:bg-zinc-600 rounded"></div>
+                        <div className="h-1.5 w-3/4 bg-zinc-200 dark:bg-zinc-600 rounded"></div>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="mt-auto p-4 bg-white dark:bg-black/20">
-                    <button className="h-12 w-full bg-[#FF6600] rounded-lg flex items-center justify-center text-white text-xs font-bold group-hover:lg:animate-payment-processing lg:group-hover:animate-payment-processing transition-all group-hover:lg:bg-[#e64a19] lg:group-hover:bg-[#e64a19] group-hover:lg:shadow-lg lg:group-hover:shadow-lg group-hover:lg:shadow-[#FF6600]/50 lg:group-hover:shadow-[#FF6600]/50">
+                    <button className="h-12 w-full bg-[#FF6600] rounded-lg flex items-center justify-center text-white text-xs font-bold group-hover:lg:animate-payment-processing lg:group-hover:animate-payment-processing transition-all group-hover:lg:bg-[#e64a19] lg:group-hover:bg-[#e64a19] group-hover:lg:shadow-lg lg:group-hover:shadow-lg group-hover:lg:shadow-[#FF6600]/50 lg:group-hover:shadow-[#FF6600]/50 animate-payment-button-mobile lg:animate-none">
                       <span className="group-hover:lg:hidden lg:group-hover:hidden animate-payment-text-mobile lg:animate-none">Pay $24.00</span>
                       <span className="hidden group-hover:lg:block lg:group-hover:block animate-payment-spinner-mobile lg:animate-none">
                         <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

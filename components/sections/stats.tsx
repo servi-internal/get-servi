@@ -40,9 +40,9 @@ export function Stats() {
               2.5x
             </span>
             <p className="text-sm sm:text-base font-medium text-gray-300">
-              faster table turnover with
+              faster table turnover
               <br />
-              QR code payments
+              & service
             </p>
           </div>
         </div>

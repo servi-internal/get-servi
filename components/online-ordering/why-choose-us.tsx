@@ -80,10 +80,10 @@ export function WhyChooseUs() {
               </div>
               <div>
                 <h3 className="font-bold text-zinc-900 dark:text-white">
-                  Customer Engagement Tools
+                  SEO-Optimized Website
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Boost repeat orders with loyalty rewards and digital gift cards.
+                  Improve your restaurant's visibility in Google Search with a branded site built for SEO.
                 </p>
               </div>
             </div>

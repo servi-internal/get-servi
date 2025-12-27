@@ -51,10 +51,10 @@ export function CTA() {
           <div className="flex flex-col gap-4 sm:gap-6">
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#333333] mb-3 sm:mb-4 leading-tight">
-                Ready to Transform Your <span className="text-[#FF6600]">Restaurant?</span>
+                Ready to Streamline Your <span className="text-[#FF6600]">Restaurant?</span>
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                Get in touch with our team to see how Ser.vi can help you boost revenue, reduce costs, and delight your customers.
+                Get in touch with our team to see how Ser.vi can help you boost profits, reduce cost and get more customers.
               </p>
             </div>
 
@@ -91,8 +91,7 @@ export function CTA() {
 
             {/* Quick CTA */}
             <div className="mt-2 sm:mt-4 p-4 sm:p-6 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#FF6600] to-[#FF8533] text-white">
-              <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Prefer to schedule a call?</h3>
-              <p className="text-xs sm:text-sm text-white/90 mb-3 sm:mb-4">Book a time that works best for you</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Contact us or book a time that works best for you.</h3>
               <a
                 href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
                 target="_blank"

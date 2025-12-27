@@ -1,14 +1,15 @@
 import {
   BarChart3,
-  Mail,
   Store,
-  Percent,
   Smartphone,
-  Gift,
-  ArrowRight,
-  Send,
-  MessageSquare,
-  Bell,
+  ShoppingCart,
+  Globe,
+  Search,
+  TrendingUp,
+  MapPin,
+  Target,
+  Phone,
+  Truck,
 } from "lucide-react";
 
 export function ScaleFeatures() {
@@ -42,21 +43,21 @@ export function ScaleFeatures() {
             <div className="absolute -right-10 -bottom-10 w-3/4 h-3/4 bg-gradient-to-br from-blue-400 to-blue-600 rounded-tl-3xl shadow-2xl transform rotate-3 group-hover:rotate-0 group-hover:scale-105 transition-all duration-500 border-4 border-zinc-800"></div>
           </div>
 
-          {/* Zero Commission */}
+          {/* Direct Online Ordering */}
           <div className="rounded-2xl sm:rounded-[2rem] bg-white dark:bg-zinc-900 p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 relative overflow-hidden group hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg">
             <div className="absolute top-0 right-0 p-6 sm:p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Percent className="w-24 h-24 sm:w-32 sm:h-32 text-emerald-500" />
+              <ShoppingCart className="w-24 h-24 sm:w-32 sm:h-32 text-emerald-500" />
             </div>
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
                 <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-4 sm:mb-6 text-emerald-600 dark:text-emerald-400">
-                  <Percent className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Zero Commission Fees
+                  Direct Online Ordering
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm">
-                  Keep 100% of your revenue. No hidden fees or commissions on orders.
+                  Accept orders directly from your website, Google Business listing, and branded mobile app. No third-party commissions.
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex items-center gap-2">
@@ -68,29 +69,29 @@ export function ScaleFeatures() {
             </div>
           </div>
 
-          {/* Marketing Automation */}
+          {/* SEO Website */}
           <div className="rounded-2xl sm:rounded-[2rem] bg-white dark:bg-zinc-900 p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 relative overflow-hidden group hover:border-[#FF6600]/50 transition-all duration-300 hover:shadow-lg">
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
                 <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center mb-4 sm:mb-6 text-[#FF6600]">
-                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Marketing Automation
+                  SEO-Optimized Website
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm">
-                  Automated email and SMS campaigns to bring customers back.
+                  Rank higher on Google with a fast, mobile-friendly restaurant website built for search visibility and local discovery.
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex gap-2">
                 <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
-                  <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
-                  <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
-                  <Bell className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
               </div>
             </div>
@@ -148,41 +149,45 @@ export function ScaleFeatures() {
             <div className="absolute -right-4 -top-4 size-32 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-colors"></div>
           </div>
 
-          {/* Loyalty & Gift Cards - Full Width */}
+          {/* Google Ads & IVR Phone & Delivery - Full Width */}
           <div className="md:col-span-3 lg:col-span-3 rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-zinc-800 dark:to-zinc-900 text-white p-6 sm:p-8 md:p-10 relative overflow-hidden group border border-zinc-800 hover:border-[#FF6600]/50 transition-all duration-300">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#FF6600]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative z-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
-              <div className="max-w-xl">
-                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-[#FF6600] flex items-center justify-center text-white shadow-lg shadow-[#FF6600]/30">
-                    <Gift className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <span className="text-[#FF6600] font-bold uppercase tracking-wider text-[10px] sm:text-xs bg-[#FF6600]/10 px-2.5 sm:px-3 py-1 rounded-full border border-[#FF6600]/20">
-                    Retention Engine
-                  </span>
-                </div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
-                  Loyalty &amp; Shareable Gift Cards
-                </h3>
-                <p className="text-sm sm:text-base text-zinc-400">
-                  Drive repeat business with loyalty points and digital gift cards that customers can earn, redeem, and share.
-                </p>
+            <div className="relative z-20">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <span className="text-[#FF6600] font-bold uppercase tracking-wider text-[10px] sm:text-xs bg-[#FF6600]/10 px-2.5 sm:px-3 py-1 rounded-full border border-[#FF6600]/20">
+                  Growth Engine
+                </span>
               </div>
-              <div className="flex-shrink-0 relative w-full md:w-auto">
-                <div className="w-full max-w-[280px] sm:w-64 h-36 sm:h-40 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#FF6600] to-[#E65C00] shadow-2xl relative overflow-hidden transform group-hover:-translate-y-2 group-hover:rotate-2 transition-transform duration-300 border border-white/10 mx-auto md:mx-0">
-                  <div className="absolute top-3 sm:top-4 left-3 sm:left-4 font-bold text-white/80 text-xs sm:text-sm">
-                    GIFT CARD
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                {/* Google Ads */}
+                <div className="flex flex-col">
+                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-[#FF6600] flex items-center justify-center text-white shadow-lg shadow-[#FF6600]/30 mb-3 sm:mb-4">
+                    <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 font-bold text-white text-base sm:text-lg tracking-widest">
-                    •••• 4829
-                  </div>
-                  <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 font-black text-white text-lg sm:text-xl italic">
-                    $50
-                  </div>
-                  <div className="absolute -right-8 -top-8 size-32 bg-white/20 rounded-full blur-xl"></div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">Google Ads Management</h3>
+                  <p className="text-sm text-zinc-400">
+                    Fully managed Google Ad campaigns to drive new customers. Target hungry diners searching for restaurants near you.
+                  </p>
                 </div>
-                <div className="absolute -top-3 sm:-top-4 -left-3 sm:-left-4 bg-white text-zinc-900 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg font-bold text-xs sm:text-sm transform -rotate-6 group-hover:rotate-0 transition-transform">
-                  +150 Points!
+                {/* IVR Phone Ordering */}
+                <div className="flex flex-col">
+                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-600/30 mb-3 sm:mb-4">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">Phone Ordering Service</h3>
+                  <p className="text-sm text-zinc-400">
+                    Customers call and receive an online ordering link via SMS or speak directly to staff. Never miss an order again.
+                  </p>
+                </div>
+                {/* Delivery Integration */}
+                <div className="flex flex-col">
+                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-600/30 mb-3 sm:mb-4">
+                    <Truck className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">Delivery Integration</h3>
+                  <p className="text-sm text-zinc-400">
+                    Offer delivery through your own platform with integrated driver dispatch. Keep customers ordering direct, not through third-party apps.
+                  </p>
                 </div>
               </div>
             </div>

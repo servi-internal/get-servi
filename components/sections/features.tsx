@@ -31,7 +31,7 @@ export function Features() {
               <CreditCard className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold text-[#333333]">
-              Lower Credit Card Fees
+              Eliminate Credit Card Fees
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
               Our tablet POS passes convenience fees to customers, not you.
@@ -45,7 +45,7 @@ export function Features() {
               Mobile Self-Service Ordering
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              QR code ordering at tables means faster service and higher tips.
+              Stop losing customers who won't wait with QR Code Ordering at Tables & Counters.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -56,7 +56,7 @@ export function Features() {
               Automated Marketing Tools
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Email and SMS campaigns that bring customers back automatically.
+              Attract more diners online with smart marketing tools.
             </p>
           </div>
         </div>

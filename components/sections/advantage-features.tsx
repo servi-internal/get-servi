@@ -1,4 +1,4 @@
-import { ShoppingCart, Monitor, UtensilsCrossed } from "lucide-react";
+import { ShoppingCart, Monitor, Phone } from "lucide-react";
 import Image from "next/image";
 
 export function AdvantageFeatures() {
@@ -28,10 +28,10 @@ export function AdvantageFeatures() {
                 <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl font-bold text-[#333333]">
-                Online Ordering
+                Online Ordering & Delivery
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Accept orders directly from your website and mobile app. Zero commission fees, keep 100% of your revenue.
+                Direct ordering from your Google Business Listing, website and branded mobile app for pickup or delivery. Zero commission fees & keep 100% of your profits.
               </p>
             </div>
           </div>
@@ -49,10 +49,10 @@ export function AdvantageFeatures() {
                 <Monitor className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl font-bold text-[#333333]">
-                Counter Service
+                Counter & Table Service
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Fast checkout for quick-service restaurants. Process orders efficiently with intuitive POS interface.
+                Fast checkout for quick-service and full-service restaurants. Manage dine-in orders seamlessly with intuitive POS interface. Zero Wait, Scan, Order, Enjoy.
               </p>
             </div>
           </div>
@@ -60,20 +60,21 @@ export function AdvantageFeatures() {
             <div className="h-48 sm:h-56 w-full bg-gray-200 relative overflow-hidden">
               <Image
                 src="https://assets2.ser.vi/brand/saltestco/feature_image/table.png"
-                alt="Table service with guests dining"
+                alt="IVR phone ordering service"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="flex flex-1 flex-col p-6 sm:p-8">
               <div className="mb-4 sm:mb-5 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-[#333333] text-white">
-                <UtensilsCrossed className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl font-bold text-[#333333]">
-                Table Service
+                Phone Ordering Service
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Manage dine-in orders seamlessly. Let guests order and pay from their phones for faster table turnover.
+                Customers call and can either receive an online ordering link via SMS text message or speak to staff.
+                Never miss an order again.
               </p>
             </div>
           </div>

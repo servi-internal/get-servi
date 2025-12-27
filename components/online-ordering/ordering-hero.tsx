@@ -22,7 +22,7 @@ export function OrderingHero() {
               <span className="text-[#FF6600]">Grows Your Business</span>
             </h1>
             <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0">
-              Launch your own branded online ordering website and mobile app. Accept orders directly, build customer loyalty, and take control of your restaurant's digital presence.
+              Online Ordering that showcases your brand, accepts orders directly, builds customer loyalty, and takes control of your restaurant's digital presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">

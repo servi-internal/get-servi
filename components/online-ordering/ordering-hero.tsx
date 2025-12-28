@@ -18,11 +18,10 @@ export function OrderingHero() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
-              Restaurant Online Ordering System That{" "}
-              <span className="text-[#FF6600]">Grows Your Business</span>
+              Own Your <span className="text-[#FF6600]">Online Ordering</span>
             </h1>
             <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0">
-              Online Ordering that showcases your brand, accepts orders directly, builds customer loyalty, and takes control of your restaurant's digital presence.
+              Your branded website, mobile app, and Google Business listing — all driving orders directly to you. Keep 100% of your profits.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">

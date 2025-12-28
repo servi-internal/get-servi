@@ -18,19 +18,17 @@ export function Footer() {
               <h2 className="text-lg sm:text-xl font-bold">Ser.vi</h2>
             </div>
             <p className="text-gray-500 text-xs sm:text-sm max-w-xs mb-6 sm:mb-8 leading-relaxed">
-              Ser.vi Worldwide LLC. Helping independent restaurants grow their customer
-              list, manage reviews, and offer competitive pricing while reducing
-              dependency on expensive delivery apps.
+              Serving restaurants since 2016. Modern tech that helps you grow customers, boost profits, and streamline operations — simple, intuitive, and built for you.
             </p>
             <div className="flex gap-3 sm:gap-4">
               <a
                 className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
-                href="https://ser.vi/"
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Ordering Platform"
+                title="Book a Meeting"
               >
-                <i className="bi bi-globe text-base sm:text-lg"></i>
+                <i className="bi bi-calendar-event text-base sm:text-lg"></i>
               </a>
               <a
                 className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"

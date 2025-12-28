@@ -11,10 +11,10 @@ export function QRPlacement() {
               Easy Setup
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-4 sm:mb-6">
-              QR Codes on Every Table
+              QR Codes on Every Table & Counter
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-5 sm:mb-6 leading-relaxed">
-              We provide QR codes on every table and convenient stickers throughout your restaurant, making ordering faster and easier than ever.
+              We provide QR codes & stickers on every table and counter throughout your restaurant, making ordering faster and easier than ever.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-4">

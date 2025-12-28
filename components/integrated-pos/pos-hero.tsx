@@ -21,7 +21,7 @@ export function POSHero() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#FF6600] mt-1">•</span>
-                <span>Fully customizable to match your workflow (white-label ready)</span>
+                <span>Fully customizable to match your workflow</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#FF6600] mt-1">•</span>

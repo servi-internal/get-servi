@@ -87,8 +87,8 @@ export function WhySwitch() {
                 </div>
               </div>
             </div>
+            </div>
           </div>
-        </div>
 
         {/* Secondary Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
@@ -138,13 +138,13 @@ export function WhySwitch() {
             <div className="relative z-10">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                 <CreditCard className="w-6 h-6 text-[#FF6600]" />
-              </div>
+                </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Instant Digital Payments
-              </h3>
+                  Instant Digital Payments
+                </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Seamless checkout with Apple Pay, Google Pay, and all major cards. No cash handling—just tap and done.
-              </p>
+                  Seamless checkout with Apple Pay, Google Pay, and all major cards. No cash handling—just tap and done.
+                </p>
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full">
                   <i className="bi bi-apple text-sm text-gray-700"></i>

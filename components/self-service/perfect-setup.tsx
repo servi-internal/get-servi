@@ -6,7 +6,7 @@ export function PerfectSetup() {
     <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-zinc-950">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-8 sm:mb-10 lg:mb-12 text-center">
-          Perfect for Any Setup
+        A Win-Win Solution for Restaurants and Customers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow">

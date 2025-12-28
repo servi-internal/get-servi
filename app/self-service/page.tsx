@@ -5,8 +5,6 @@ import { QRPlacement } from "@/components/self-service/qr-placement";
 import { WhySwitch } from "@/components/self-service/why-switch";
 import { HowItWorks } from "@/components/self-service/how-it-works";
 import { PerfectSetup } from "@/components/self-service/perfect-setup";
-import { WhyItMatters } from "@/components/self-service/why-it-matters";
-import { PricingCTA } from "@/components/self-service/pricing-cta";
 import { VideoDemo } from "@/components/self-service/video-demo";
 import { ContactCTA } from "@/components/self-service/contact-cta";
 
@@ -31,8 +29,6 @@ export default function SelfServicePage() {
         <WhySwitch />
         <HowItWorks />
         <PerfectSetup />
-        <WhyItMatters />
-        <PricingCTA />
         <VideoDemo />
         <ContactCTA />
       </main>

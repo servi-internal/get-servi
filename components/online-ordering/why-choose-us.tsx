@@ -7,7 +7,9 @@ import {
   Cable,
   Smartphone,
   MousePointer,
-  RotateCcw,
+  Calendar,
+  Sliders,
+  ShieldCheck,
 } from "lucide-react";
 
 export function WhyChooseUs() {
@@ -93,13 +95,13 @@ export function WhyChooseUs() {
               </div>
               <div>
                 <h3 className="font-bold text-zinc-900 dark:text-white">
-                  POS Integration
+                  Use Yours or Ours
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                  Seamlessly sync menus and orders with your existing POS system.
+                  We can market your existing direct online ordering or provide ours — your call.
                 </p>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
@@ -141,14 +143,27 @@ export function WhyChooseUs() {
             </div>
             <div className="flex gap-4 sm:gap-6 items-start">
               <div className="size-12 sm:size-14 rounded-lg sm:rounded-xl bg-white dark:bg-zinc-900 shadow-sm flex items-center justify-center text-[#FF6600] shrink-0">
-                <RotateCcw className="w-6 h-6 sm:w-7 sm:h-7" />
+                <Calendar className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-1 sm:mb-2">
-                  One-Click Reordering
+                  Schedule Orders & Deep Customization
                 </h3>
                 <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300">
-                  Save favorite orders and reorder in seconds for faster checkout.
+                  Order ahead for pickup or delivery. Customize every item exactly how you want it.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 sm:gap-6 items-start">
+              <div className="size-12 sm:size-14 rounded-lg sm:rounded-xl bg-white dark:bg-zinc-900 shadow-sm flex items-center justify-center text-[#FF6600] shrink-0">
+                <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7" />
+              </div>
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-1 sm:mb-2">
+                  Your Data Stays Safe
+                </h3>
+                <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300">
+                  Customer data stays securely with the restaurant — never sold to third parties.
                 </p>
               </div>
             </div>

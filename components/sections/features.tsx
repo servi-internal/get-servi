@@ -23,7 +23,7 @@ export function Features() {
               Zero Commission Online Ordering
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Keep 100% of your revenue. No 30% fees to DoorDash or UberEats.
+              Keep 100% of your profits with direct ordering for delivery or pickup. No 30% fees to DoorDash or UberEats.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -34,7 +34,7 @@ export function Features() {
               Eliminate Credit Card Fees
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Our tablet POS passes convenience fees to customers, not you.
+              Our POS and online ordering passes convenience fees to customers, not you.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -45,7 +45,7 @@ export function Features() {
               Mobile Self-Service Ordering
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Stop losing customers who won't wait with QR Code Ordering at Tables & Counters.
+            Reduce losing customers due to long lines and wait times with QR Code Ordering at Tables & Counters.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -56,7 +56,7 @@ export function Features() {
               Automated Marketing Tools
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Attract more diners online with smart marketing tools.
+              Attract more diners and online orders with smart marketing tools.
             </p>
           </div>
         </div>

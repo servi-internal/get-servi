@@ -18,7 +18,7 @@ export function SelfServiceHero() {
               Enjoy.
             </h1>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
-              QR code ordering for dine-in & counter service. Reduce losing customers due to long lines and wait times. Take more orders & speed up payments even when short staffed. Your guests can just scan, order, and pay from their own phone.
+              QR code ordering for dine-in & counter service. Reduce losing customers due to long lines and wait times. Take more orders & speed up payment processing even when short staffed. Your guests can just scan, order, and pay from their own phone.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <a href="#how-it-works" className="flex items-center justify-center h-12 sm:h-14 px-6 sm:px-8 bg-[#FF6600] hover:bg-[#E65C00] text-white text-sm sm:text-base font-bold rounded-full transition-all shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5">

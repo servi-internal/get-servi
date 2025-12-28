@@ -2,12 +2,12 @@ import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { POSHero } from "@/components/integrated-pos/pos-hero";
 import { AllOrderTypes } from "@/components/integrated-pos/all-order-types";
+import { POSFeaturesGrid } from "@/components/integrated-pos/pos-features-grid";
 import { HandleScenario } from "@/components/integrated-pos/handle-scenario";
 import { ConnectedHub } from "@/components/integrated-pos/connected-hub";
 import { 
   Tablet, TabletSmartphone, Smartphone, Monitor, 
-  LayoutGrid, DollarSign, Rocket, Cpu, CreditCard, 
-  Check, Image as ImageIcon
+  Check
 } from "lucide-react";
 
 export const metadata = {
@@ -27,6 +27,9 @@ export default function IntegratedPOSPage() {
       <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
       <main className="flex flex-col w-full">
         <POSHero />
+        
+        {/* POS Features Grid */}
+        <POSFeaturesGrid />
         
         {/* All Order Types */}
         <AllOrderTypes />
@@ -63,107 +66,6 @@ export default function IntegratedPOSPage() {
           </div>
         </section>
 
-        {/* All-in-One Platform */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-            <div className="absolute top-[20%] right-[10%] w-48 sm:w-72 h-48 sm:h-72 bg-[#FF6600]/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-[20%] left-[10%] w-64 sm:w-96 h-64 sm:h-96 bg-[#FF6600]/5 rounded-full blur-3xl"></div>
-          </div>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="mb-10 sm:mb-12 lg:mb-16 text-center md:text-left">
-              <span className="text-[#FF6600] font-bold tracking-wider uppercase text-xs sm:text-sm">
-                All-in-One Solution
-              </span>
-              <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                Everything you need,
-                <br className="hidden md:block" />
-                  built into one platform.
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 auto-rows-[minmax(240px,auto)] sm:auto-rows-[minmax(280px,auto)]">
-              <div className="group relative md:col-span-2 overflow-hidden rounded-2xl sm:rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 p-6 sm:p-8">
-                <div className="inline-flex items-center justify-center p-2.5 sm:p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg sm:rounded-xl text-[#FF6600] mb-4 sm:mb-6">
-                  <LayoutGrid className="w-6 h-6 sm:w-8 sm:h-8" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
-                  Unified Order Management
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-base sm:text-lg max-w-md">
-                  Seamlessly handle online, offline, and third-party orders from a
-                  single, intuitive command center.
-                </p>
-              </div>
-              
-              <div className="group relative md:col-span-1 md:row-span-2 overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#FF6600] to-[#E65C00] text-white shadow-lg p-6 sm:p-8 flex flex-col justify-between">
-                <div>
-                  <div className="inline-flex items-center justify-center p-2.5 sm:p-3 bg-white/20 backdrop-blur-sm rounded-lg sm:rounded-xl text-white mb-4 sm:mb-6 border border-white/30">
-                    <DollarSign className="w-6 h-6 sm:w-8 sm:h-8" />
-                  </div>
-                  <h3 className="text-3xl sm:text-4xl font-extrabold mb-2 tracking-tight">
-                    Zero
-                    <br />
-                    Monthly
-                    <br />
-                    Cost
-                  </h3>
-                  <div className="h-1 w-16 sm:w-20 bg-white/50 rounded-full my-4 sm:my-6"></div>
-                  <p className="text-white/90 text-base sm:text-lg font-medium leading-relaxed">
-                    Stop paying subscription fees. Keep 100% of your profits while
-                    guests cover a small convenience fee.
-                  </p>
-                </div>
-                <div className="mt-6 sm:mt-8 bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-white/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs sm:text-sm font-medium text-white/80">
-                      Monthly Savings
-                    </span>
-                  </div>
-                  <div className="text-2xl sm:text-3xl font-bold text-white">
-                    ~$3,000<span className="text-xs sm:text-sm font-normal text-white/70">/yr</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group relative md:col-span-1 overflow-hidden rounded-2xl sm:rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 p-6 sm:p-8">
-                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg sm:rounded-xl text-blue-600 dark:text-blue-400 mb-4 sm:mb-6">
-                  <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
-                  Train in Minutes
-                </h3>
-                <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
-                  Intuitive UI means staff are pros by their first shift. No manual
-                  needed.
-                </p>
-              </div>
-
-              <div className="group relative md:col-span-1 overflow-hidden rounded-2xl sm:rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 p-6 sm:p-8">
-                <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-purple-50 dark:bg-purple-900/20 rounded-lg sm:rounded-xl text-purple-600 dark:text-purple-400 mb-4 sm:mb-6">
-                  <Cpu className="w-5 h-5 sm:w-6 sm:h-6" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
-                  Hardware Flex
-                </h3>
-                <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
-                  Mix and match iPads, Androids, and PCs seamlessly in one ecosystem.
-                </p>
-              </div>
-
-              <div className="group relative md:col-span-3 overflow-hidden rounded-2xl sm:rounded-3xl bg-gray-900 dark:bg-black text-white shadow-lg p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
-                <div className="flex-1 text-center md:text-left">
-                  <div className="inline-flex items-center justify-center p-2.5 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl text-[#FF6600] mb-4 sm:mb-6 ring-1 ring-white/20">
-                    <CreditCard className="w-6 h-6 sm:w-8 sm:h-8" />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Pay at Table</h3>
-                  <p className="text-gray-400 text-base sm:text-lg max-w-xl">
-                    Split checks, add tips, and close tabs right from the table.
-                    Increase turn times by 15%.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Handle Every Scenario */}
         <HandleScenario />

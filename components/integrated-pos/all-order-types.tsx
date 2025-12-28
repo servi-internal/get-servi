@@ -15,9 +15,6 @@ export function AllOrderTypes() {
     <section id="all-order-types" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <span className="inline-block py-1 px-2.5 sm:px-3 rounded-full bg-[#FF6600]/10 border border-[#FF6600]/20 text-[#FF6600] text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
-            Complete POS Solution
-          </span>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-3 sm:mb-4">
             All Order Types In One Place
           </h2>

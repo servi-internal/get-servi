@@ -9,9 +9,6 @@ export function HandleScenario() {
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16 md:mb-24">
-          <span className="inline-block py-1 px-2.5 sm:px-3 rounded-full bg-orange-100 dark:bg-orange-900/30 text-[#FF6600] text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
-            Unified Platform
-          </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3 sm:mb-4">
             Handle Every{" "}
             <span className="text-[#FF6600] relative inline-block">

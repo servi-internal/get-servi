@@ -1,4 +1,5 @@
 import { TrendingUp, UserPlus, DollarSign, Repeat } from "lucide-react";
+import Image from "next/image";
 
 export function ResultsStats() {
   return (
@@ -39,8 +40,14 @@ export function ResultsStats() {
               Customer database growth
             </p>
             <div className="flex items-center gap-2 mt-4">
-              <div className="size-8 bg-gray-700 rounded-full"></div>
-              <span className="text-xs text-gray-400">Burger Joint NYC</span>
+              <Image
+                alt="Gaetano Gisone"
+                className="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                src="/testimonials/testimonial_rosas.webp"
+                width={32}
+                height={32}
+              />
+              <span className="text-xs text-gray-400">Rosa&apos;s Pizzeria</span>
             </div>
           </div>
           <div className="bg-gray-800/50 border border-gray-700 p-6 rounded-xl backdrop-blur-sm">
@@ -52,8 +59,14 @@ export function ResultsStats() {
               Saved in commissions / year
             </p>
             <div className="flex items-center gap-2 mt-4">
-              <div className="size-8 bg-gray-700 rounded-full"></div>
-              <span className="text-xs text-gray-400">Pasta Palace</span>
+              <Image
+                alt="Andrew Dimatos"
+                className="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                src="/testimonials/testimonial_midland.webp"
+                width={32}
+                height={32}
+              />
+              <span className="text-xs text-gray-400">Midland Bagels</span>
             </div>
           </div>
           <div className="bg-gray-800/50 border border-gray-700 p-6 rounded-xl backdrop-blur-sm">
@@ -65,8 +78,14 @@ export function ResultsStats() {
               Higher repeat customer rate
             </p>
             <div className="flex items-center gap-2 mt-4">
-              <div className="size-8 bg-gray-700 rounded-full"></div>
-              <span className="text-xs text-gray-400">Taco Tuesday Inc.</span>
+              <Image
+                alt="Pablo Rosales"
+                className="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                src="/testimonials/testimonial_dangelos.webp"
+                width={32}
+                height={32}
+              />
+              <span className="text-xs text-gray-400">D&apos;Angelos Gun Hill</span>
             </div>
           </div>
         </div>

@@ -3,9 +3,6 @@ import { Footer } from "@/components/sections/footer";
 import { AboutHero } from "@/components/about/about-hero";
 import { MissionSection } from "@/components/about/mission-section";
 import { ValuesSection } from "@/components/about/values-section";
-import { JourneyTimeline } from "@/components/about/journey-timeline";
-import { LeadershipTeam } from "@/components/about/leadership-team";
-import { PartnershipSection } from "@/components/about/partnership-section";
 import { FinalCTAAbout } from "@/components/about/final-cta-about";
 
 export const metadata = {
@@ -27,9 +24,6 @@ export default function AboutPage() {
         <AboutHero />
         <MissionSection />
         <ValuesSection />
-        <JourneyTimeline />
-        <LeadershipTeam />
-        <PartnershipSection />
         <FinalCTAAbout />
       </main>
       <Footer />

@@ -3,12 +3,9 @@ import { Footer } from "@/components/sections/footer";
 import { MarketingHero } from "@/components/marketing-services/marketing-hero";
 import { GrowthTriad } from "@/components/marketing-services/growth-triad";
 import { CustomerJourney } from "@/components/marketing-services/customer-journey";
-import { ComparisonSection } from "@/components/marketing-services/comparison-section";
 import { ResultsStats } from "@/components/marketing-services/results-stats";
 import { ServicesDetail } from "@/components/marketing-services/services-detail";
 import { MobileAppShowcase } from "@/components/marketing-services/mobile-app-showcase";
-import { MarketingTestimonials } from "@/components/marketing-services/marketing-testimonials";
-import { MarketingCTA } from "@/components/marketing-services/marketing-cta";
 
 export const metadata = {
   title: "Restaurant Marketing Services - Grow & Retain Customers | Ser.vi",
@@ -29,12 +26,9 @@ export default function MarketingServicesPage() {
         <MarketingHero />
         <GrowthTriad />
         <CustomerJourney />
-        <ComparisonSection />
         <ResultsStats />
         <ServicesDetail />
         <MobileAppShowcase />
-        <MarketingTestimonials />
-        <MarketingCTA />
       </main>
       <Footer />
     </div>

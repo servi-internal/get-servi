@@ -157,7 +157,7 @@ export function AllOrderTypes() {
                   Print Receipts
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                  Kitchen tickets and customer receipts automatically
+                  Print kitchen tickets and customer receipts automatically
                 </p>
               </div>
             </div>

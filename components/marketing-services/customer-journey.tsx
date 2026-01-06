@@ -37,7 +37,7 @@ export function CustomerJourney() {
           </div>
           <div className="flex gap-2 text-xs text-gray-500">
             <Clock className="w-4 h-4" />
-            <span>Pickup at 7:30 PM</span>
+            <span>Delivery at 7:30 PM</span>
           </div>
         </div>
       ),

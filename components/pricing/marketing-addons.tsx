@@ -36,7 +36,7 @@ export function MarketingAddons() {
             <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
-                Direct online ordering
+                Phone Ordering Service 
               </li>
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
@@ -44,7 +44,7 @@ export function MarketingAddons() {
               </li>
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
-                Google Ads, IVR phone
+                Google Ads
               </li>
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
@@ -69,12 +69,11 @@ export function MarketingAddons() {
             <p className="mt-2 text-xs sm:text-sm text-[#64748b]">
               Growing your customer base
             </p>
+            <p className="mt-1 text-xs sm:text-sm font-bold text-[#263238]">
+              Everything in Promote <span className="text-base sm:text-lg">+</span>
+            </p>
             <hr className="my-5 sm:my-6 border-[#e2e8f0]" />
             <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
-              <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-[#263238]">
-                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
-                Everything in Promote
-              </li>
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
                 Engagement program
@@ -89,7 +88,11 @@ export function MarketingAddons() {
               </li>
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
-                Retargeting ads, phone
+                Retargeting ads
+              </li>
+              <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
+                Professional Photoshoot
               </li>
             </ul>
           </div>
@@ -106,12 +109,11 @@ export function MarketingAddons() {
             <p className="mt-2 text-xs sm:text-sm text-[#64748b]">
               Fully customized, higher-touch
             </p>
+            <p className="mt-1 text-xs sm:text-sm font-bold text-[#263238]">
+              Everything in Grow &amp; Retain <span className="text-base sm:text-lg">+</span>
+            </p>
             <hr className="my-5 sm:my-6 border-[#e2e8f0]" />
             <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
-              <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-[#263238]">
-                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
-                Everything in Grow &amp; Retain
-              </li>
               <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
                 Social content (Pro)

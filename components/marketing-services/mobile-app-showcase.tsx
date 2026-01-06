@@ -1,9 +1,8 @@
 import {
-  TouchpadOff as TouchApp,
   Bell,
   Award,
   Palette,
-  ShoppingCart,
+  Smartphone,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -43,11 +42,11 @@ export function MobileAppShowcase() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div className="flex gap-4">
                 <div className="bg-[#FF6600]/10 p-2 rounded-lg h-fit">
-                  <TouchApp className="w-6 h-6 text-[#FF6600]" />
+                  <Smartphone className="w-6 h-6 text-[#FF6600]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">1-Click Reordering</h4>
-                  <p className="text-sm text-gray-500">Fastest way to order.</p>
+                  <h4 className="font-bold text-gray-900">iOS & Android Apps</h4>
+                  <p className="text-sm text-gray-500">Native apps for both platforms.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -75,22 +74,6 @@ export function MobileAppShowcase() {
                 <div>
                   <h4 className="font-bold text-gray-900">Fully Branded</h4>
                   <p className="text-sm text-gray-500">Your colors, your images.</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="h-10 bg-black text-white px-4 rounded flex items-center gap-2 cursor-pointer">
-                <i className="bi bi-apple text-xl"></i>
-                <div className="flex flex-col leading-none">
-                  <span className="text-[8px]">Download on the</span>
-                  <span className="text-xs font-bold">App Store</span>
-                </div>
-              </div>
-              <div className="h-10 bg-black text-white px-4 rounded flex items-center gap-2 cursor-pointer">
-                <i className="bi bi-google-play text-xl"></i>
-                <div className="flex flex-col leading-none">
-                  <span className="text-[8px]">GET IT ON</span>
-                  <span className="text-xs font-bold">Google Play</span>
                 </div>
               </div>
             </div>

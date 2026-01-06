@@ -39,7 +39,7 @@ export function SocialMediaTable() {
         "Comment responses",
         "3 Networks",
         "1 Network Ad Boost",
-        "Add'l boost $99"
+        "Add'l boost <strong>$99</strong>"
       ]
     },
     {
@@ -66,7 +66,8 @@ export function SocialMediaTable() {
             Social Media Plans
           </h2>
           <p className="text-sm sm:text-base text-[#64748b] max-w-2xl mx-auto">
-            Professional social media management to grow your online presence and engage with customers
+            Professional social media management to grow your online presence
+            <br />and engage with customers
           </p>
         </div>
         
@@ -81,7 +82,7 @@ export function SocialMediaTable() {
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff7043] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md flex items-center gap-1">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff7043] text-white px-4 py-1 rounded-full text-xs font-bold shadow-md flex items-center gap-1 whitespace-nowrap">
                   <Star className="w-3 h-3 fill-current" />
                   MOST POPULAR
                 </div>
@@ -113,7 +114,7 @@ export function SocialMediaTable() {
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-[#263238]">
                       <Check className="w-4 h-4 text-[#ff7043] flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
+                      <span dangerouslySetInnerHTML={{ __html: feature }} />
                     </li>
                   ))}
                 </ul>

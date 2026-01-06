@@ -6,9 +6,12 @@ import { useState } from "react";
 type ServiceTab =
   | "google-ads"
   | "seo-website"
-  | "social-media"
+  | "engagement"
   | "mobile-app"
-  | "email-sms";
+  | "email-sms"
+  | "social-media"
+  | "retargeting"
+  | "photoshoot";
 
 export function ServicesDetail() {
   const [activeTab, setActiveTab] = useState<ServiceTab>("google-ads");
@@ -16,17 +19,20 @@ export function ServicesDetail() {
   const tabs = [
     { id: "google-ads" as ServiceTab, label: "Google Ads Management" },
     { id: "seo-website" as ServiceTab, label: "SEO Optimized Website" },
-    { id: "social-media" as ServiceTab, label: "Social Media Automation" },
+    { id: "engagement" as ServiceTab, label: "Engagement Package" },
     { id: "mobile-app" as ServiceTab, label: "Branded Mobile App" },
-    { id: "email-sms" as ServiceTab, label: "Email & SMS Marketing" },
+    { id: "retargeting" as ServiceTab, label: "Retargeting Ads" },
+    { id: "email-sms" as ServiceTab, label: "Email Campaigns" },
+    { id: "social-media" as ServiceTab, label: "Social Media (Optional)" },
+    { id: "photoshoot" as ServiceTab, label: "Professional Photoshoot" },
   ];
 
   const content = {
     "google-ads": {
       title: "Google Ads Management",
-      badge: "Included in Pro",
+      badge: "Included in Promote",
       description:
-        'Stop wasting money on ineffective boosts. Our AI-driven bidding system places your restaurant at the top of Google searches for high-intent keywords like "best italian food near me" or "pizza delivery open now".',
+        'Stop wasting money on ineffective boosts. Our AI-driven system places your restaurant at the top of Google searches for high-intent keywords like "best italian food near me" or "pizza delivery open now".',
       features: [
         "Keyword research & optimization",
         "Geo-fencing (5-mile radius)",
@@ -36,7 +42,7 @@ export function ServicesDetail() {
     },
     "seo-website": {
       title: "SEO Optimized Website",
-      badge: "Included in Pro",
+      badge: "Included in Promote",
       description:
         "Your digital storefront optimized for search engines. We build fast-loading, mobile-responsive websites that rank high on Google and convert visitors into customers without paying commission fees.",
       features: [
@@ -47,39 +53,76 @@ export function ServicesDetail() {
       ],
     },
     "social-media": {
-      title: "Social Media Automation",
-      badge: "Included in Pro",
+      title: "Social Media Add-ons",
+      badge: "Optional Add-ons",
       description:
-        "Keep your social media presence active without lifting a finger. Our AI creates and schedules mouth-watering content for Instagram, Facebook, and TikTok that keeps your restaurant top-of-mind.",
+        "Your social media presence is your brand's voice. We create and schedule mouth-watering content for Instagram, Facebook, TikTok & Youtube that keeps your restaurant top-of-mind.",
       features: [
         "Automated content creation",
-        "Multi-platform scheduling",
+        "Multi-platform scheduling (Facebook, Instagram, TikTok, Youtube)",
         "Engagement tracking & analytics",
         "Hashtag optimization",
+        "Your brand is the face of the content",
+      ],
+    },
+    "engagement": {
+      title: "Engagement Package",
+      badge: "Included in Grow & Retain",
+      description:
+        "Turn one-time visitors into loyal regulars with our complete engagement toolkit. Reward repeat customers, encourage sharing, and manage your online reputation — all from one dashboard.",
+      features: [
+        "Loyalty points program with customizable rewards",
+        "Shareable digital gift cards",
+        "Review Gate to boost positive reviews",
+        "Capture negative reviews before posting",
       ],
     },
     "mobile-app": {
       title: "Branded Mobile App",
-      badge: "Premium Add-on",
+      badge: "Included in Grow & Retain",
       description:
-        "Give your customers a dedicated app with your logo on their home screen. Enable one-click reordering, push notifications for promotions, and a built-in loyalty rewards program.",
+        "Give your customers a dedicated app with your logo on their home screen. Enable most convenient ordering, push notifications for promotions, and a built-in loyalty rewards program.",
       features: [
         "iOS & Android native apps",
-        "Push notification campaigns",
-        "Integrated loyalty system",
-        "One-click reordering",
+        "Push notifications for promotions",
+        "Loyalty rewards program",
+        "Your logo is the app icon",
       ],
     },
     "email-sms": {
-      title: "Email & SMS Marketing",
-      badge: "Included in Pro",
+      title: "Email Campaigns",
+      badge: "Included in Grow & Retain",
       description:
         "Automated campaigns that bring customers back. We capture emails at checkout and send targeted messages based on customer behavior, preferences, and order history.",
       features: [
         "Automated welcome sequences",
-        "Behavior-triggered campaigns",
-        "SMS for time-sensitive offers",
-        "A/B testing & optimization",
+        "Keep your customers engaged with your brand",
+        "Send promotions & discount codes",
+        "Track open & click rates",
+      ],
+    },
+    "retargeting": {
+      title: "Retargeting Ads for App Installs",
+      badge: "Included in Grow & Retain",
+      description:
+        "Your branded app is only valuable if customers know it exists. We run targeted social media campaigns to promote your app to existing customers and website visitors — because without active promotion, app installs simply won't happen.",
+      features: [
+        "Facebook & Instagram app install ads",
+        "Target your existing customer base",
+        "Retarget website visitors",
+        "Drive repeat orders through your app",
+      ],
+    },
+    "photoshoot": {
+      title: "Professional Photoshoot",
+      badge: "One-Time Service",
+      description:
+        "First impressions matter. When you sign up with Ser.vi, we send a professional photographer to capture stunning images of your dishes, interior, and team — ready to use across all your marketing channels.",
+      features: [
+        "Professional food photography",
+        "Interior & ambiance shots",
+        "Team & action photos",
+        "Full rights to all images",
       ],
     },
   };
@@ -156,6 +199,10 @@ export function ServicesDetail() {
                   className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide w-fit ${
                     currentContent.badge === "Premium Add-on"
                       ? "bg-purple-100 text-purple-800"
+                      : currentContent.badge === "One-Time Service"
+                      ? "bg-blue-100 text-blue-800"
+                      : currentContent.badge === "Optional Add-on"
+                      ? "bg-gray-100 text-gray-800"
                       : "bg-orange-100 text-orange-800"
                   }`}
                 >
@@ -235,6 +282,47 @@ export function ServicesDetail() {
                       </div>
                     </div>
                   )}
+                  {activeTab === "engagement" && (
+                    <div className="w-full space-y-3">
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 text-center">
+                          <div className="w-10 h-10 mx-auto mb-2 bg-yellow-100 rounded-full flex items-center justify-center">
+                            <i className="bi bi-star-fill text-yellow-500"></i>
+                          </div>
+                          <div className="h-2 w-12 mx-auto bg-gray-200 rounded mb-1"></div>
+                          <div className="text-xs font-bold text-[#FF6600]">250 pts</div>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 text-center">
+                          <div className="w-10 h-10 mx-auto mb-2 bg-green-100 rounded-full flex items-center justify-center">
+                            <i className="bi bi-gift-fill text-green-600"></i>
+                          </div>
+                          <div className="h-2 w-12 mx-auto bg-gray-200 rounded mb-1"></div>
+                          <div className="text-xs font-bold text-green-600">$25</div>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 text-center">
+                          <div className="w-10 h-10 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i className="bi bi-chat-quote-fill text-blue-600"></i>
+                          </div>
+                          <div className="h-2 w-12 mx-auto bg-gray-200 rounded mb-1"></div>
+                          <div className="flex justify-center gap-0.5">
+                            <i className="bi bi-star-fill text-yellow-400 text-xs"></i>
+                            <i className="bi bi-star-fill text-yellow-400 text-xs"></i>
+                            <i className="bi bi-star-fill text-yellow-400 text-xs"></i>
+                            <i className="bi bi-star-fill text-yellow-400 text-xs"></i>
+                            <i className="bi bi-star-fill text-yellow-400 text-xs"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-xs font-medium text-gray-600">Review Gate</span>
+                          <span className="text-xs text-green-600 font-bold">Active</span>
+                        </div>
+                        <div className="h-2 w-full bg-gray-100 rounded mb-1"></div>
+                        <div className="h-2 w-2/3 bg-gray-100 rounded"></div>
+                      </div>
+                    </div>
+                  )}
                   {activeTab === "mobile-app" && (
                     <div className="relative">
                       <div className="w-40 h-72 bg-gray-900 rounded-3xl border-4 border-gray-900 shadow-xl overflow-hidden">
@@ -279,6 +367,70 @@ export function ServicesDetail() {
                         </div>
                         <div className="h-2 w-full bg-gray-100 rounded mb-1"></div>
                         <div className="h-2 w-3/4 bg-gray-100 rounded"></div>
+                      </div>
+                    </div>
+                  )}
+                  {activeTab === "retargeting" && (
+                    <div className="w-full space-y-3">
+                      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center text-blue-600">
+                              <i className="bi bi-bullseye"></i>
+                            </div>
+                            <span className="text-xs font-medium text-gray-600">Retargeting Campaign</span>
+                          </div>
+                          <span className="text-xs text-green-600 font-bold">Active</span>
+                        </div>
+                        <div className="grid grid-cols-3 gap-2 mb-3">
+                          <div className="text-center p-2 bg-gray-50 rounded">
+                            <div className="text-lg font-bold text-gray-900">2.4k</div>
+                            <div className="text-xs text-gray-500">Reached</div>
+                          </div>
+                          <div className="text-center p-2 bg-gray-50 rounded">
+                            <div className="text-lg font-bold text-[#FF6600]">312</div>
+                            <div className="text-xs text-gray-500">Installs</div>
+                          </div>
+                          <div className="text-center p-2 bg-gray-50 rounded">
+                            <div className="text-lg font-bold text-green-600">$1.24</div>
+                            <div className="text-xs text-gray-500">CPI</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 justify-center">
+                        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <i className="bi bi-facebook text-white text-sm"></i>
+                        </div>
+                        <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                          <i className="bi bi-instagram text-white text-sm"></i>
+                        </div>
+                        <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
+                          <i className="bi bi-google text-white text-sm"></i>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {activeTab === "photoshoot" && (
+                    <div className="w-full space-y-3">
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="aspect-square bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg flex items-center justify-center">
+                          <i className="bi bi-camera-fill text-3xl text-amber-600"></i>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="h-[calc(50%-4px)] bg-gradient-to-br from-red-100 to-pink-100 rounded-lg flex items-center justify-center">
+                            <i className="bi bi-cup-hot-fill text-xl text-red-400"></i>
+                          </div>
+                          <div className="h-[calc(50%-4px)] bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg flex items-center justify-center">
+                            <i className="bi bi-egg-fried text-xl text-green-500"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 text-center">
+                        <div className="flex items-center justify-center gap-2 mb-1">
+                          <i className="bi bi-check-circle-fill text-green-500"></i>
+                          <span className="text-sm font-medium text-gray-900">One-Time at Signup</span>
+                        </div>
+                        <p className="text-xs text-gray-500">Professional photographer visits your location</p>
                       </div>
                     </div>
                   )}

@@ -9,7 +9,9 @@ import {
   Smartphone,
   Receipt,
   Users,
-  Wallet
+  Wallet,
+  Tablet,
+  TabletSmartphone
 } from "lucide-react";
 
 export function POSFeaturesGrid() {
@@ -27,6 +29,26 @@ export function POSFeaturesGrid() {
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Use your existing devices or choose from our recommended hardware. No forced purchases — just flexibility.
           </p>
+          
+          {/* Device Support Grid */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 mt-10 sm:mt-12">
+            {[
+              { icon: Tablet, title: "iPad", desc: "All models supported" },
+              { icon: TabletSmartphone, title: "Android Tablet", desc: "Any manufacturer" },
+              { icon: Smartphone, title: "Smartphone", desc: "iOS & Android" },
+              { icon: Monitor, title: "PC / Laptop", desc: "Via web browser" },
+            ].map((device, i) => (
+              <div key={i} className="group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gray-50 transition-colors hover:bg-[#FF6600]/5">
+                <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-white shadow-sm text-[#FF6600] group-hover:scale-110 transition-transform border border-gray-100">
+                  <device.icon className="w-7 h-7 sm:w-10 sm:h-10" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-sm sm:text-base text-gray-900">{device.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">{device.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Features Grid - 3 Columns */}

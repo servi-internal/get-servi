@@ -20,7 +20,7 @@ export function MarketingHero() {
                 See Plans &amp; Pricing
               </button>
               <button className="bg-white border border-gray-200 text-gray-900 text-sm sm:text-base font-bold h-11 sm:h-12 px-6 sm:px-8 rounded-lg hover:bg-gray-50 transition-colors">
-                Book a Demo
+                Book a Meeting
               </button>
             </div>
           </div>

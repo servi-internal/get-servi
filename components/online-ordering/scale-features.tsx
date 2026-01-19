@@ -7,9 +7,6 @@ import {
   Search,
   TrendingUp,
   MapPin,
-  Target,
-  Phone,
-  Truck,
 } from "lucide-react";
 
 export function ScaleFeatures() {
@@ -18,11 +15,10 @@ export function ScaleFeatures() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-zinc-900 dark:text-white mb-4 sm:mb-6 tracking-tight">
-            Everything You Need to <span className="text-[#FF6600]">Scale</span>
+            Everything You Need to <span className="text-[#FF6600]">Sell Online</span>
           </h2>
           <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto px-4">
-            Powerful tools designed to help your restaurant grow, manage
-            operations, and retain customers—all in one place.
+            A Complete and Professional Online Ordering System
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 auto-rows-[minmax(240px,auto)] sm:auto-rows-[minmax(280px,auto)]">
@@ -33,9 +29,9 @@ export function ScaleFeatures() {
                 <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600]" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-2">Real-Time Analytics Dashboard</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">Send us your existing menus</h3>
                 <p className="text-sm sm:text-base text-zinc-400 max-w-md">
-                  Track sales, popular items, peak hours, and customer behavior with actionable insights to optimize your menu and operations.
+                  We provide full data entry from your PDF or delivery app links.
                 </p>
               </div>
             </div>
@@ -54,10 +50,10 @@ export function ScaleFeatures() {
                   <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Direct Online Ordering
+                  Receive orders with our app and tablet
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm">
-                  Accept orders directly from your website, Google Business listing, and branded mobile app. No third-party commissions.
+                  Automatically print orders handsfree, view order histories, and run reports.
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex items-center gap-2">
@@ -77,10 +73,10 @@ export function ScaleFeatures() {
                   <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  SEO-Optimized Website
+                  Print orders with your existing printers
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm">
-                  Rank higher on Google with a fast, mobile-friendly restaurant website built for search visibility and local discovery.
+                  Works with all network printer makes and models
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex gap-2">
@@ -105,10 +101,10 @@ export function ScaleFeatures() {
                   <Store className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white mb-2">
-                  Multi-Location Support
+                  Your own credit card processing.
                 </h3>
                 <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm">
-                  Manage multiple restaurant locations from one central dashboard.
+                  Use your existing credit card processing, or ours, and you get paid out daily.
                 </p>
               </div>
               <div className="mt-4 flex gap-2">
@@ -132,9 +128,9 @@ export function ScaleFeatures() {
                 <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 sm:mb-6">
                   <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2">Custom Mobile Apps</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Multi Location support.</h3>
                 <p className="text-purple-100 text-xs sm:text-sm">
-                  Branded iOS and Android apps for your restaurant.
+                  Manage a single menu and settings across multiple location ordering links
                 </p>
               </div>
               <div className="mt-4 sm:mt-6 flex gap-2 sm:gap-3">
@@ -149,49 +145,6 @@ export function ScaleFeatures() {
             <div className="absolute -right-4 -top-4 size-32 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-colors"></div>
           </div>
 
-          {/* Google Ads & IVR Phone & Delivery - Full Width */}
-          <div className="md:col-span-3 lg:col-span-3 rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-zinc-800 dark:to-zinc-900 text-white p-6 sm:p-8 md:p-10 relative overflow-hidden group border border-zinc-800 hover:border-[#FF6600]/50 transition-all duration-300">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#FF6600]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative z-20">
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <span className="text-[#FF6600] font-bold uppercase tracking-wider text-[10px] sm:text-xs bg-[#FF6600]/10 px-2.5 sm:px-3 py-1 rounded-full border border-[#FF6600]/20">
-                  Growth Engine
-                </span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {/* Google Ads */}
-                <div className="flex flex-col">
-                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-[#FF6600] flex items-center justify-center text-white shadow-lg shadow-[#FF6600]/30 mb-3 sm:mb-4">
-                    <Target className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2">Google Ads Management</h3>
-                  <p className="text-sm text-zinc-400">
-                    Fully managed Google Ad campaigns to drive new customers. Target hungry diners searching for restaurants near you.
-                  </p>
-                </div>
-                {/* IVR Phone Ordering */}
-                <div className="flex flex-col">
-                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-600/30 mb-3 sm:mb-4">
-                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2">Phone Ordering Service</h3>
-                  <p className="text-sm text-zinc-400">
-                    Customers call and receive an online ordering link via SMS or speak directly to staff. Never miss an order again.
-                  </p>
-                </div>
-                {/* Delivery Integration */}
-                <div className="flex flex-col">
-                  <div className="size-10 sm:size-12 rounded-lg sm:rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-600/30 mb-3 sm:mb-4">
-                    <Truck className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2">Delivery Integration</h3>
-                  <p className="text-sm text-zinc-400">
-                    Offer delivery through your own platform with integrated driver dispatch. Keep customers ordering direct, not through third-party apps.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

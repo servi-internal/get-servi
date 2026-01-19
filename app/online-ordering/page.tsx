@@ -1,6 +1,7 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { OrderingHero } from "@/components/online-ordering/ordering-hero";
+import { Comparison } from "@/components/sections/comparison";
 import { WhyChooseUs } from "@/components/online-ordering/why-choose-us";
 import { ScaleFeatures } from "@/components/online-ordering/scale-features";
 import { OrderingProcess } from "@/components/online-ordering/ordering-process";
@@ -22,6 +23,7 @@ export default function OnlineOrderingPage() {
       <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
       <main className="flex flex-col w-full overflow-hidden">
         <OrderingHero />
+        <Comparison />
         <WhyChooseUs />
         <ScaleFeatures />
         <OrderingProcess />

@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/hero";
 import { TrustedBrands } from "@/components/sections/trusted-brands";
 import { Features } from "@/components/sections/features";
 import { AdvantageFeatures } from "@/components/sections/advantage-features";
-import { Comparison } from "@/components/sections/comparison";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Stats } from "@/components/sections/stats";
 import { CTA } from "@/components/sections/cta";
@@ -86,7 +85,6 @@ export default function Home() {
           <TrustedBrands />
           <Features />
           <AdvantageFeatures />
-          <Comparison />
           <Testimonials />
           <Stats />
           <CTA />

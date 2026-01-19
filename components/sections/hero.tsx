@@ -8,12 +8,10 @@ export function Hero() {
         <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div className="flex flex-col gap-4 sm:gap-6 text-left">
             <h1 className="text-[#333333] text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Run Your Restaurant
-              <br />
-              <span className="text-[#FF6600]">Smarter, Not Harder</span>
+              Boost Profits. Get More Customers.
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed">
-              POS, Direct online ordering, self-service, and marketing—all in one powerful platform. Boost sales, Reduce costs, and turnover tables faster.
+              Are you a restaurant owner paying high credit card fees, extra staff costs, and massive delivery app commissions?
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <a href="/pricing" className="flex h-12 sm:h-12 cursor-pointer items-center justify-center rounded-lg bg-[#FF6600] px-6 sm:px-8 text-sm sm:text-base font-bold text-white transition-all hover:bg-[#FF6600]/90 shadow-lg shadow-[#FF6600]/25 hover:shadow-xl hover:-translate-y-0.5">

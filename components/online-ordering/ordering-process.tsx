@@ -6,11 +6,8 @@ export function OrderingProcess() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3 sm:mb-4">
-            Seamless Ordering Experience
+            Get Rid of Seamless Ordering Experience
           </h2>
-          <p className="text-sm sm:text-base text-zinc-500">
-            From hunger to happiness in 4 simple steps
-          </p>
         </div>
         <div className="relative">
           {/* Dashed line that only spans from first to last card */}

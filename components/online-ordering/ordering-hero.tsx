@@ -21,7 +21,7 @@ export function OrderingHero() {
               Own Your <span className="text-[#FF6600]">Online Ordering</span>
             </h1>
             <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0">
-              Your branded website, mobile app, and Google Business listing — all driving orders directly to you. Keep 100% of your profits.
+              Don't rely on delivery apps alone for online orders, they're costly and they keep your customer data for themselves.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr" target="_blank" rel="noopener noreferrer" className="h-11 sm:h-12 px-6 sm:px-8 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF6600]/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">

@@ -8,11 +8,8 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-12 sm:mb-16 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#333333]">
-            Why Restaurants <span className="text-[#FF6600]">Choose</span> Ser.vi
+            Why Restaurants Choose Ser.vi
           </h2>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">
-            Save money, increase sales, and grow your customer base with our all-in-one restaurant platform.
-          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -23,7 +20,7 @@ export function Features() {
               Zero Commission Online Ordering
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Keep 100% of your profits with direct ordering for delivery or pickup. No 30% fees to DoorDash or UberEats.
+              Keep 100% of your profits with direct online ordering and capture customer data for your marketing.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -31,10 +28,10 @@ export function Features() {
               <CreditCard className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold text-[#333333]">
-              Eliminate Credit Card Fees
+              Eliminate credit card fees
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Our POS and online ordering passes convenience fees to customers, not you.
+              Our fast and easy to use POS and online ordering passes convenience fees to customers, not you.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -42,10 +39,10 @@ export function Features() {
               <QrCode className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold text-[#333333]">
-              Mobile Self-Service Ordering
+              Stop Losing Walk-In Customers
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-            Reduce losing customers due to long lines and wait times with QR Code Ordering at Tables & Counters.
+              QR Code ordering and pay at the table & counters reduces long lines and wait times while keeping staff cost low.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -53,10 +50,10 @@ export function Features() {
               <Megaphone className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold text-[#333333]">
-              Automated Marketing Tools
+              Reach New Customers
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Attract more diners and online orders with smart marketing tools.
+              Our proven marketing program gives you the lowest cost per customer at an affordable price
             </p>
           </div>
         </div>

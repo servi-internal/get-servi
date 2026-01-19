@@ -6,23 +6,22 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-10 mb-12 sm:mb-16">
           <div className="col-span-2 lg:col-span-2">
-            <div className="flex items-center gap-2 text-[#1F2937] mb-4 sm:mb-6">
+            <div className="flex items-center mb-4 sm:mb-6">
               <Image
-                src="/servi-app.png"
-                alt="Ser.vi Icon"
-                width={32}
-                height={32}
-                className="size-7 sm:size-8"
+                src="/servi-logo-black.png"
+                alt="Ser.vi Logo"
+                width={240}
+                height={80}
+                className="w-auto h-6 sm:h-7"
                 quality={100}
               />
-              <h2 className="text-lg sm:text-xl font-bold">Ser.vi</h2>
             </div>
             <p className="text-gray-500 text-xs sm:text-sm max-w-xs mb-6 sm:mb-8 leading-relaxed">
               Serving restaurants since 2016. Modern tech that helps you grow customers, boost profits, and streamline operations — simple, intuitive, and built for you.
             </p>
             <div className="flex gap-3 sm:gap-4">
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
+                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#4285F4] hover:text-white transition-all"
                 href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -31,7 +30,7 @@ export function Footer() {
                 <i className="bi bi-calendar-event text-base sm:text-lg"></i>
               </a>
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
+                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] hover:text-white transition-all"
                 href="https://www.instagram.com/ser.vi/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -40,7 +39,7 @@ export function Footer() {
                 <i className="bi bi-instagram text-base sm:text-lg"></i>
               </a>
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
+                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:text-white transition-all"
                 href="https://www.facebook.com/serviworldwide/"
                 target="_blank"
                 rel="noopener noreferrer"

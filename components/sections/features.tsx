@@ -8,7 +8,7 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-12 sm:mb-16 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#333333]">
-            Why Restaurants Choose Ser.vi
+            Why Restaurants <span className="text-[#FF6600]">Choose</span> Us
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -28,10 +28,10 @@ export function Features() {
               <CreditCard className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold text-[#333333]">
-              Eliminate credit card fees
+              Eliminate credit card fees and surprises
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Our fast and easy to use POS and online ordering passes convenience fees to customers, not you.
+              We guarantee a flat rate for all transactions, so no hidden charges. The convenience fee truly covers you.
             </p>
           </div>
           <div className="flex flex-col rounded-xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-lg">
@@ -50,10 +50,10 @@ export function Features() {
               <Megaphone className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold text-[#333333]">
-              Reach New Customers
+              Reach New Customers Affordably
             </h3>
             <p className="text-sm leading-relaxed text-gray-500">
-              Our proven marketing program gives you the lowest cost per customer at an affordable price
+              Our real world, proven marketing program, promotes your whole business, with actual results at any budget.
             </p>
           </div>
         </div>

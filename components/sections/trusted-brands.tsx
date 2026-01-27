@@ -26,7 +26,7 @@ export function TrustedBrands() {
               <Image src="/logos-webp/allproplecoffee.webp" alt="All Prople Coffee" width={240} height={120} className="object-contain h-16 sm:h-20 md:h-24 w-[150px] sm:w-[200px] md:w-[240px] flex-shrink-0 transition-all" />
               <Image src="/logos-webp/newriverdale.webp" alt="New Riverdale" width={240} height={120} className="object-contain h-16 sm:h-20 md:h-24 w-[150px] sm:w-[200px] md:w-[240px] flex-shrink-0 transition-all" />
             </div>
-            <div className="flex items-center gap-8 sm:gap-12 flex-shrink-0 ml-8 sm:ml-12">
+            <div className="flex items-center gap-8 sm:gap-12 flex-shrink-0 pl-8 sm:pl-12">
               <Image src="/logos-webp/rosa.webp" alt="Rosa's Pizzeria" width={240} height={120} className="object-contain h-16 sm:h-20 md:h-24 w-[150px] sm:w-[200px] md:w-[240px] flex-shrink-0 transition-all" />
               <Image src="/logos-webp/midland.webp" alt="Midland Bagels" width={240} height={120} className="object-contain h-16 sm:h-20 md:h-24 w-[150px] sm:w-[200px] md:w-[240px] flex-shrink-0 transition-all" />
               <Image src="/logos-webp/dangelos.webp" alt="D'Angelos" width={240} height={120} className="object-contain h-16 sm:h-20 md:h-24 w-[150px] sm:w-[200px] md:w-[240px] flex-shrink-0 transition-all" />

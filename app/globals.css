@@ -161,10 +161,6 @@
   will-change: transform;
 }
 
-.animate-scroll-logos:hover {
-  animation-play-state: paused;
-}
-
 /* Ordering Process Animations */
 @keyframes scroll-menu {
   0% {

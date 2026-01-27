@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-white border-t border-gray-100 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
@@ -146,7 +148,7 @@ export function Footer() {
         </div>
         <div className="border-t border-gray-100 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-            <p>© 2025 Ser.vi Worldwide LLC. All rights reserved.</p>
+            <p>© {currentYear} Ser.vi Worldwide LLC. All rights reserved.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="/privacy">

@@ -27,12 +27,12 @@ export function Stats() {
           </div>
           <div className="flex flex-col gap-2 p-4 pt-8 md:pt-4">
             <span className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white text-[#FF6600]">
-              $200K+
+              $2,000
             </span>
             <p className="text-sm sm:text-base font-medium text-gray-300">
-              processed in commission-free
+              average savings
               <br />
-              orders last year
+              per month
             </p>
           </div>
           <div className="flex flex-col gap-2 p-4 pt-8 md:pt-4">

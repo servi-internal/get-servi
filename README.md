@@ -37,13 +37,25 @@
 - ♿ Accessible components
 - 🎭 Smooth animations
 
+## 📍 Main Pages
+
+- **/** – Home (hero, features, testimonials, CTA)
+- **/pricing** – Pricing tiers, savings calculator, comparison
+- **/integrated-pos** – POS (hero, features grid, order types, connected hub, table-side payments, gift cards)
+- **/online-ordering** – Online ordering, comparison, why choose us, scale features
+- **/self-service** – QR ordering, how it works, perfect setup, video demo
+- **/marketing-services** – Marketing services
+- **/about** – Company, mission, values
+- **/schedule-demo** – Demo request form
+- **/privacy**, **/terms** – Legal
+
 ## 🌐 Live Site
 
 Visit [get.ser.vi](https://get.ser.vi) to see the platform in action.
 
 ## 📄 License
 
-© 2025 Ser.vi. All rights reserved.
+© 2026 Ser.vi. All rights reserved.
 
 ---
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { TrendingUp } from "lucide-react";
 
 export function SavingsCalculator() {
@@ -144,14 +145,12 @@ export function SavingsCalculator() {
                 <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
                 That&apos;s pure profit
               </div>
-              <a 
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 sm:py-4 bg-[#ff7043] hover:bg-[#e64a19] text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg shadow-[#ff7043]/20"
+              <Link
+                href="/schedule-demo"
+                className="block w-full py-3 sm:py-4 bg-[#ff7043] hover:bg-[#e64a19] text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg shadow-[#ff7043]/20 text-center"
               >
-                Book a Meeting
-              </a>
+                Request a Demo
+              </Link>
               <p className="mt-3 sm:mt-4 text-xs text-gray-400">
                 *Estimates based on converting 3rd party delivery volume to Ser.vi direct
                 ordering.

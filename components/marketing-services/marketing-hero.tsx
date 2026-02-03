@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { TrendingUp, UserPlus, Repeat } from "lucide-react";
 
 export function MarketingHero() {
@@ -19,9 +20,9 @@ export function MarketingHero() {
               <button className="bg-[#FF6600] hover:bg-[#FF6600]/90 text-white text-sm sm:text-base font-bold h-11 sm:h-12 px-6 sm:px-8 rounded-lg shadow-lg shadow-orange-500/30 transition-all transform hover:-translate-y-0.5">
                 See Plans &amp; Pricing
               </button>
-              <button className="bg-white border border-gray-200 text-gray-900 text-sm sm:text-base font-bold h-11 sm:h-12 px-6 sm:px-8 rounded-lg hover:bg-gray-50 transition-colors">
-                Book a Meeting
-              </button>
+              <Link href="/schedule-demo" className="bg-white border border-gray-200 text-gray-900 text-sm sm:text-base font-bold h-11 sm:h-12 px-6 sm:px-8 rounded-lg hover:bg-gray-50 transition-colors inline-flex items-center justify-center">
+                Request a Demo
+              </Link>
             </div>
           </div>
           <div className="relative w-full lg:h-[600px] flex items-center justify-center select-none mt-8 lg:mt-0">

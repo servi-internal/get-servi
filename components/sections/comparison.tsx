@@ -1,108 +1,99 @@
-import { X, Check, ArrowRight } from "lucide-react";
+import { X, Check, ArrowRight, Frown, Smile } from "lucide-react";
 
 export function Comparison() {
   return (
-    <section className="w-full bg-gray-50 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#333333] mb-4">
+    <section className="w-full bg-white py-10 sm:py-14 lg:py-16 overflow-x-hidden">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-w-0">
+        <div className="mb-8 sm:mb-10 text-center max-w-2xl mx-auto">
+          <h2 className="text-xl font-bold tracking-tight text-[#333333] mb-2 sm:mb-3 sm:text-2xl md:text-3xl">
             Delivery Apps Hijack <span className="text-[#FF6600]">Your Business</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600">
             Stop losing money to third-party platforms. Take control of your online ordering.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
-          {/* Delivery Apps Side */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border-2 border-gray-200 hover:border-gray-300 transition-colors">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
-                <X className="w-5 h-5 text-red-500" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-[#333333]">
-                Delivery Apps Hijack Your Business
-              </h3>
+        <div className="group/card grid gap-0 overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 shadow-lg md:grid-cols-2 transition-all duration-300 hover:shadow-xl hover:border-[#FF6600]/10 min-w-0">
+          {/* Left: Delivery Apps */}
+          <div className="group relative flex flex-col justify-center bg-gray-50 p-6 sm:p-8 md:p-10 lg:p-14 border-r-0 md:border-r border-gray-100 transition-colors duration-300 hover:bg-gray-50/95 min-w-0">
+            <div className="mb-5 sm:mb-6 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-red-100 text-red-500 shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Frown className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 group">
-                <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <X className="w-3 h-3 text-red-500" />
-                </div>
-                <span className="text-sm sm:text-base text-gray-600">
+            <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
+              Delivery Apps Hijack Your Business
+            </h3>
+            <ul className="space-y-3 sm:space-y-4">
+              <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-500 transition-transform duration-200 group-hover:scale-105">
+                  <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                </span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
                   Pay up to 30% commission on every order
                 </span>
               </li>
-              <li className="flex items-start gap-3 group">
-                <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <X className="w-3 h-3 text-red-500" />
-                </div>
-                <span className="text-sm sm:text-base text-gray-600">
+              <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-500 transition-transform duration-200 group-hover:scale-105">
+                  <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                </span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
                   Never own your customer data
                 </span>
               </li>
-              <li className="flex items-start gap-3 group">
-                <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <X className="w-3 h-3 text-red-500" />
-                </div>
-                <span className="text-sm sm:text-base text-gray-600">
+              <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-500 transition-transform duration-200 group-hover:scale-105">
+                  <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                </span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
                   Customers don&apos;t remember your brand
                 </span>
               </li>
             </ul>
-          </div>
-
-          {/* Direct Ordering Side */}
-          <div className="bg-gradient-to-br from-[#FF6600] to-[#FF8533] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden group hover:shadow-xl transition-shadow">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-            <div className="relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                  <Check className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold">
-                  Direct Ordering Grows Your Business
-                </h3>
-              </div>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-white" />
-                  </div>
-                  <span className="text-sm sm:text-base text-white/95">
-                    Keep 100% of your profits
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-white" />
-                  </div>
-                  <span className="text-sm sm:text-base text-white/95">
-                    Build your own customer database
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-white" />
-                  </div>
-                  <span className="text-sm sm:text-base text-white/95">
-                    Create loyal repeat customers
-                  </span>
-                </li>
-              </ul>
+            {/* Floating arrow between columns - desktop only */}
+            <div
+              className="absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 translate-x-1/2 rounded-full bg-[#FF6600] p-2.5 sm:p-3 shadow-lg shadow-[#FF6600]/20 md:flex ring-4 ring-white transition-transform duration-200 group-hover/card:scale-110 group-hover/card:shadow-xl group-hover/card:shadow-[#FF6600]/25"
+              aria-hidden
+            >
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
           </div>
-        </div>
 
-        {/* Arrow indicator */}
-        <div className="flex justify-center mt-8">
-          <div className="flex items-center gap-3 text-sm text-gray-500">
-            <span>Make the switch</span>
-            <ArrowRight className="w-4 h-4 text-[#FF6600]" />
+          {/* Right: Direct Ordering */}
+          <div className="group flex flex-col justify-center bg-[#FFF3EE] p-6 sm:p-8 md:p-10 lg:p-14 transition-all duration-300 hover:bg-[#FFEDE6] min-w-0">
+            <div className="mb-5 sm:mb-6 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white text-[#FF6600] shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Smile className="w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
+            <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
+              Direct Ordering Grows Your Business
+            </h3>
+            <ul className="space-y-3 sm:space-y-4">
+              <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-[#FF6600] text-white transition-transform duration-200 group-hover:scale-105">
+                  <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                </span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-800 font-medium">
+                  Keep 100% of your profits
+                </span>
+              </li>
+              <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-[#FF6600] text-white transition-transform duration-200 group-hover:scale-105">
+                  <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                </span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-800 font-medium">
+                  Build your own customer database
+                </span>
+              </li>
+              <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-[#FF6600] text-white transition-transform duration-200 group-hover:scale-105">
+                  <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                </span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-800 font-medium">
+                  Create loyal repeat customers
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

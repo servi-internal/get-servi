@@ -20,10 +20,10 @@ export const metadata = {
 
 export default function SelfServicePage() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <div className="relative flex min-h-screen w-full min-w-0 flex-col overflow-x-hidden">
       <Header />
-      <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
-      <main className="flex flex-col w-full">
+      <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
+      <main className="flex min-w-0 flex-1 flex-col w-full">
         <SelfServiceHero />
         <QRPlacement />
         <WhySwitch />

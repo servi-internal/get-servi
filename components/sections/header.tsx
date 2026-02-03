@@ -105,14 +105,12 @@ export function Header() {
               About
             </Link>
           </nav>
-          <a 
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/schedule-demo"
             className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 xl:h-10 px-4 xl:px-5 bg-[#FF6600] text-white text-xs xl:text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20"
           >
-            <span className="truncate">Book a Meeting</span>
-          </a>
+            <span className="truncate">Request a Demo</span>
+          </Link>
         </div>
         <button
           className="lg:hidden p-1.5 sm:p-2 text-[#333333] hover:bg-gray-50 rounded-lg transition-all duration-200 active:scale-95"
@@ -193,15 +191,13 @@ export function Header() {
             >
               About
             </Link>
-            <a 
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/schedule-demo"
               className="flex w-full cursor-pointer items-center justify-center rounded-lg h-10 sm:h-11 px-5 bg-[#FF6600] text-white text-sm font-bold transition-transform active:scale-95 hover:bg-[#E65C00] shadow-lg shadow-[#FF6600]/20 mt-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="truncate">Book a Meeting</span>
-            </a>
+              <span className="truncate">Request a Demo</span>
+            </Link>
           </nav>
       </div>
     </header>

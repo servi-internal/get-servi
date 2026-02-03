@@ -3,7 +3,7 @@ import {
   UtensilsCrossed,
   Database,
   Truck,
-  Gift,
+  Search,
   Calendar,
 } from "lucide-react";
 
@@ -12,100 +12,83 @@ export function WhyChooseUs() {
     {
       icon: Palette,
       title: "Showcase Your Brand",
-      description: "Fully customized ordering site with your colors, photos, and style.",
+      description: "Fully customized ordering site with your colors, photos, and style that reflects your restaurant's unique identity.",
+      color: "#FF6600",
     },
     {
       icon: UtensilsCrossed,
       title: "Unlimited Menu Options",
-      description: "Add unlimited items, modifiers, and upsells. We handle setup.",
+      description: "Add unlimited items, modifiers, and upsells. We handle the complete setup for you.",
+      color: "#10B981",
     },
     {
       icon: Database,
       title: "Built-In Customer Database",
-      description: "Auto-capture customer data to grow your marketing list effortlessly.",
+      description: "Auto-capture customer data to grow your marketing list effortlessly and drive repeat business.",
+      color: "#3B82F6",
     },
     {
       icon: Truck,
       title: "Delivery as a Service",
       description: "Have DoorDash and Uber deliver your online orders without paying delivery app commissions.",
+      color: "#8B5CF6",
     },
     {
-      icon: Gift,
+      icon: Search,
       title: "SEO-Optimized Website",
       description: "Improve your restaurant's visibility in Google Search with a branded site built for SEO.",
+      color: "#F59E0B",
     },
     {
       icon: Calendar,
       title: "Full Featured Ordering",
       description: "Schedule recurring breakfast, lunch, dinner, weekday and weekend menus, and even offer daily specials.",
+      color: "#EF4444",
     },
   ];
 
   return (
-    <section className="relative bg-white py-16 sm:py-20 lg:py-24 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#FF6600]/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FF6600]/5 rounded-full blur-3xl"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#333333] mb-4">
+    <section className="w-full bg-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-[#FFF3EE] opacity-50 blur-3xl pointer-events-none" aria-hidden />
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-64 w-64 rounded-full bg-gray-50 opacity-50 blur-3xl pointer-events-none" aria-hidden />
+      
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold tracking-tight text-[#333333] mb-2 sm:mb-3 sm:text-2xl md:text-3xl lg:text-4xl">
             Why Restaurants Choose Our <span className="text-[#FF6600]">Online Ordering</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#FF6600] to-[#FF8533] mx-auto rounded-full"></div>
+          <p className="text-sm sm:text-base text-gray-600">
+            A commission-free platform that puts you in control of your brand, menu, and customer relationships
+          </p>
         </div>
 
-        {/* Timeline-style layout */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Vertical line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF6600]/20 via-[#FF6600]/40 to-[#FF6600]/20 transform -translate-x-1/2"></div>
-
-          <div className="space-y-8 sm:space-y-12">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              const isEven = index % 2 === 0;
-
-              return (
-                <div
-                  key={index}
-                  className={`relative flex flex-col lg:flex-row items-center gap-6 sm:gap-8 ${
-                    isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                  }`}
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 min-w-0">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            
+            return (
+              <div
+                key={index}
+                className="group flex flex-col rounded-xl sm:rounded-2xl bg-white border border-gray-100 p-4 sm:p-6 lg:p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-gray-200 hover:-translate-y-0.5 min-w-0"
+              >
+                <div 
+                  className="mb-3 sm:mb-4 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-105"
+                  style={{ backgroundColor: `${feature.color}15` }}
                 >
-                  {/* Content */}
-                  <div className={`w-full lg:w-5/12 ${isEven ? "lg:text-right" : "lg:text-left"}`}>
-                    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#FF6600]/20 group">
-                      <div className={`flex items-start gap-4 ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
-                        <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-[#FF6600] to-[#FF8533] flex items-center justify-center text-white shadow-lg shadow-[#FF6600]/25 group-hover:scale-110 transition-transform duration-300">
-                          <Icon className="w-7 h-7" />
-                        </div>
-                        <div className={`flex-1 ${isEven ? "lg:text-right" : "lg:text-left"} text-left`}>
-                          <h3 className="text-lg sm:text-xl font-bold text-[#333333] mb-2 group-hover:text-[#FF6600] transition-colors">
-                            {feature.title}
-                          </h3>
-                          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                            {feature.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Center dot */}
-                  <div className="hidden lg:flex w-2/12 justify-center">
-                    <div className="relative">
-                      <div className="w-4 h-4 rounded-full bg-[#FF6600] ring-4 ring-white shadow-lg"></div>
-                      <div className="absolute inset-0 w-4 h-4 rounded-full bg-[#FF6600] animate-ping opacity-75"></div>
-                    </div>
-                  </div>
-
-                  {/* Spacer for alignment */}
-                  <div className="hidden lg:block w-5/12"></div>
+                  <Icon 
+                    className="w-5 h-5 sm:w-6 sm:h-6" 
+                    style={{ color: feature.color }}
+                  />
                 </div>
-              );
-            })}
-          </div>
+                <h3 className="mb-1.5 sm:mb-2 text-sm font-bold text-[#333333] group-hover:text-[#FF6600] transition-colors sm:text-base lg:text-lg">
+                  {feature.title}
+                </h3>
+                <p className="text-xs sm:text-sm leading-relaxed text-gray-600">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

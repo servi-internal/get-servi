@@ -1,75 +1,71 @@
 import Image from "next/image";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="bg-white border-t border-gray-100 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-10 mb-12 sm:mb-16">
+    <footer className="bg-white border-t border-gray-100 pt-10 sm:pt-12 lg:pt-14 pb-6 sm:pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-10">
           <div className="col-span-2 lg:col-span-2">
-            <div className="flex items-center mb-4 sm:mb-6">
+            <div className="flex items-center mb-3 sm:mb-4">
               <Image
                 src="/servi-logo-black.png"
                 alt="Ser.vi Logo"
                 width={240}
                 height={80}
-                className="w-auto h-6 sm:h-7"
+                className="w-auto h-5 sm:h-6"
                 quality={100}
               />
             </div>
-            <p className="text-gray-500 text-xs sm:text-sm max-w-xs mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-gray-500 text-xs max-w-xs mb-4 sm:mb-6 leading-relaxed">
               Serving restaurants since 2016. Modern tech that helps you grow customers, boost profits, and streamline operations — simple, intuitive, and built for you.
             </p>
-            <div className="flex gap-3 sm:gap-4">
+            <div className="flex gap-2.5 sm:gap-3">
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#4285F4] hover:text-white transition-all"
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1FdI1lQhrxPqvmw6TinzfpcAShPOyjBFUzOMVH6euzWdzpx_bxTURwZElipfxthReLVfeylFVr"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Book a Meeting"
+                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#4285F4] hover:text-white transition-all"
+                href="/schedule-demo"
+                title="Request a Demo"
               >
-                <i className="bi bi-calendar-event text-base sm:text-lg"></i>
+                <i className="bi bi-calendar-event text-sm"></i>
               </a>
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] hover:text-white transition-all"
+                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] hover:text-white transition-all"
                 href="https://www.instagram.com/ser.vi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Follow us on Instagram"
               >
-                <i className="bi bi-instagram text-base sm:text-lg"></i>
+                <i className="bi bi-instagram text-sm"></i>
               </a>
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:text-white transition-all"
+                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:text-white transition-all"
                 href="https://www.facebook.com/serviworldwide/"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Follow us on Facebook"
               >
-                <i className="bi bi-facebook text-base sm:text-lg"></i>
+                <i className="bi bi-facebook text-sm"></i>
               </a>
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:text-white transition-all"
+                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:text-white transition-all"
                 href="https://api.whatsapp.com/send?phone=16156633663"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Chat with us on WhatsApp"
               >
-                <i className="bi bi-whatsapp text-base sm:text-lg"></i>
+                <i className="bi bi-whatsapp text-sm"></i>
               </a>
               <a
-                className="size-9 sm:size-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
+                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
                 href="mailto:hello@ser.vi"
                 title="Email us"
               >
-                <i className="bi bi-envelope text-base sm:text-lg"></i>
+                <i className="bi bi-envelope text-sm"></i>
               </a>
             </div>
           </div>
           <div>
-            <h4 className="font-bold text-[#1F2937] mb-4 sm:mb-6 text-sm sm:text-base">Services</h4>
-            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-500">
+            <h4 className="font-bold text-[#1F2937] mb-3 sm:mb-4 text-xs sm:text-sm">Services</h4>
+            <ul className="space-y-2 text-xs text-gray-500">
               <li>
                 <a className="hover:text-[#FF6600] transition-colors" href="/online-ordering">
                   Online Ordering
@@ -93,8 +89,8 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-[#1F2937] mb-4 sm:mb-6 text-sm sm:text-base">Company</h4>
-            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-500">
+            <h4 className="font-bold text-[#1F2937] mb-3 sm:mb-4 text-xs sm:text-sm">Company</h4>
+            <ul className="space-y-2 text-xs text-gray-500">
               <li>
                 <a
                   className="hover:text-[#FF6600] transition-colors"
@@ -121,16 +117,11 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-[#1F2937] mb-4 sm:mb-6 text-sm sm:text-base">Resources</h4>
-            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-500">
+            <h4 className="font-bold text-[#1F2937] mb-3 sm:mb-4 text-xs sm:text-sm">Resources</h4>
+            <ul className="space-y-2 text-xs text-gray-500">
               <li>
-                <a className="hover:text-[#FF6600] transition-colors" href="/contact">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-[#FF6600] transition-colors" href="https://get.ser.vi" target="_blank" rel="noopener noreferrer">
-                  Book a Meeting
+                <a className="hover:text-[#FF6600] transition-colors" href="/schedule-demo">
+                  Request a Demo
                 </a>
               </li>
               <li>
@@ -146,11 +137,11 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-100 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+        <div className="border-t border-gray-100 pt-5 sm:pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-400">
           <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-            <p>© {currentYear} Ser.vi Worldwide LLC. All rights reserved.</p>
+            <p>© 2016-2026 Ser.vi Worldwide LLC. All rights reserved.</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
             <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="/privacy">
               Privacy Policy
             </a>

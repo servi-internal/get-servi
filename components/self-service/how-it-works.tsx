@@ -1,116 +1,83 @@
-import { QrCode, Monitor } from "lucide-react";
+"use client";
+
+import { QrCode, Smartphone, CreditCard, Printer, BarChart3 } from "lucide-react";
+
+const STEPS = [
+  {
+    icon: QrCode,
+    title: "QR Menu",
+    description: "No app download required. Customers use their native camera.",
+  },
+  {
+    icon: Smartphone,
+    title: "Ordering",
+    description: "Guests browse a visual menu, customize orders, and add to cart.",
+  },
+  {
+    icon: CreditCard,
+    title: "Payment",
+    description: "Pay instantly with Apple Pay, Google Pay, or card.",
+  },
+  {
+    icon: Printer,
+    title: "Printing",
+    description: "Orders print directly to your kitchen printer—no staff touch screen.",
+  },
+  {
+    icon: BarChart3,
+    title: "Control",
+    description: "Manage menus, sell-outs, and daily specials from your tablet.",
+  },
+];
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-zinc-950 relative overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(#FF6600 1px, transparent 1px)",
-          backgroundSize: "30px 30px",
-        }}
-      ></div>
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <span className="inline-block py-1 px-2.5 sm:px-3 rounded-full bg-orange-50 text-[#FF6600] font-bold tracking-wider uppercase text-[10px] sm:text-xs mb-3 sm:mb-4">
-            Simple Process
+    <section
+      id="how-it-works"
+      className="py-14 sm:py-18 lg:py-24 bg-[#0f1419] text-white relative overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(255,102,0,0.03)_50%,transparent_100%)]" aria-hidden />
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="mb-10 lg:mb-14">
+          <span className="text-[#ff7043] font-semibold tracking-widest uppercase text-xs">
+            How it works
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white">
-            From Scan to Kitchen in Seconds
+          <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
+            From Scan to <span className="text-[#ff7043]">Kitchen in Seconds</span>
           </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-8 relative items-start">
-          <div className="hidden md:block absolute top-[60px] left-[20%] right-[20%] h-1 bg-gray-100 dark:bg-gray-800 z-0 rounded-full">
-            <div className="h-full w-full bg-gradient-to-r from-transparent via-[#FF6600]/50 to-transparent animate-pulse"></div>
-          </div>
-          {/* Step 1 */}
-          <div className="relative flex flex-col items-center text-center group z-10">
-            <div className="relative mb-8 transition-transform duration-300 group-hover:-translate-y-2">
-              <div className="w-28 h-48 bg-gray-900 rounded-[2rem] border-4 border-gray-800 shadow-2xl overflow-hidden relative mx-auto">
-                <div className="w-full h-full bg-gray-800 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-xl border-2 border-[#FF6600]/50 flex items-center justify-center animate-pulse">
-                    <QrCode className="w-10 h-10 text-[#FF6600]" />
-                  </div>
-                </div>
-                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-8 h-2 bg-black rounded-full"></div>
-              </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-gray-700 border-4 border-gray-50 dark:border-gray-800 flex items-center justify-center shadow-lg">
-                <span className="text-[#FF6600] font-bold text-lg">1</span>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-              Scan QR Code
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm max-w-[250px]">
-              No app download required. Customers use their native camera.
-            </p>
-          </div>
+          <p className="mt-2 text-gray-400 text-sm sm:text-base max-w-xl">
+            Five simple steps. No training, no apps, no friction.
+          </p>
+        </header>
 
-          {/* Step 2 */}
-          <div className="relative flex flex-col items-center text-center group z-10">
-            <div className="relative mb-8 transition-transform duration-300 group-hover:-translate-y-2">
-              <div className="w-28 h-48 bg-white dark:bg-gray-800 rounded-[2rem] border-4 border-gray-200 dark:border-gray-700 shadow-2xl overflow-hidden relative mx-auto flex flex-col">
-                <div className="h-16 bg-orange-50 dark:bg-gray-700 w-full mb-2 bg-gradient-to-br from-orange-100 to-orange-200 opacity-80"></div>
-                <div className="px-2 space-y-2 flex-grow">
-                  <div className="h-2 w-3/4 bg-gray-200 dark:bg-gray-600 rounded"></div>
-                  <div className="h-2 w-1/2 bg-gray-100 dark:bg-gray-700 rounded"></div>
-                  <div className="mt-4 flex items-center justify-between">
-                    <div className="h-4 w-4 rounded-full bg-gray-100 dark:bg-gray-700"></div>
-                    <div className="h-2 w-8 bg-gray-200 dark:bg-gray-600 rounded"></div>
+        {/* Horizontal strip: one row, connected steps */}
+        <div className="flex overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible scrollbar-none">
+          <div className="flex min-w-full lg:min-w-0 lg:grid lg:grid-cols-5 lg:gap-0 lg:border lg:border-gray-700/60 lg:rounded-xl lg:overflow-hidden lg:bg-gray-900/40 lg:divide-x lg:divide-gray-700/60">
+            {STEPS.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={index}
+                  className="group flex shrink-0 w-[260px] sm:w-[280px] lg:w-auto lg:shrink lg:flex flex-col items-center text-center p-6 lg:py-8 rounded-xl transition-all duration-300 ease-out hover:bg-gray-800/50 lg:hover:bg-gray-800/60 cursor-default"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#ff7043] flex items-center justify-center mb-4 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#ff7043]/25">
+                    <Icon className="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-105" strokeWidth={2} />
                   </div>
+                  <span className="text-[10px] font-bold text-[#ff7043] tracking-widest uppercase transition-colors duration-300 group-hover:text-[#ff8a65]">
+                    Step {index + 1}
+                  </span>
+                  <h3 className="mt-1 text-base font-semibold text-white transition-colors duration-300 group-hover:text-[#ff7043]">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-400 leading-snug transition-colors duration-300 group-hover:text-gray-300">
+                    {step.description}
+                  </p>
                 </div>
-                <div className="p-2 mt-auto">
-                  <div className="w-full h-6 bg-[#FF6600] rounded-lg flex items-center justify-center text-[8px] text-white font-bold">
-                    PAY NOW
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#FF6600] border-4 border-white dark:border-gray-800 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">2</span>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-              Order &amp; Pay
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm max-w-[250px]">
-              Guests browse a visual menu, customize orders, and pay instantly.
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div className="relative flex flex-col items-center text-center group z-10">
-            <div className="relative mb-8 transition-transform duration-300 group-hover:-translate-y-2">
-              <div className="w-40 h-28 mt-10 bg-gray-800 rounded-xl border-b-8 border-gray-900 shadow-2xl overflow-hidden relative mx-auto p-1.5 grid grid-cols-2 gap-1">
-                <div className="bg-orange-100 rounded p-1 flex flex-col gap-0.5">
-                  <div className="flex justify-between items-center mb-0.5 border-b border-orange-200 pb-0.5">
-                    <div className="w-4 h-1 bg-orange-800 rounded"></div>
-                    <div className="w-2 h-1 bg-orange-300 rounded"></div>
-                  </div>
-                  <div className="w-full h-0.5 bg-orange-300 rounded"></div>
-                  <div className="w-3/4 h-0.5 bg-orange-300 rounded"></div>
-                </div>
-                <div className="bg-green-100 rounded p-1 flex flex-col gap-0.5">
-                  <div className="flex justify-between items-center mb-0.5 border-b border-green-200 pb-0.5">
-                    <div className="w-4 h-1 bg-green-800 rounded"></div>
-                    <div className="w-2 h-1 bg-green-300 rounded"></div>
-                  </div>
-                  <div className="w-full h-0.5 bg-green-300 rounded"></div>
-                </div>
-              </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-gray-700 border-4 border-gray-50 dark:border-gray-800 flex items-center justify-center shadow-lg">
-                <span className="text-[#FF6600] font-bold text-lg">3</span>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-              Sent to Kitchen
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm max-w-[250px]">
-              Orders fire directly to KDS or printers. No manual entry needed.
-            </p>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
 }
-

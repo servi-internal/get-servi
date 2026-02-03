@@ -4,7 +4,7 @@ import { OrderingHero } from "@/components/online-ordering/ordering-hero";
 import { Comparison } from "@/components/sections/comparison";
 import { WhyChooseUs } from "@/components/online-ordering/why-choose-us";
 import { ScaleFeatures } from "@/components/online-ordering/scale-features";
-import { OrderingProcess } from "@/components/online-ordering/ordering-process";
+import { OrderingCTA } from "@/components/online-ordering/ordering-cta";
 
 export const metadata = {
   title: "Online Ordering Platform - Zero Commission | Ser.vi",
@@ -18,15 +18,15 @@ export const metadata = {
 
 export default function OnlineOrderingPage() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-hidden">
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
       <Header />
-      <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
-      <main className="flex flex-col w-full overflow-hidden">
+      <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
+      <main className="flex flex-1 flex-col w-full min-w-0 overflow-x-hidden">
         <OrderingHero />
         <Comparison />
         <WhyChooseUs />
         <ScaleFeatures />
-        <OrderingProcess />
+        <OrderingCTA />
       </main>
       <Footer />
     </div>

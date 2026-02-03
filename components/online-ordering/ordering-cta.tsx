@@ -3,11 +3,9 @@ import { Calendar, ArrowRight } from "lucide-react";
 
 export function OrderingCTA() {
   return (
-    <section className="relative w-full overflow-hidden py-12 sm:py-16 lg:py-20">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FF6600]/5 via-[#FFF3EE]/50 to-white" />
-      <div className="absolute left-1/2 top-0 h-px w-full max-w-3xl -translate-x-1/2 bg-gradient-to-r from-transparent via-[#FF6600]/20 to-transparent" />
-      <div className="absolute bottom-0 left-1/2 h-px w-full max-w-3xl -translate-x-1/2 bg-gradient-to-r from-transparent via-[#FF6600]/20 to-transparent" />
+    <section className="relative w-full overflow-hidden bg-white py-12 sm:py-16 lg:py-20">
+      <div className="absolute left-1/2 top-0 h-px w-full max-w-3xl -translate-x-1/2 bg-gradient-to-r from-transparent via-gray-200 to-transparent" aria-hidden />
+      <div className="absolute bottom-0 left-1/2 h-px w-full max-w-3xl -translate-x-1/2 bg-gradient-to-r from-transparent via-gray-200 to-transparent" aria-hidden />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

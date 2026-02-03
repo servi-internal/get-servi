@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Calendar, ArrowRight, Mail, MessageCircle } from "lucide-react";
+import { Calendar, ArrowRight, Mail } from "lucide-react";
 
 export function CTA() {
   return (
@@ -38,24 +38,13 @@ export function CTA() {
             Schedule a Demo
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
-          <div className="flex items-center gap-4 sm:gap-6 text-sm text-gray-500 dark:text-gray-400">
-            <a
-              href="mailto:hello@ser.vi"
-              className="inline-flex items-center gap-2 font-medium text-gray-700 dark:text-gray-300 hover:text-[#FF6600] transition-colors"
-            >
-              <Mail className="h-4 w-4 shrink-0" />
-              hello@ser.vi
-            </a>
-            <a
-              href="https://api.whatsapp.com/send?phone=16156633663"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-medium text-gray-700 dark:text-gray-300 hover:text-[#FF6600] transition-colors"
-            >
-              <MessageCircle className="h-4 w-4 shrink-0" />
-              +1 (615) 663-3663
-            </a>
-          </div>
+          <a
+            href="mailto:hello@ser.vi"
+            className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-[#FF6600] transition-colors"
+          >
+            <Mail className="h-4 w-4 shrink-0" />
+            hello@ser.vi
+          </a>
         </div>
 
         <p className="mt-10 text-xs sm:text-sm text-gray-500 dark:text-gray-400">

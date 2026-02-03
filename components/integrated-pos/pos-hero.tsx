@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function POSHero() {
   return (
@@ -30,22 +30,6 @@ export function POSHero() {
               The fastest, simplest POS you&apos;ll ever use — and it costs you
               absolutely nothing. You keep running your restaurant your way.
             </p>
-            
-            {/* Feature list with modern styling */}
-            <div className="space-y-4 mb-10">
-              {[
-                "Use your existing devices — iPads, Android tablets, phones, or PCs",
-                "Fully customizable to match your workflow",
-                "Everything faster, easier, and more profitable"
-              ].map((feature, i) => (
-                <div key={i} className="flex items-start gap-3 group">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FF6600] flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
-                    <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
-                  </div>
-                  <span className="text-gray-700 dark:text-gray-300 text-base sm:text-lg">{feature}</span>
-                </div>
-              ))}
-            </div>
             
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4">

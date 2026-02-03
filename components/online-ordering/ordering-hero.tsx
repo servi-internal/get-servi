@@ -4,17 +4,13 @@ import { CheckCircle, Calendar, ShoppingBag, Menu as MenuIcon, CreditCard, Star 
 export function OrderingHero() {
   return (
     <section className="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-[#FAFAFA] dark:bg-zinc-950">
-        <div
-          className="absolute inset-0 opacity-25"
-          style={{
-            backgroundImage:
-              "radial-gradient(#FF6600 0.5px, transparent 0.5px)",
-            backgroundSize: "20px 20px",
-          }}
-        ></div>
-      </div>
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF6600]/5 to-transparent"></div>
+      <div
+        className="absolute inset-0 z-0 dark:bg-zinc-950"
+        style={{
+          background: "linear-gradient(180deg, #ffffff 0%, #FFF8F5 40%, #FFF3EE 100%)",
+        }}
+      />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF6600]/5 to-transparent pointer-events-none" aria-hidden />
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-10 lg:items-center">
           <div className="flex flex-col gap-3 sm:gap-4 text-center lg:text-left">

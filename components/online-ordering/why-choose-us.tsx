@@ -48,10 +48,7 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="w-full bg-white py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-[#FFF3EE] opacity-50 blur-3xl pointer-events-none" aria-hidden />
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-64 w-64 rounded-full bg-gray-50 opacity-50 blur-3xl pointer-events-none" aria-hidden />
-      
+    <section className="relative w-full overflow-hidden bg-white py-10 sm:py-14 lg:py-16">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 sm:mb-10 text-center max-w-3xl mx-auto">
           <h2 className="text-xl font-bold tracking-tight text-[#333333] mb-2 sm:mb-3 sm:text-2xl md:text-3xl lg:text-4xl">

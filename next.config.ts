@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "assets2.ser.vi",
       },
+      {
+        protocol: "https",
+        hostname: "file.cdn.sunmi.com",
+      },
     ],
     qualities: [100, 70, 75],
   },

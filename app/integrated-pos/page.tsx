@@ -3,8 +3,9 @@ import { Footer } from "@/components/sections/footer";
 import { POSHero } from "@/components/integrated-pos/pos-hero";
 import { AllOrderTypes } from "@/components/integrated-pos/all-order-types";
 import { POSFeaturesGrid } from "@/components/integrated-pos/pos-features-grid";
-import { HandleScenario } from "@/components/integrated-pos/handle-scenario";
 import { ConnectedHub } from "@/components/integrated-pos/connected-hub";
+import { TableSidePayments } from "@/components/integrated-pos/table-side-payments";
+import { GiftCardSection } from "@/components/integrated-pos/gift-card-section";
 
 export const metadata = {
   title: "Restaurant POS System - Works on Any Device | Ser.vi",
@@ -18,10 +19,10 @@ export const metadata = {
 
 export default function IntegratedPOSPage() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <div className="relative flex min-h-screen w-full min-w-0 flex-col overflow-x-hidden">
       <Header />
-      <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
-      <main className="flex flex-col w-full">
+      <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
+      <main className="flex min-w-0 flex-1 flex-col w-full overflow-x-hidden">
         <POSHero />
         
         {/* POS Features Grid */}
@@ -30,50 +31,53 @@ export default function IntegratedPOSPage() {
         {/* All Order Types */}
         <AllOrderTypes />
 
+        {/* Fast table side payments */}
+        <TableSidePayments />
+
+        {/* Gift Card section */}
+        <GiftCardSection />
+
         {/* Connected Hub */}
         <ConnectedHub />
 
-        {/* Handle Every Scenario */}
-        <HandleScenario />
-
         {/* Pricing Comparison */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-gray-900 dark:bg-black relative overflow-hidden">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 className="text-[#FF6600] font-bold text-sm sm:text-base lg:text-lg tracking-wider uppercase mb-2">
+        <section className="py-10 sm:py-14 lg:py-20 bg-gray-900 dark:bg-black relative overflow-hidden">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center min-w-0">
+            <h2 className="text-[#FF6600] font-bold text-xs sm:text-sm tracking-wider uppercase mb-1 sm:mb-2">
               Unbeatable Value
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3 sm:mb-4">
               NO MONTHLY COST TO YOU
             </h3>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Stop bleeding cash on subscriptions. You pay{" "}
               <span className="text-white font-bold">$0</span>. Your guests cover a
               simple 4% service fee.
             </p>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col items-center">
-                <p className="text-gray-400 font-medium mb-3 sm:mb-4 uppercase tracking-widest text-xs sm:text-sm">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/10 flex flex-col items-center">
+                <p className="text-gray-400 font-medium mb-2 sm:mb-3 uppercase tracking-widest text-[10px] sm:text-xs">
                   Traditional POS
                 </p>
-                <div className="text-3xl sm:text-4xl font-bold text-gray-300 mb-2">
+                <div className="text-2xl sm:text-3xl font-bold text-gray-300 mb-1">
                   $100 - $300
                 </div>
-                <p className="text-xs sm:text-sm text-gray-500">per month, per terminal</p>
-                <div className="mt-4 sm:mt-6 w-full h-1 bg-gray-700 rounded-full overflow-hidden">
-                  <div className="h-full bg-red-500 w-[80%]"></div>
+                <p className="text-[10px] sm:text-xs text-gray-500">per month, per terminal</p>
+                <div className="mt-3 sm:mt-4 w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+                  <div className="h-full bg-red-500 w-[80%]" />
                 </div>
               </div>
-              <div className="bg-[#FF6600] rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-2xl shadow-[#FF6600]/20 transform md:scale-105 flex flex-col items-center border border-[#E65C00]">
-                <p className="text-white/80 font-bold mb-3 sm:mb-4 uppercase tracking-widest text-xs sm:text-sm">
+              <div className="bg-[#FF6600] rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xl shadow-[#FF6600]/20 md:scale-[1.02] flex flex-col items-center border border-[#E65C00]">
+                <p className="text-white/80 font-bold mb-2 sm:mb-3 uppercase tracking-widest text-[10px] sm:text-xs">
                   Ser.vi POS
                 </p>
-                <div className="text-4xl sm:text-5xl font-black text-white mb-2">$0</div>
-                <p className="text-xs sm:text-sm text-white/80">per month, unlimited devices</p>
-                <div className="mt-4 sm:mt-6 w-full h-1 bg-black/20 rounded-full overflow-hidden">
-                  <div className="h-full bg-white w-[5%]"></div>
+                <div className="text-3xl sm:text-4xl font-black text-white mb-1">$0</div>
+                <p className="text-[10px] sm:text-xs text-white/80">per month, unlimited devices</p>
+                <div className="mt-3 sm:mt-4 w-full h-1 bg-black/20 rounded-full overflow-hidden">
+                  <div className="h-full bg-white w-[5%]" />
                 </div>
-                <div className="mt-3 sm:mt-4 inline-flex items-center gap-2 bg-white/20 px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold text-white">
-                  <i className="bi bi-graph-up-arrow text-xs sm:text-sm"></i> Save ~$3,000 / year
+                <div className="mt-2 sm:mt-3 inline-flex items-center gap-1.5 bg-white/20 px-2 sm:px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold text-white">
+                  <i className="bi bi-graph-up-arrow text-xs" /> Save ~$3,000 / year
                 </div>
               </div>
             </div>

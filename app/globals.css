@@ -149,16 +149,17 @@
 
 @keyframes scroll-logos {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-scroll-logos {
   animation: scroll-logos 40s linear infinite;
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Ordering Process Animations */

@@ -26,35 +26,19 @@ export function TrustedBrands() {
           {/* Right gradient fade */}
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-          <div className="flex animate-scroll-logos group-hover:[animation-play-state:paused]">
+          <div className="flex animate-scroll-logos group-hover:[animation-play-state:paused] w-max">
             <div className="flex items-center gap-6 sm:gap-8 flex-shrink-0">
-              {LOGOS.map((logo) => (
+              {[...LOGOS, ...LOGOS].map((logo, index) => (
                 <span
-                  key={`${logo.src}-1`}
+                  key={`${logo.src}-${index}`}
                   className="inline-flex transition-transform duration-300 hover:scale-105"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    width={180}
-                    height={90}
-                    className="object-contain h-12 sm:h-14 md:h-16 w-[120px] sm:w-[150px] md:w-[180px] flex-shrink-0 transition-all duration-300 hover:brightness-105"
-                  />
-                </span>
-              ))}
-            </div>
-            <div className="flex items-center gap-6 sm:gap-8 flex-shrink-0 pl-6 sm:pl-8">
-              {LOGOS.map((logo) => (
-                <span
-                  key={`${logo.src}-2`}
-                  className="inline-flex transition-transform duration-300 hover:scale-105"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={180}
-                    height={90}
-                    className="object-contain h-12 sm:h-14 md:h-16 w-[120px] sm:w-[150px] md:w-[180px] flex-shrink-0 transition-all duration-300 hover:brightness-105"
+                    width={200}
+                    height={100}
+                    className="object-contain h-14 sm:h-16 md:h-20 w-[140px] sm:w-[170px] md:w-[200px] flex-shrink-0 transition-all duration-300 hover:brightness-105"
                   />
                 </span>
               ))}

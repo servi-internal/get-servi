@@ -1,23 +1,23 @@
-import { Check, CheckCircle } from "lucide-react";
+import { Check, CheckCircle, Clock } from "lucide-react";
 
 export function MarketingAddons() {
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-[#f8fafc]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center mb-10 sm:mb-12 lg:mb-16 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#263238] mb-4 sm:mb-6">
+    <section className="py-10 sm:py-14 lg:py-20 bg-[#f8fafc] overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center mb-8 sm:mb-10 lg:mb-14 text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#263238] mb-3 sm:mb-4">
             Online Ordering & Marketing Plans
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-[#64748b] max-w-2xl mb-6 sm:mb-8">
+          <p className="text-xs sm:text-sm lg:text-base text-[#64748b] max-w-2xl mb-4 sm:mb-6">
             Accelerate your growth. These optional plans automate your customer retention
             so you can focus on the food.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* Promote Plan */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border-2 border-[#ff7043] shadow-xl relative">
-            <div className="absolute top-0 right-0 bg-[#ff7043] text-white text-xs font-bold px-2 sm:px-3 py-1 rounded-bl-lg rounded-tr-lg uppercase">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border-2 border-[#ff7043] shadow-xl relative">
+            <div className="absolute top-0 right-0 bg-[#ff7043] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-bl-lg rounded-tr-xl sm:rounded-tr-2xl uppercase">
               Most Popular
             </div>
             <h3 className="text-base sm:text-lg font-bold text-[#263238]">
@@ -58,7 +58,7 @@ export function MarketingAddons() {
           </div>
 
           {/* Grow & Retain Plan */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#e2e8f0] hover:shadow-xl transition-all">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-[#e2e8f0] hover:shadow-xl transition-all">
             <h3 className="text-base sm:text-lg font-bold text-[#263238]">Grow &amp; Retain</h3>
             <div className="mt-3 sm:mt-4 flex items-baseline gap-1">
               <span className="text-3xl sm:text-4xl font-black text-[#263238]">
@@ -98,7 +98,7 @@ export function MarketingAddons() {
           </div>
 
           {/* Inspire & Connect Plan */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#e2e8f0] hover:shadow-xl transition-all">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-[#e2e8f0] hover:shadow-xl transition-all">
             <h3 className="text-base sm:text-lg font-bold text-[#263238]">Inspire &amp; Connect</h3>
             <div className="mt-3 sm:mt-4 flex items-baseline gap-1">
               <span className="text-3xl sm:text-4xl font-black text-[#263238]">
@@ -135,6 +135,23 @@ export function MarketingAddons() {
                 Optional Premium/Max social add-ons
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* 1 Week Setup Guarantee */}
+        <div className="mt-8 sm:mt-10 lg:mt-14 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-[#ff7043]/5 to-orange-50 rounded-lg sm:rounded-xl border border-[#ff7043]/20 p-3 sm:p-4 lg:p-5 flex items-center gap-2.5 sm:gap-3">
+            <div className="size-8 sm:size-10 rounded-full bg-[#ff7043]/10 flex items-center justify-center flex-shrink-0">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043]" />
+            </div>
+            <div>
+              <h4 className="text-sm sm:text-base font-bold text-[#263238] mb-0.5">
+                1 week setup guarantee
+              </h4>
+              <p className="text-[11px] sm:text-xs lg:text-sm text-[#64748b]">
+                From the time we receive all required information from you we will have your program live in 1 week.
+              </p>
+            </div>
           </div>
         </div>
       </div>

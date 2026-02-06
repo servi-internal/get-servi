@@ -130,25 +130,25 @@ export function ServicesDetail() {
   const currentContent = content[activeTab];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[#f9fafb]" id="services">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+    <section className="py-10 sm:py-14 lg:py-20 bg-[#f9fafb] overflow-hidden" id="services">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
             Everything You Need to Scale
           </h2>
-          <p className="text-gray-600 mt-2 text-sm sm:text-base">
+          <p className="text-gray-600 mt-2 text-xs sm:text-sm lg:text-base">
             Comprehensive tools included in our marketing plans.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8 min-w-0">
           {/* Mobile: Horizontal scrolling tabs */}
-          <div className="lg:hidden overflow-x-auto pb-2 -mx-4 px-4">
-            <div className="flex gap-2 min-w-max">
+          <div className="lg:hidden overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
+            <div className="flex gap-1.5 sm:gap-2 min-w-max">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-lg whitespace-nowrap text-sm font-medium transition-all ${
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg whitespace-nowrap text-xs sm:text-sm font-medium transition-all min-h-[36px] sm:min-h-[40px] ${
                     activeTab === tab.id
                       ? "bg-[#FF6600] text-white shadow-md"
                       : "bg-white text-gray-600 border border-gray-200"
@@ -189,10 +189,10 @@ export function ServicesDetail() {
           </div>
 
           {/* Content area */}
-          <div className="lg:w-2/3 bg-white rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-200 shadow-sm">
-            <div className="flex flex-col h-full">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5 sm:mb-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+          <div className="lg:w-2/3 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-200 shadow-sm min-w-0">
+            <div className="flex flex-col h-full min-w-0">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                   {currentContent.title}
                 </h3>
                 <span
@@ -209,9 +209,9 @@ export function ServicesDetail() {
                   {currentContent.badge}
                 </span>
               </div>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4 sm:gap-6">
                 <div>
-                  <p className="text-gray-600 mb-5 leading-relaxed text-sm sm:text-base">
+                  <p className="text-gray-600 mb-4 sm:mb-5 leading-relaxed text-xs sm:text-sm lg:text-base">
                     {currentContent.description}
                   </p>
                   <ul className="space-y-3">
@@ -328,9 +328,9 @@ export function ServicesDetail() {
                   {activeTab === "social-media" && (
                     <div className="w-full flex flex-col items-center space-y-3">
                       {/* Instagram Posts Grid */}
-                      <div className="flex gap-2.5">
+                      <div className="flex gap-2 sm:gap-2.5 overflow-x-auto max-w-full">
                         {/* Post 1 */}
-                        <div className="w-40 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <div className="w-32 sm:w-40 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                           <div className="flex items-center gap-2 p-2 border-b border-gray-100">
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-0.5">
                               <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
@@ -359,7 +359,7 @@ export function ServicesDetail() {
                         </div>
                         
                         {/* Post 2 */}
-                        <div className="w-40 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <div className="w-32 sm:w-40 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                           <div className="flex items-center gap-2 p-2 border-b border-gray-100">
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-0.5">
                               <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
@@ -388,7 +388,7 @@ export function ServicesDetail() {
                         </div>
                         
                         {/* Post 3 */}
-                        <div className="w-40 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <div className="w-32 sm:w-40 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                           <div className="flex items-center gap-2 p-2 border-b border-gray-100">
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-0.5">
                               <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
@@ -547,7 +547,7 @@ export function ServicesDetail() {
                       {/* Phone with App */}
                       <div className="relative">
                         {/* Phone Frame */}
-                        <div className="w-44 h-80 bg-gray-900 rounded-[2.5rem] p-1.5 shadow-2xl">
+                        <div className="w-36 h-64 sm:w-44 sm:h-80 bg-gray-900 rounded-[2rem] sm:rounded-[2.5rem] p-1.5 shadow-2xl">
                           {/* Phone Notch */}
                           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-b-2xl z-20"></div>
                           
@@ -745,9 +745,9 @@ export function ServicesDetail() {
                   {activeTab === "retargeting" && (
                     <div className="w-full flex flex-col items-center space-y-3">
                       {/* Social Media Ads Grid */}
-                      <div className="flex gap-2.5">
+                      <div className="flex gap-2 sm:gap-2.5 overflow-x-auto max-w-full">
                         {/* Ad 1 - Instagram */}
-                        <div className="w-40 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <div className="w-32 sm:w-40 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                           <div className="flex items-center gap-2 p-2 border-b border-gray-100">
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
                               <i className="bi bi-instagram text-white text-[10px]"></i>
@@ -780,7 +780,7 @@ export function ServicesDetail() {
                         </div>
                         
                         {/* Ad 2 - Facebook */}
-                        <div className="w-40 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <div className="w-32 sm:w-40 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                           <div className="flex items-center gap-2 p-2 border-b border-gray-100">
                             <div className="w-6 h-6 rounded-full bg-[#1877f2] flex items-center justify-center">
                               <i className="bi bi-facebook text-white text-[10px]"></i>
@@ -813,7 +813,7 @@ export function ServicesDetail() {
                         </div>
                         
                         {/* Ad 3 - Instagram Story Style */}
-                        <div className="w-40 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                        <div className="w-32 sm:w-40 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                           <div className="flex items-center gap-2 p-2 border-b border-gray-100">
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
                               <i className="bi bi-instagram text-white text-[10px]"></i>

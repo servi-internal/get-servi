@@ -2,16 +2,16 @@ import { MousePointerClick, Globe, ThumbsUp } from "lucide-react";
 
 export function GrowthTriad() {
   return (
-    <section className="py-10 sm:py-12 lg:py-16 bg-[#f9fafb] border-y border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+    <section className="py-10 sm:py-12 lg:py-16 bg-[#f9fafb] border-y border-gray-200 overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-14">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
             The Growth Triad
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg">
-            Our marketing ecosystem connects the most powerful channels to drive
-            traffic directly to your restaurant, creating a seamless loop of
-            growth.
+          <p className="text-gray-600 text-sm sm:text-base">
+            Our marketing program uses proven channels to drive new customers
+            directly to your restaurant and online ordering. We use the same cost
+            effective, high ROI methods that big chains use for your small business.
           </p>
         </div>
         <div className="relative">
@@ -52,8 +52,9 @@ export function GrowthTriad() {
                 Social Media
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Engage your community with automated, mouth-watering content on
-                Instagram and Facebook that keeps you top-of-mind.
+                Engage and build a community with consistent, mouth-watering
+                content on Instagram, Facebook and Tiktok and others, that keeps
+                you top-of-mind.
               </p>
             </div>
           </div>

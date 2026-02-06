@@ -1,20 +1,19 @@
 import {
-  Megaphone,
-  ShoppingBag,
+  Search,
   Mail,
   Share2,
   Smartphone,
   Clock,
   Heart,
+  Phone,
 } from "lucide-react";
-import Image from "next/image";
 
 export function CustomerJourney() {
   const steps = [
     {
-      icon: Megaphone,
-      title: "We Create Demand",
-      description: "Our system launches targeted ads across Google and Social Media to people within a 5-mile radius of your restaurant.",
+      icon: Search,
+      title: "Customer searches for your cuisine",
+      description: "Google ads match and highlight your business, and SEO means you show up for their search terms in your area. They find your restaurant.",
       visual: (
         <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-100">
           <div className="flex items-center gap-2 mb-2">
@@ -26,9 +25,9 @@ export function CustomerJourney() {
       ),
     },
     {
-      icon: ShoppingBag,
-      title: "You Get Direct Orders",
-      description: "Customers land on your optimized website and order directly. You keep the data and save on commission fees.",
+      icon: Phone,
+      title: "They call, order online or come in",
+      description: "For customers that call or order online, you receive their customer contact information and opt-in permission with each order.",
       visual: (
         <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-100">
           <div className="flex items-center justify-between mb-2 border-b pb-2">
@@ -44,15 +43,15 @@ export function CustomerJourney() {
     },
     {
       icon: Mail,
-      title: "Branded Emails Engage",
-      description: "We automatically capture their email and send a branded \"Thank You\" message with a discount for their next visit.",
+      title: "They receive emails with your branding",
+      description: "We send a review invite email that drives up your review score. We then send additional marketing emails to keep your brand top of mind.",
       visual: (
         <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm border border-gray-100">
           <div className="flex items-center gap-3">
             <div className="size-8 rounded-full bg-[#FF6600]/20 flex items-center justify-center text-[#FF6600] font-bold text-xs">R</div>
             <div className="flex-1">
               <div className="text-sm font-bold text-gray-800">Restaurant Name</div>
-              <div className="text-xs text-gray-500 truncate">Here's 10% off your next order!</div>
+              <div className="text-xs text-gray-500 truncate">Leave us a review &amp; get 10% off!</div>
             </div>
           </div>
         </div>
@@ -60,26 +59,36 @@ export function CustomerJourney() {
     },
     {
       icon: Share2,
-      title: "Social Content Re-engages",
-      description: "They see your delicious food on their social feed a few days later, reminding them of that great meal.",
+      title: "They see your content on social media",
+      description: "We re-target callers and customers on social media in very cost effective campaigns so they see your brand again when the timing is right.",
       visual: (
         <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-100">
-          <div
-            className="h-20 sm:h-24 bg-gray-200 rounded mb-2 w-full bg-cover bg-center"
-            style={{
-              backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyVUkNuSrLgLW1XCOKcNVmMIa5ggqwrFVCcDxRr_MfH68UVtpHES1ayWYD-749cqmNYf3ZtJedVfbU-5DcQ6tUcaQ5p5nFxDEp-eQP3yLdHJ15N-EOj3LUgoXDLhFUnsQZsQe7GPxsq0pQ1fwduOQ3ndiZ-5dzdk7Cza7BMpphhZz8gvPv8KX3m8yWM6mPNqEptRYZExmcOOO0ENflC1sCb44HpNloU6tLaWoJRW3kdfK-TzXwRnNPpWsuzipePoDewK1FLfTk4MU')",
-            }}
-          ></div>
-          <div className="flex items-center gap-2 text-xs text-gray-500">
-            <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> 124 likes
+          <div className="flex items-center gap-3 mb-2">
+            <div className="size-8 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 p-0.5">
+              <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
+                <span className="text-[8px] font-bold text-gray-800">YR</span>
+              </div>
+            </div>
+            <div>
+              <div className="text-xs font-bold text-gray-900">your_restaurant</div>
+              <div className="text-[10px] text-gray-500">Sponsored</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 mt-2">
+            <div className="flex items-center gap-1 text-xs text-gray-500">
+              <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> 124 likes
+            </div>
+            <div className="flex items-center gap-1 text-xs text-gray-500">
+              <span className="text-blue-500 font-bold">+48</span> Followers
+            </div>
           </div>
         </div>
       ),
     },
     {
       icon: Smartphone,
-      title: "Customers Download App",
-      description: "Loyal fans download your branded app for easy reordering and loyalty points. You own a spot on their home screen.",
+      title: "They download your ordering app",
+      description: "We offer the easiest way to reorder from you, your own branded app when the moment strikes. You will own a spot on their home screen.",
       visual: (
         <div className="flex gap-2">
           <div className="size-10 sm:size-12 rounded-xl bg-gray-900 flex items-center justify-center shadow-lg">
@@ -96,43 +105,40 @@ export function CustomerJourney() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-            How It Works: The Customer Journey
+    <section className="py-10 sm:py-14 lg:py-20 bg-white overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-14">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
+            From stranger to loyal regular in 5 steps.
           </h2>
-          <p className="text-sm sm:text-base text-gray-600">
-            From stranger to loyal regular in 5 automated steps.
-          </p>
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden space-y-6">
+        <div className="md:hidden space-y-4 sm:space-y-6">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="flex gap-4">
+              <div className="flex gap-3 sm:gap-4">
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className={`size-12 rounded-full flex items-center justify-center shadow-md ${
-                    step.highlight 
-                      ? 'bg-[#FF6600] text-white border-4 border-white ring-4 ring-[#FF6600]/20' 
+                  <div className={`size-10 sm:size-12 rounded-full flex items-center justify-center shadow-md ${
+                    step.highlight
+                      ? 'bg-[#FF6600] text-white border-4 border-white ring-4 ring-[#FF6600]/20'
                       : 'bg-white border-4 border-[#FF6600]'
                   }`}>
-                    <step.icon className={`w-5 h-5 ${step.highlight ? 'text-white' : 'text-[#FF6600]'}`} />
+                    <step.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${step.highlight ? 'text-white' : 'text-[#FF6600]'}`} />
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="w-0.5 h-full min-h-[120px] bg-gray-200 mt-2"></div>
+                    <div className="w-0.5 h-full min-h-[100px] sm:min-h-[120px] bg-gray-200 mt-2"></div>
                   )}
                 </div>
-                <div className="flex-1 pb-6">
-                  <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FF6600] text-white text-xs font-bold">
+                <div className="flex-1 pb-4 sm:pb-6 min-w-0">
+                  <div className="bg-gray-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-gray-100">
+                    <div className="flex items-start justify-between mb-2 sm:mb-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1.5 sm:mb-2">
+                          <span className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#FF6600] text-white text-[10px] sm:text-xs font-bold flex-shrink-0">
                             {index + 1}
                           </span>
-                          <h3 className="text-base font-bold text-gray-900">{step.title}</h3>
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900">{step.title}</h3>
                         </div>
                         <p className="text-xs text-gray-600 leading-relaxed mb-3">{step.description}</p>
                       </div>
@@ -145,24 +151,24 @@ export function CustomerJourney() {
           ))}
         </div>
 
-        {/* Desktop Layout */}
+        {/* Desktop Layout - Copy on left, graphics on right */}
         <div className="hidden md:block relative">
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2"></div>
-          
+
           {steps.map((step, index) => (
-            <div key={index} className="relative flex items-center justify-between mb-16 last:mb-0 group">
-              <div className={`w-[45%] ${index % 2 === 0 ? 'text-right pr-12' : 'order-3 pl-12'}`}>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
+            <div key={index} className="relative flex items-center justify-between mb-12 lg:mb-16 last:mb-0 group">
+              <div className="w-[45%] text-right pr-8 lg:pr-12">
+                <h3 className="text-base lg:text-xl font-bold text-gray-900 mb-1.5 lg:mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-xs lg:text-sm">{step.description}</p>
               </div>
-              <div className={`absolute left-1/2 -translate-x-1/2 size-16 rounded-full z-10 flex items-center justify-center shadow-md ${
-                step.highlight 
-                  ? 'bg-[#FF6600] text-white border-4 border-white ring-4 ring-[#FF6600]/20' 
+              <div className={`absolute left-1/2 -translate-x-1/2 size-12 lg:size-16 rounded-full z-10 flex items-center justify-center shadow-md ${
+                step.highlight
+                  ? 'bg-[#FF6600] text-white border-4 border-white ring-4 ring-[#FF6600]/20'
                   : 'bg-white border-4 border-[#FF6600]'
               }`}>
-                <step.icon className={`w-6 h-6 ${step.highlight ? 'text-white' : 'text-[#FF6600]'}`} />
+                <step.icon className={`w-5 h-5 lg:w-6 lg:h-6 ${step.highlight ? 'text-white' : 'text-[#FF6600]'}`} />
               </div>
-              <div className={`w-[45%] ${index % 2 === 0 ? 'pl-12 order-3' : 'pr-12 flex justify-end'}`}>
+              <div className="w-[45%] pl-8 lg:pl-12">
                 <div className="max-w-xs w-full">{step.visual}</div>
               </div>
             </div>
@@ -172,4 +178,3 @@ export function CustomerJourney() {
     </section>
   );
 }
-

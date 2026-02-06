@@ -17,10 +17,10 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="relative flex flex-col min-h-screen w-full bg-[#f9fafb] dark:bg-[#18181b]">
+    <div className="relative flex min-h-screen w-full min-w-0 flex-col overflow-x-hidden bg-[#f9fafb]">
       <Header />
-      <div className="h-[60px] sm:h-[68px] lg:h-[72px]"></div> {/* Spacer for fixed header */}
-      <main>
+      <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
+      <main className="flex min-w-0 flex-1 flex-col w-full">
         <AboutHero />
         <MissionSection />
         <ValuesSection />

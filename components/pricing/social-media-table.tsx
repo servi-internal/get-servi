@@ -59,23 +59,23 @@ export function SocialMediaTable() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-[#f8fafc]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#263238] mb-3 sm:mb-4">
+    <section className="py-10 sm:py-14 lg:py-20 bg-gradient-to-b from-white to-[#f8fafc] overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-14">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#263238] mb-2 sm:mb-3">
             Social Media Plans
           </h2>
-          <p className="text-sm sm:text-base text-[#64748b] max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm lg:text-base text-[#64748b] max-w-2xl mx-auto">
             Professional social media management to grow your online presence
             <br />and engage with customers
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative flex flex-col rounded-2xl border-2 p-6 sm:p-8 transition-all hover:shadow-xl ${
+              className={`relative flex flex-col rounded-xl sm:rounded-2xl border-2 p-5 sm:p-6 lg:p-8 transition-all hover:shadow-xl ${
                 plan.popular
                   ? "border-[#ff7043] bg-white shadow-lg scale-100 sm:scale-105"
                   : "border-[#e2e8f0] bg-white hover:border-[#ff7043]/30"
@@ -88,8 +88,8 @@ export function SocialMediaTable() {
                 </div>
               )}
               
-              <div className="mb-6">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#263238] mb-2">
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#263238] mb-1.5 sm:mb-2">
                   {plan.name}
                 </h3>
                 <p className="text-xs sm:text-sm text-[#64748b] leading-relaxed min-h-[40px]">
@@ -97,17 +97,17 @@ export function SocialMediaTable() {
                 </p>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl sm:text-4xl font-black text-[#ff7043]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#ff7043]">
                     {plan.price}
                   </span>
                   <span className="text-sm text-[#64748b]">/mo</span>
                 </div>
               </div>
 
-              <div className="mb-6 flex-1">
-                <div className="text-xs font-bold text-[#263238] uppercase tracking-wide mb-3">
+              <div className="mb-4 sm:mb-6 flex-1">
+                <div className="text-[10px] sm:text-xs font-bold text-[#263238] uppercase tracking-wide mb-2 sm:mb-3">
                   What's Included
                 </div>
                 <ul className="space-y-2.5">

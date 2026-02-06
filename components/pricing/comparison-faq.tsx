@@ -45,37 +45,51 @@ export function ComparisonFAQ() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-[#f8fafc]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="text-xl sm:text-2xl font-bold text-[#263238] mb-6 sm:mb-8 flex items-center justify-center gap-2 sm:gap-3">
-              <span className="p-1.5 sm:p-2 bg-gray-100 rounded-lg text-[#263238]">
-                <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-              </span>
-              Frequently Asked Questions
-            </h3>
-            <div className="space-y-3 sm:space-y-4">
-              {faqs.map((faq, index) => (
-                <details
-                  key={index}
-                  className="group bg-white rounded-xl border border-[#e2e8f0] overflow-hidden open:shadow-md transition-all duration-300"
-                  open={openFAQ === index}
-                  onToggle={(e) => {
-                    const target = e.target as HTMLDetailsElement;
-                    setOpenFAQ(target.open ? index : null);
-                  }}
+    <section className="py-10 sm:py-14 lg:py-20 bg-[#f8fafc] overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#263238] mb-5 sm:mb-6 lg:mb-8 flex items-center justify-center gap-2 sm:gap-3">
+          <span className="p-1.5 sm:p-2 bg-gray-100 rounded-lg text-[#263238]">
+            <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+          </span>
+          Frequently Asked Questions
+        </h3>
+        <div className="space-y-2.5 sm:space-y-3 lg:space-y-4">
+          {faqs.map((faq, index) => {
+            const isOpen = openFAQ === index;
+            return (
+              <div
+                key={index}
+                className={`bg-white rounded-xl border border-[#e2e8f0] overflow-hidden transition-shadow duration-300 ${
+                  isOpen ? "shadow-md" : ""
+                }`}
+              >
+                <button
+                  onClick={() => setOpenFAQ(isOpen ? null : index)}
+                  className="flex justify-between items-center w-full p-3 sm:p-4 lg:p-5 cursor-pointer text-xs sm:text-sm lg:text-base font-bold text-[#263238] hover:bg-gray-50 transition-colors duration-200 text-left"
                 >
-                  <summary className="flex justify-between items-center p-4 sm:p-5 cursor-pointer text-sm sm:text-base font-bold text-[#263238] hover:bg-gray-50 transition-colors duration-200 list-none">
-                    {faq.question}
-                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-2" />
-                  </summary>
-                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-[#64748b] text-xs sm:text-sm leading-relaxed border-t border-[#e2e8f0] pt-3 sm:pt-4 animate-in fade-in slide-in-from-top-2 duration-300">
-                    {faq.answer}
+                  {faq.question}
+                  <ChevronDown
+                    className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0 ml-2 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-3 sm:px-4 lg:px-5 pb-3 sm:pb-4 lg:pb-5 text-[#64748b] text-[11px] sm:text-xs lg:text-sm leading-relaxed border-t border-[#e2e8f0] pt-2.5 sm:pt-3 lg:pt-4">
+                      {faq.answer}
+                    </div>
                   </div>
-                </details>
-              ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
-

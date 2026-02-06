@@ -40,26 +40,26 @@ export function SavingsCalculator() {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[#263238] text-white relative overflow-hidden" id="calculator">
-      <div className="absolute top-0 right-0 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-[#ff7043]/20 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-      
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+    <section className="py-10 sm:py-14 lg:py-20 bg-[#263238] text-white relative overflow-hidden" id="calculator">
+      <div className="absolute top-0 right-0 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] bg-[#ff7043]/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[300px] lg:h-[300px] bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Left side - Controls */}
           <div>
-            <span className="text-[#ff7043] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">
+            <span className="text-[#ff7043] font-bold tracking-wider uppercase text-[10px] sm:text-xs lg:text-sm mb-2 block">
               Savings Estimator
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6">
               How much can you save?
             </h2>
-            <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8">
+            <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-5 sm:mb-6 lg:mb-8">
               Traditional delivery apps take 30% of every order. See how much profit you
               reclaim by switching to Ser.vi&apos;s direct ordering channels.
             </p>
 
-            <div className="space-y-6 sm:space-y-8 pr-0 md:pr-12">
+            <div className="space-y-5 sm:space-y-6 lg:space-y-8 pr-0 md:pr-8 lg:pr-12">
               {/* Order Volume Slider */}
               <div>
                 <div className="flex justify-between mb-2">
@@ -134,14 +134,14 @@ export function SavingsCalculator() {
           {/* Right side - Results */}
           <div className="relative">
             <div className="absolute inset-0 bg-[#ff7043] blur-2xl opacity-20 rounded-3xl"></div>
-            <div className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-center">
-              <p className="text-gray-300 text-base sm:text-lg font-medium mb-3 sm:mb-4">
+            <div className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-10 text-center">
+              <p className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium mb-2 sm:mb-3 lg:mb-4">
                 Estimated Annual Savings
               </p>
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 sm:mb-6 tracking-tight transition-all duration-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-3 sm:mb-4 lg:mb-6 tracking-tight transition-all duration-300">
                 {formatCurrency(annualSavings)}
               </div>
-              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-green-500/20 text-green-400 rounded-full text-xs sm:text-sm font-bold mb-6 sm:mb-8">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-green-500/20 text-green-400 rounded-full text-[10px] sm:text-xs lg:text-sm font-bold mb-4 sm:mb-6 lg:mb-8">
                 <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
                 That&apos;s pure profit
               </div>

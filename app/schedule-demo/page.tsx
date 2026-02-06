@@ -16,8 +16,8 @@ import {
   ArrowRight,
   CheckCircle2,
   AlertCircle,
+  X,
 } from "lucide-react";
-import Link from "next/link";
 
 const BENEFITS = [
   {
@@ -39,14 +39,14 @@ const BENEFITS = [
   },
   {
     icon: Calendar,
-    title: "Drive More Business",
+    title: "Create Customer Loyalty",
     description:
-      "How to boost reservations, events, catering & more.",
+      "How to make it easy for customers to order directly from you.",
   },
   {
     icon: Scissors,
-    title: "Reduce Marketing Costs",
-    description: "How to cut costs while improving results.",
+    title: "Get More Results",
+    description: "How to market affordably and get big returns on investment.",
   },
 ];
 
@@ -85,10 +85,10 @@ export default function ScheduleDemoPage() {
     hearAbout: "Please select",
     interestedIn: [] as string[],
     comments: "",
-    smsConsent: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [showPrivacy, setShowPrivacy] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -107,7 +107,6 @@ export default function ScheduleDemoPage() {
         hearAbout: "Please select",
         interestedIn: [],
         comments: "",
-        smsConsent: false,
       });
     } catch {
       setSubmitStatus("error");
@@ -181,7 +180,7 @@ export default function ScheduleDemoPage() {
               <div className="lg:sticky lg:top-24">
                 <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 lg:p-8 shadow-lg">
                   <h2 className="text-lg sm:text-xl font-bold text-[#333333] mb-5 sm:mb-6">
-                    Book Your Free Demo – It only takes 1 minute
+                    Book Your Free Demo Today
                   </h2>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -359,23 +358,6 @@ export default function ScheduleDemoPage() {
                       />
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <input
-                        type="checkbox"
-                        id="smsConsent"
-                        name="smsConsent"
-                        checked={formData.smsConsent}
-                        onChange={handleChange}
-                        className="mt-1 h-4 w-4 rounded border-gray-300 text-[#FF6600] focus:ring-[#FF6600]"
-                      />
-                      <Label htmlFor="smsConsent" className="text-xs sm:text-sm text-gray-600 leading-snug cursor-pointer">
-                        I agree to receive communications by text message regarding a potential or confirmed subscription from Ser.vi.{" "}
-                        <Link href="/privacy" className="text-[#FF6600] hover:underline font-medium">
-                          More Info
-                        </Link>
-                      </Label>
-                    </div>
-
                     <Button
                       type="submit"
                       disabled={isSubmitting}
@@ -417,8 +399,13 @@ export default function ScheduleDemoPage() {
 
                   <p className="mt-4 text-xs text-gray-500 leading-relaxed">
                     We respect your data. By submitting this form, you agree that we will contact you in relation to our products and services, in accordance with our{" "}
-                    <Link href="/privacy" className="text-[#FF6600] hover:underline">Privacy Policy</Link> and{" "}
-                    <Link href="/terms" className="text-[#FF6600] hover:underline">Terms & Conditions</Link>.
+                    <button
+                      type="button"
+                      onClick={() => setShowPrivacy(true)}
+                      className="text-[#FF6600] hover:underline cursor-pointer"
+                    >
+                      Privacy Policy
+                    </button>.
                   </p>
                 </div>
               </div>
@@ -426,6 +413,48 @@ export default function ScheduleDemoPage() {
           </div>
         </section>
       </main>
+
+      {/* Privacy Policy Modal */}
+      {showPrivacy && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+          onClick={() => setShowPrivacy(false)}
+        >
+          <div
+            className="relative w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-2xl bg-white p-6 sm:p-8 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowPrivacy(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Close privacy policy"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#333333] mb-4">Privacy Policy</h2>
+            <div className="text-sm text-gray-600 leading-relaxed space-y-4">
+              <p><strong>Last Updated:</strong> December 24, 2025</p>
+              <p>Ser.vi Worldwide LLC (&ldquo;Ser.vi,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our restaurant management platform and services.</p>
+              <h3 className="font-bold text-[#333333]">Information We Collect</h3>
+              <p>We collect account information (name, email, phone number, business details), payment information, restaurant data, order information, and automatically collected data such as device information, usage data, and cookies.</p>
+              <h3 className="font-bold text-[#333333]">How We Use Your Information</h3>
+              <p>We use information to provide and improve our services, process transactions, respond to support requests, send administrative updates, analyze usage patterns, prevent fraud, and send marketing communications with your consent.</p>
+              <h3 className="font-bold text-[#333333]">Data Security</h3>
+              <p>We implement encryption, regular security assessments, access controls, and employee training to protect your information.</p>
+              <h3 className="font-bold text-[#333333]">Your Rights</h3>
+              <p>You have the right to access, correct, delete, and port your data, as well as opt out of marketing communications.</p>
+              <h3 className="font-bold text-[#333333]">Contact Us</h3>
+              <p>Ser.vi Worldwide LLC<br />Email: <a href="mailto:privacy@ser.vi" className="text-[#FF6600] hover:underline">privacy@ser.vi</a><br />Address: Zephyrhills, FL, United States</p>
+              <p className="pt-2">
+                <a href="/privacy" className="text-[#FF6600] hover:underline font-medium text-sm">
+                  Read Full Privacy Policy
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

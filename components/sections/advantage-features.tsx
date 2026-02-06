@@ -4,7 +4,11 @@ import { ArrowRight } from "lucide-react";
 const advantages = [
   {
     title: "Direct Online Ordering",
-    description: "Take orders directly online and leverage Google search traffic to grow your business. Add on-demand delivery without app commissions—you take the order, they deliver it. Branded website and mobile app keep customers coming back.",
+    bullets: [
+      "Take orders directly online and leverage Google search traffic to grow your business.",
+      "Add delivery on demand without payment delivery app commissions. Take the order and they deliver it. The customer pays the delivery fee.",
+      "Branded website and mobile app allow your customers to return and order again easily.",
+    ],
     image: "https://assets2.ser.vi/brand/saltestco/feature_image/online.png",
     color: "#FF6600",
     buttonText: "Learn More",
@@ -12,7 +16,11 @@ const advantages = [
   },
   {
     title: "Self Service Ordering",
-    description: "QR Code order and pay made for table and counter service. Easy to use for all guests, captures the order quickly without issues. Prints to your existing network or bluetooth printers.",
+    bullets: [
+      "QR Code order and pay made for table and counter service.",
+      "Easy to use for all guests, captures the order quickly without issues.",
+      "Prints to your existing network or bluetooth printers.",
+    ],
     image: "https://assets2.ser.vi/brand/saltestco/feature_image/counter.png",
     color: "#10B981",
     buttonText: "Learn More",
@@ -20,7 +28,11 @@ const advantages = [
   },
   {
     title: "Integrated POS",
-    description: "Works on any tablet or PC hardware. Connected to your online and self-service catalog and ordering. Supports phone, table tabs and walk up counter orders.",
+    bullets: [
+      "Works on any tablet or PC hardware.",
+      "Connected to your online and self-service catalog and ordering.",
+      "Supports phone, table tabs and walk up counter orders.",
+    ],
     image: "https://assets2.ser.vi/brand/saltestco/feature_image/pos-card.png",
     color: "#3B82F6",
     buttonText: "Learn More",
@@ -28,7 +40,11 @@ const advantages = [
   },
   {
     title: "Marketing",
-    description: "Engage phone callers with SMS link to your online ordering. Advertise on google maps for real time impulse demand sales. SEO website and retargeting campaigns drive traffic and repeat business.",
+    bullets: [
+      "Engage phone callers with SMS link to your online ordering.",
+      "Advertise on Google Maps for real time impulse demand sales.",
+      "SEO website and retargeting campaigns drive traffic and repeat business.",
+    ],
     image: "https://assets2.ser.vi/brand/saltestco/logo/marketing.png",
     color: "#8B5CF6",
     buttonText: "Learn More",
@@ -78,9 +94,14 @@ export function AdvantageFeatures() {
                 <h3 className="text-base sm:text-lg font-bold text-[#333333] mb-2 group-hover:text-[#FF6600] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-3">
-                  {item.description}
-                </p>
+                <ul className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-3 space-y-1.5">
+                  {item.bullets.map((bullet, i) => (
+                    <li key={i} className="flex items-start gap-1.5">
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full" style={{ backgroundColor: item.color }} />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
                 <a 
                   href={item.buttonLink}
                   className="mt-auto inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#FF6600] transition-all duration-300 hover:gap-2.5 hover:underline underline-offset-2"

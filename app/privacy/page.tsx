@@ -199,7 +199,7 @@ export default function PrivacyPage() {
               <div className="bg-[#f8fafc] p-6 rounded-xl border border-[#e2e8f0]">
                 <p className="text-[#263238] font-semibold mb-2">Ser.vi Worldwide LLC</p>
                 <p className="text-[#64748b]">Email: <a href="mailto:privacy@ser.vi" className="text-[#ff7043] hover:underline">privacy@ser.vi</a></p>
-                <p className="text-[#64748b]">Address: Austin, TX, United States</p>
+                <p className="text-[#64748b]">Address: Zephyrhills, FL, United States</p>
               </div>
             </section>
           </div>

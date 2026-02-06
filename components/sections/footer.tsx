@@ -19,49 +19,6 @@ export function Footer() {
             <p className="text-gray-500 text-xs max-w-xs mb-4 sm:mb-6 leading-relaxed">
               Serving restaurants since 2016. Modern tech that helps you grow customers, boost profits, and streamline operations — simple, intuitive, and built for you.
             </p>
-            <div className="flex gap-2.5 sm:gap-3">
-              <a
-                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#4285F4] hover:text-white transition-all"
-                href="/schedule-demo"
-                title="Request a Demo"
-              >
-                <i className="bi bi-calendar-event text-sm"></i>
-              </a>
-              <a
-                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] hover:text-white transition-all"
-                href="https://www.instagram.com/ser.vi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Follow us on Instagram"
-              >
-                <i className="bi bi-instagram text-sm"></i>
-              </a>
-              <a
-                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:text-white transition-all"
-                href="https://www.facebook.com/serviworldwide/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Follow us on Facebook"
-              >
-                <i className="bi bi-facebook text-sm"></i>
-              </a>
-              <a
-                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:text-white transition-all"
-                href="https://api.whatsapp.com/send?phone=16156633663"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Chat with us on WhatsApp"
-              >
-                <i className="bi bi-whatsapp text-sm"></i>
-              </a>
-              <a
-                className="size-8 sm:size-9 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#FF6600] hover:text-white transition-all"
-                href="mailto:hello@ser.vi"
-                title="Email us"
-              >
-                <i className="bi bi-envelope text-sm"></i>
-              </a>
-            </div>
           </div>
           <div>
             <h4 className="font-bold text-[#1F2937] mb-3 sm:mb-4 text-xs sm:text-sm">Services</h4>
@@ -144,9 +101,6 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
             <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="/privacy">
               Privacy Policy
-            </a>
-            <a className="hover:text-[#FF6600] transition-colors whitespace-nowrap" href="/terms">
-              Terms of Service
             </a>
           </div>
         </div>

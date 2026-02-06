@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, DollarSign } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HERO_IMAGE = "https://assets2.ser.vi/brand/saltestco/feature_image/hero-imge.png";
 
@@ -10,34 +10,23 @@ export function Hero() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14 lg:items-center">
           {/* Copy */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FF6600]/20 bg-[#FF6600]/05 px-3.5 py-1.5 text-xs font-semibold text-[#FF6600] sm:text-sm">
-              <DollarSign className="h-3.5 w-3.5" aria-hidden />
-              Zero monthly fees
-            </div>
-            <h1 className="mt-6 max-w-xl text-[#333333] text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl md:text-5xl lg:max-w-none lg:text-5xl xl:text-6xl">
+            <h1 className="max-w-xl text-[#333333] text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl md:text-5xl lg:max-w-none lg:text-5xl xl:text-6xl">
               Boost profits.{" "}
-              <span className="relative text-[#FF6600]">
+              <span className="text-[#FF6600]">
                 Get more customers.
-                <span className="absolute -bottom-1 left-0 right-0 h-1.5 rounded-full bg-[#FF6600]/20" aria-hidden />
               </span>{" "}
               Serve faster.
             </h1>
             <p className="mt-5 max-w-lg text-gray-600 text-base sm:text-lg lg:max-w-xl">
-              Stop overpaying on delivery commissions, card fees, and labor. One platform for POS, online ordering, and self-service.
+              Stop overpaying on delivery commissions, card fees, and labor. Use our platform to save money and attract new customers to grow your business.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 lg:justify-start lg:mt-10">
               <Link
-                href="/pricing"
+                href="/schedule-demo"
                 className="group inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#FF6600] px-6 text-sm font-bold text-white shadow-lg shadow-[#FF6600]/25 transition hover:bg-[#e65c00] hover:shadow-[#FF6600]/30 focus:outline-none focus:ring-2 focus:ring-[#FF6600] focus:ring-offset-2"
               >
-                See pricing
+                Request a Demo
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
-              </Link>
-              <Link
-                href="/schedule-demo"
-                className="inline-flex h-12 items-center justify-center rounded-xl border-2 border-[#333333] bg-transparent px-6 text-sm font-bold text-[#333333] transition hover:bg-[#333333] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#333333] focus:ring-offset-2"
-              >
-                Request a demo
               </Link>
             </div>
           </div>

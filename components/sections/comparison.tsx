@@ -14,13 +14,13 @@ export function Comparison() {
         </div>
 
         <div className="group/card grid gap-0 overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 shadow-lg md:grid-cols-2 transition-all duration-300 hover:shadow-xl hover:border-[#FF6600]/10 min-w-0">
-          {/* Left: Delivery Apps */}
-          <div className="group relative flex flex-col justify-center bg-gray-50 p-6 sm:p-8 md:p-10 lg:p-14 border-r-0 md:border-r border-gray-100 transition-colors duration-300 hover:bg-gray-50/95 min-w-0">
-            <div className="mb-5 sm:mb-6 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-red-100 text-red-500 shrink-0 transition-transform duration-300 group-hover:scale-105">
-              <Frown className="w-6 h-6 sm:w-7 sm:h-7" />
+          {/* Left: Don't Do This */}
+          <div className="group relative flex flex-col justify-center bg-red-50/60 p-6 sm:p-8 md:p-10 lg:p-14 border-r-0 md:border-r border-gray-100 transition-colors duration-300 hover:bg-red-50/80 min-w-0">
+            <div className="mb-5 sm:mb-6 inline-flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-red-100 text-red-500 shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Frown className="w-7 h-7 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
-              Delivery Apps Hijack Your Business
+              Don&apos;t Do This
             </h3>
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
@@ -28,7 +28,7 @@ export function Comparison() {
                   <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
                 <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
-                  Pay up to 30% commission on every order
+                  Don&apos;t let delivery apps put their links on your Google listing
                 </span>
               </li>
               <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
@@ -36,7 +36,7 @@ export function Comparison() {
                   <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
                 <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
-                  Never own your customer data
+                  Don&apos;t let delivery apps charge you for your own Google traffic
                 </span>
               </li>
               <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
@@ -44,7 +44,7 @@ export function Comparison() {
                   <X className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
                 <span className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
-                  Customers don&apos;t remember your brand
+                  Don&apos;t let delivery apps keep your customer data from you
                 </span>
               </li>
             </ul>
@@ -57,37 +57,37 @@ export function Comparison() {
             </div>
           </div>
 
-          {/* Right: Direct Ordering */}
-          <div className="group flex flex-col justify-center bg-[#FFF3EE] p-6 sm:p-8 md:p-10 lg:p-14 transition-all duration-300 hover:bg-[#FFEDE6] min-w-0">
-            <div className="mb-5 sm:mb-6 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white text-[#FF6600] shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-105">
-              <Smile className="w-6 h-6 sm:w-7 sm:h-7" />
+          {/* Right: Do This */}
+          <div className="group flex flex-col justify-center bg-green-50/60 p-6 sm:p-8 md:p-10 lg:p-14 transition-all duration-300 hover:bg-green-50/80 min-w-0">
+            <div className="mb-5 sm:mb-6 inline-flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-green-100 text-green-600 shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Smile className="w-7 h-7 sm:w-8 sm:h-8" />
             </div>
             <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
-              Direct Ordering Grows Your Business
+              Do This Instead
             </h3>
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
-                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-[#FF6600] text-white transition-transform duration-200 group-hover:scale-105">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-green-500 text-white transition-transform duration-200 group-hover:scale-105">
                   <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
                 <span className="text-xs sm:text-sm md:text-base text-gray-800 font-medium">
-                  Keep 100% of your profits
+                  Do have your Google listing promote your direct ordering
                 </span>
               </li>
               <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
-                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-[#FF6600] text-white transition-transform duration-200 group-hover:scale-105">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-green-500 text-white transition-transform duration-200 group-hover:scale-105">
                   <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
                 <span className="text-xs sm:text-sm md:text-base text-gray-800 font-medium">
-                  Build your own customer database
+                  Do keep 100% of your profits from your own Google traffic
                 </span>
               </li>
               <li className="flex items-start gap-3 sm:gap-4 transition-colors duration-200 hover:text-gray-900">
-                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-[#FF6600] text-white transition-transform duration-200 group-hover:scale-105">
+                <span className="mt-0.5 flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded-full bg-green-500 text-white transition-transform duration-200 group-hover:scale-105">
                   <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
                 <span className="text-xs sm:text-sm md:text-base text-gray-800 font-medium">
-                  Create loyal repeat customers
+                  Do create loyal customers with customer data you own
                 </span>
               </li>
             </ul>

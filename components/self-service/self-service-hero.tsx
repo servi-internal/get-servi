@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, PlayCircle, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function SelfServiceHero() {
   return (
@@ -36,43 +36,27 @@ export function SelfServiceHero() {
               Nothing is better than <span className="text-[#FF6600]">great personal service.</span>
             </h1>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-              QR ordering lets guests scan, order, and pay from their phone—so you serve more with less.
+              Nothing is worse than when your customers can&apos;t get it.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-1">
               <Link
-                href="#how-it-works"
+                href="/schedule-demo"
                 className="inline-flex items-center justify-center h-12 px-6 bg-[#FF6600] hover:bg-[#E65C00] text-white text-sm font-bold rounded-xl transition-all shadow-lg shadow-[#FF6600]/30 hover:shadow-xl hover:shadow-[#FF6600]/35 hover:-translate-y-0.5"
               >
-                See How It Works <ArrowRight className="ml-2 w-4 h-4" />
+                Request a Demo <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              <Link
-                href="#video-demo"
-                className="group inline-flex items-center justify-center h-12 px-6 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-sm font-bold rounded-xl transition-all hover:border-[#FF6600] hover:text-[#FF6600] dark:hover:border-[#FF6600]"
-              >
-                <PlayCircle className="mr-2 w-4 h-4 text-[#FF6600]" /> View Demo
-              </Link>
-            </div>
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500 dark:text-gray-400 pt-1">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-[#FF6600] flex-shrink-0" />
-                <span>No app download for guests</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-[#FF6600] flex-shrink-0" />
-                <span>No monthly fees</span>
-              </div>
             </div>
           </div>
 
           {/* Visual */}
           <div className="relative flex justify-center lg:justify-end items-center min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] min-w-0 w-full">
-            <div className="relative w-full max-w-[85vw] sm:max-w-xl aspect-[4/3] lg:max-w-2xl">
+            <div className="relative w-full max-w-[85vw] sm:max-w-xl aspect-[4/3] lg:max-w-2xl overflow-hidden rounded-2xl sm:rounded-3xl">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/self-ordering-hero.png"
-                alt="Self-service ordering: customer scanning QR to order"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/self-service-hero.png"
+                alt="Self-service ordering at a restaurant"
                 fill
-                className="object-contain"
+                className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

@@ -35,19 +35,19 @@ export function ConnectedHub() {
               <line stroke="#FF6600" strokeDasharray="5,5" strokeWidth="2" x1="400" x2="150" y1="250" y2="150"></line>
               <line stroke="#FF6600" strokeDasharray="5,5" strokeWidth="2" x1="400" x2="400" y1="250" y2="420"></line>
             </svg>
-            <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 bg-white dark:bg-gray-900 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 flex items-center gap-2 w-40 sm:w-44">
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 bg-white dark:bg-gray-900 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 flex items-center gap-2 w-48 sm:w-52">
               <div className="bg-orange-100 p-1.5 rounded-lg text-orange-600 flex-shrink-0">
                 <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <span className="font-bold text-xs sm:text-sm text-gray-900 dark:text-white truncate">Mobile Payments</span>
             </div>
-            <div className="absolute top-20 right-[18%] z-20 bg-white dark:bg-gray-900 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 flex items-center gap-2 w-40 sm:w-44">
+            <div className="absolute top-20 right-[18%] z-20 bg-white dark:bg-gray-900 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 flex items-center gap-2 w-48 sm:w-52">
               <div className="bg-gray-100 p-1.5 rounded-lg text-gray-600 flex-shrink-0">
                 <QrCode className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <span className="font-bold text-xs sm:text-sm text-gray-900 dark:text-white truncate">Self-Service QR</span>
             </div>
-            <div className="absolute bottom-20 right-[18%] z-20 bg-white dark:bg-gray-900 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 flex items-center gap-2 w-40 sm:w-44">
+            <div className="absolute bottom-20 right-[18%] z-20 bg-white dark:bg-gray-900 p-2.5 sm:p-3 rounded-lg sm:rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 flex items-center gap-2 w-48 sm:w-52">
               <div className="bg-green-100 p-1.5 rounded-lg text-green-600 flex-shrink-0">
                 <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>

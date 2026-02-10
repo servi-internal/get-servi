@@ -15,7 +15,7 @@ export function TableSidePayments() {
           <div className="relative min-w-0 order-1 lg:order-1 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[70vw] sm:max-w-sm lg:max-w-xl aspect-[4/3] max-h-[180px] sm:max-h-[220px] lg:max-h-[280px] rounded-xl sm:rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 shadow-lg">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/table-side-pay.png"
+                src="https://assets2.ser.vi/brand/saltestco/feature_image/tableside-pay.jpg"
                 alt="Person holding mobile payment terminal at table"
                 fill
                 className="object-cover"

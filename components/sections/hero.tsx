@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const HERO_IMAGE = "https://assets2.ser.vi/brand/saltestco/feature_image/hero-imge.png";
+const HERO_IMAGE = "https://assets2.ser.vi/brand/saltestco/feature_image/hero_happy.png";
 
 export function Hero() {
   return (

@@ -9,7 +9,7 @@ export function Comparison() {
             Delivery Apps Hijack <span className="text-[#FF6600]">Your Business</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600">
-            Stop losing money to third-party platforms. Take control of your online ordering.
+            Stop losing money to third-party platforms. Take control of your online ordering, and Start Making More Today.
           </p>
         </div>
 

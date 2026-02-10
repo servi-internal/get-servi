@@ -1,7 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { SelfServiceHero } from "@/components/self-service/self-service-hero";
-import { QRPlacement } from "@/components/self-service/qr-placement";
 import { WhySwitch } from "@/components/self-service/why-switch";
 import { HowItWorks } from "@/components/self-service/how-it-works";
 import { PerfectSetup } from "@/components/self-service/perfect-setup";
@@ -25,7 +24,6 @@ export default function SelfServicePage() {
       <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
       <main className="flex min-w-0 flex-1 flex-col w-full">
         <SelfServiceHero />
-        <QRPlacement />
         <WhySwitch />
         <HowItWorks />
         <PerfectSetup />

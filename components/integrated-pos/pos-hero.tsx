@@ -44,7 +44,7 @@ export function POSHero() {
                 <Image
                   alt="Collection of devices showing POS interface floating in 3D space"
                   className="rounded-[calc(0.75rem-2px)] sm:rounded-[calc(1rem-2px)] w-full h-full object-cover relative"
-                  src="https://assets2.ser.vi/brand/saltestco/feature_image/heroPOS.webp"
+                  src="https://file.cdn.sunmi.com/newebsite/products/t3-family/lg/p3-3-1.jpg"
                   width={800}
                   height={600}
                   priority

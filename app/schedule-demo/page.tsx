@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useState } from "react";
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
@@ -103,8 +102,6 @@ export default function ScheduleDemoPage() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   // Initialize Stracker form hook
   const { submitToStracker, isSubmitting, error: strackerError, retryCount } = useStrackerForm({
@@ -158,12 +155,6 @@ export default function ScheduleDemoPage() {
       return;
     }
 
-    // Verify reCAPTCHA
-    if (!recaptchaToken) {
-      setValidationErrors({ recaptcha: "Please complete the reCAPTCHA verification" });
-      return;
-    }
-
     // Prepare form data for Stracker API
     const submissionData: Record<string, any> = {
       firstName: formData.firstName,
@@ -175,7 +166,6 @@ export default function ScheduleDemoPage() {
       bestTime: formData.bestTime,
       hearAbout: formData.hearAbout,
       comments: formData.comments,
-      recaptchaToken: recaptchaToken, // Include reCAPTCHA token
     };
 
     // Handle checkbox array - Stracker expects array of values for checkboxes with same name
@@ -184,13 +174,7 @@ export default function ScheduleDemoPage() {
     }
 
     // Submit to Stracker
-    const success = await submitToStracker(submissionData);
-
-    // Reset reCAPTCHA after submission (whether success or fail)
-    if (recaptchaRef.current) {
-      recaptchaRef.current.reset();
-      setRecaptchaToken(null);
-    }
+    await submitToStracker(submissionData);
   };
 
   const handleChange = (
@@ -503,28 +487,6 @@ export default function ScheduleDemoPage() {
                         rows={4}
                         className="text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600] resize-y min-h-[80px]"
                       />
-                    </div>
-
-                    {/* reCAPTCHA */}
-                    <div className="flex flex-col items-center space-y-2">
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-                        onChange={(token) => {
-                          setRecaptchaToken(token);
-                          setValidationErrors((prev) => {
-                            const { recaptcha, ...rest } = prev;
-                            return rest;
-                          });
-                        }}
-                        onExpired={() => setRecaptchaToken(null)}
-                        onErrored={() => setRecaptchaToken(null)}
-                      />
-                      {validationErrors.recaptcha && (
-                        <p className="text-xs text-red-600 mt-1">
-                          {validationErrors.recaptcha}
-                        </p>
-                      )}
                     </div>
 
                     <Button

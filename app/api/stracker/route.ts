@@ -114,33 +114,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify reCAPTCHA
-    const recaptchaToken = body.fields.recaptchaToken;
-    if (!recaptchaToken || typeof recaptchaToken !== "string") {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "reCAPTCHA verification required.",
-        },
-        { status: 400 }
-      );
-    }
-
-    const recaptchaValid = await verifyRecaptcha(recaptchaToken);
-    if (!recaptchaValid) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "reCAPTCHA verification failed. Please try again.",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Remove reCAPTCHA token from fields before sending to Stracker
-    const { recaptchaToken: _, ...fieldsWithoutRecaptcha } = body.fields;
-    body.fields = fieldsWithoutRecaptcha;
-
     // Get API credentials from server-side env vars
     const apiUrl = process.env.STRACKER_API_URL || process.env.NEXT_PUBLIC_STRACKER_API_URL;
     const apiKey = process.env.STRACKER_API_KEY || process.env.NEXT_PUBLIC_STRACKER_API_KEY;

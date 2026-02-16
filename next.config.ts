@@ -19,6 +19,9 @@ const nextConfig: NextConfig = {
     ],
     qualities: [100, 70, 75],
   },
+  env: {
+    NEXT_PUBLIC_RECAPTCHA_SITE_KEY: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+  },
 };
 
 export default nextConfig;

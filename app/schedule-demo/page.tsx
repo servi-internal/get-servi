@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
@@ -8,11 +9,24 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useStrackerForm } from "@/lib/hooks/useStrackerForm";
+import {
+  validateForm,
+  bookMeetingValidation,
+  type ValidationErrors,
+} from "@/lib/validation/formValidation";
+import {
   FileText,
   Search,
-  ShoppingCart,
-  Calendar,
-  Scissors,
+  Users,
+  Heart,
+  TrendingUp,
   ArrowRight,
   CheckCircle2,
   AlertCircle,
@@ -32,19 +46,19 @@ const BENEFITS = [
     description: "How to show up in more Google searches.",
   },
   {
-    icon: ShoppingCart,
+    icon: Users,
     title: "Customer Acquisition",
     description:
       "How to turn more online visitors into walk-in customers.",
   },
   {
-    icon: Calendar,
+    icon: Heart,
     title: "Create Customer Loyalty",
     description:
       "How to make it easy for customers to order directly from you.",
   },
   {
-    icon: Scissors,
+    icon: TrendingUp,
     title: "Get More Results",
     description: "How to market affordably and get big returns on investment.",
   },
@@ -86,33 +100,96 @@ export default function ScheduleDemoPage() {
     interestedIn: [] as string[],
     comments: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [showPrivacy, setShowPrivacy] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  // Initialize Stracker form hook
+  const { submitToStracker, isSubmitting, error: strackerError, retryCount } = useStrackerForm({
+    formSlug: "book-a-meeting",
+    onSuccess: (redirectUrl) => {
+      if (redirectUrl) {
+        // Redirect if URL is provided
+        window.location.href = redirectUrl;
+      } else {
+        // Show success message and reset form
+        setSuccessMessage("Demo request received! We'll be in touch shortly to schedule your call.");
+        // Reset form after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          mobile: "",
+          restaurantName: "",
+          restaurantCity: "",
+          bestTime: "Anytime",
+          hearAbout: "Please select",
+          interestedIn: [],
+          comments: "",
+        });
+        // Clear success message after 8 seconds
+        setTimeout(() => setSuccessMessage(null), 8000);
+      }
+    },
+    onError: (error) => {
+      console.error("Stracker form submission error:", error);
+      // Error is already set in the hook state, we just log it here
+    },
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitStatus("success");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        mobile: "",
-        restaurantName: "",
-        restaurantCity: "",
-        bestTime: "Anytime",
-        hearAbout: "Please select",
-        interestedIn: [],
-        comments: "",
-      });
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus("idle"), 5000);
+
+    // Clear any previous messages
+    setSuccessMessage(null);
+    setValidationErrors({});
+
+    // Validate form data
+    const errors = validateForm(formData, bookMeetingValidation);
+
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors);
+      // Scroll to first error
+      const firstErrorField = Object.keys(errors)[0];
+      const element = document.getElementById(firstErrorField);
+      element?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+
+    // Verify reCAPTCHA
+    if (!recaptchaToken) {
+      setValidationErrors({ recaptcha: "Please complete the reCAPTCHA verification" });
+      return;
+    }
+
+    // Prepare form data for Stracker API
+    const submissionData: Record<string, any> = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      mobile: formData.mobile,
+      restaurantName: formData.restaurantName,
+      restaurantCity: formData.restaurantCity,
+      bestTime: formData.bestTime,
+      hearAbout: formData.hearAbout,
+      comments: formData.comments,
+      recaptchaToken: recaptchaToken, // Include reCAPTCHA token
+    };
+
+    // Handle checkbox array - Stracker expects array of values for checkboxes with same name
+    if (formData.interestedIn.length > 0) {
+      submissionData.interestedIn = formData.interestedIn;
+    }
+
+    // Submit to Stracker
+    const success = await submitToStracker(submissionData);
+
+    // Reset reCAPTCHA after submission (whether success or fail)
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+      setRecaptchaToken(null);
     }
   };
 
@@ -197,8 +274,19 @@ export default function ScheduleDemoPage() {
                           value={formData.firstName}
                           onChange={handleChange}
                           placeholder="James"
-                          className="h-10 text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                          className={`h-10 text-xs sm:text-sm ${
+                            validationErrors.firstName
+                              ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                              : "border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                          }`}
+                          aria-invalid={!!validationErrors.firstName}
+                          aria-describedby={validationErrors.firstName ? "firstName-error" : undefined}
                         />
+                        {validationErrors.firstName && (
+                          <p id="firstName-error" className="text-xs text-red-600 mt-1">
+                            {validationErrors.firstName}
+                          </p>
+                        )}
                       </div>
                       <div className="space-y-1.5">
                         <Label htmlFor="lastName" className="text-[#333333] font-medium text-xs sm:text-sm">
@@ -212,8 +300,19 @@ export default function ScheduleDemoPage() {
                           value={formData.lastName}
                           onChange={handleChange}
                           placeholder="Smith"
-                          className="h-10 text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                          className={`h-10 text-xs sm:text-sm ${
+                            validationErrors.lastName
+                              ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                              : "border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                          }`}
+                          aria-invalid={!!validationErrors.lastName}
+                          aria-describedby={validationErrors.lastName ? "lastName-error" : undefined}
                         />
+                        {validationErrors.lastName && (
+                          <p id="lastName-error" className="text-xs text-red-600 mt-1">
+                            {validationErrors.lastName}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -229,8 +328,19 @@ export default function ScheduleDemoPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="james@acme.com"
-                        className="h-10 text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        className={`h-10 text-xs sm:text-sm ${
+                          validationErrors.email
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        }`}
+                        aria-invalid={!!validationErrors.email}
+                        aria-describedby={validationErrors.email ? "email-error" : undefined}
                       />
+                      {validationErrors.email && (
+                        <p id="email-error" className="text-xs text-red-600 mt-1">
+                          {validationErrors.email}
+                        </p>
+                      )}
                     </div>
 
                     <div className="space-y-1.5">
@@ -245,8 +355,19 @@ export default function ScheduleDemoPage() {
                         value={formData.mobile}
                         onChange={handleChange}
                         placeholder="+123456789"
-                        className="h-10 text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        className={`h-10 text-xs sm:text-sm ${
+                          validationErrors.mobile
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        }`}
+                        aria-invalid={!!validationErrors.mobile}
+                        aria-describedby={validationErrors.mobile ? "mobile-error" : undefined}
                       />
+                      {validationErrors.mobile && (
+                        <p id="mobile-error" className="text-xs text-red-600 mt-1">
+                          {validationErrors.mobile}
+                        </p>
+                      )}
                     </div>
 
                     <div className="space-y-1.5">
@@ -261,8 +382,19 @@ export default function ScheduleDemoPage() {
                         value={formData.restaurantName}
                         onChange={handleChange}
                         placeholder="Acme Foods"
-                        className="h-10 text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        className={`h-10 text-xs sm:text-sm ${
+                          validationErrors.restaurantName
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        }`}
+                        aria-invalid={!!validationErrors.restaurantName}
+                        aria-describedby={validationErrors.restaurantName ? "restaurantName-error" : undefined}
                       />
+                      {validationErrors.restaurantName && (
+                        <p id="restaurantName-error" className="text-xs text-red-600 mt-1">
+                          {validationErrors.restaurantName}
+                        </p>
+                      )}
                     </div>
 
                     <div className="space-y-1.5">
@@ -277,46 +409,61 @@ export default function ScheduleDemoPage() {
                         value={formData.restaurantCity}
                         onChange={handleChange}
                         placeholder="Springfield"
-                        className="h-10 text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        className={`h-10 text-xs sm:text-sm ${
+                          validationErrors.restaurantCity
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]"
+                        }`}
+                        aria-invalid={!!validationErrors.restaurantCity}
+                        aria-describedby={validationErrors.restaurantCity ? "restaurantCity-error" : undefined}
                       />
+                      {validationErrors.restaurantCity && (
+                        <p id="restaurantCity-error" className="text-xs text-red-600 mt-1">
+                          {validationErrors.restaurantCity}
+                        </p>
+                      )}
                     </div>
 
                     <div className="space-y-1.5">
                       <Label htmlFor="bestTime" className="text-[#333333] font-medium text-xs sm:text-sm">
                         Best time to reach you
                       </Label>
-                      <select
-                        id="bestTime"
-                        name="bestTime"
+                      <Select
                         value={formData.bestTime}
-                        onChange={handleChange}
-                        className="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-xs sm:text-sm text-[#333333] focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 outline-none transition-colors"
+                        onValueChange={(value) => setFormData((prev) => ({ ...prev, bestTime: value }))}
                       >
-                        {BEST_TIME_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
+                        <SelectTrigger className="h-10 w-full text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]">
+                          <SelectValue placeholder="Select best time" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {BEST_TIME_OPTIONS.map((opt) => (
+                            <SelectItem key={opt} value={opt}>
+                              {opt}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div className="space-y-1.5">
                       <Label htmlFor="hearAbout" className="text-[#333333] font-medium text-xs sm:text-sm">
                         How did you hear about Ser.vi?
                       </Label>
-                      <select
-                        id="hearAbout"
-                        name="hearAbout"
+                      <Select
                         value={formData.hearAbout}
-                        onChange={handleChange}
-                        className="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-xs sm:text-sm text-[#333333] focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 outline-none transition-colors"
+                        onValueChange={(value) => setFormData((prev) => ({ ...prev, hearAbout: value }))}
                       >
-                        {HEAR_ABOUT_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
+                        <SelectTrigger className="h-10 w-full text-xs sm:text-sm border-gray-300 focus:border-[#FF6600] focus:ring-[#FF6600]">
+                          <SelectValue placeholder="Please select" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {HEAR_ABOUT_OPTIONS.map((opt) => (
+                            <SelectItem key={opt} value={opt}>
+                              {opt}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div className="space-y-2">
@@ -358,15 +505,42 @@ export default function ScheduleDemoPage() {
                       />
                     </div>
 
+                    {/* reCAPTCHA */}
+                    <div className="flex flex-col items-center space-y-2">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                        onChange={(token) => {
+                          setRecaptchaToken(token);
+                          setValidationErrors((prev) => {
+                            const { recaptcha, ...rest } = prev;
+                            return rest;
+                          });
+                        }}
+                        onExpired={() => setRecaptchaToken(null)}
+                        onErrored={() => setRecaptchaToken(null)}
+                      />
+                      {validationErrors.recaptcha && (
+                        <p className="text-xs text-red-600 mt-1">
+                          {validationErrors.recaptcha}
+                        </p>
+                      )}
+                    </div>
+
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-11 sm:h-12 bg-[#FF6600] hover:bg-[#FF6600]/90 text-white font-bold text-sm shadow-lg shadow-[#FF6600]/20 hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full h-11 sm:h-12 bg-[#FF6600] hover:bg-[#FF6600]/90 text-white font-bold text-sm shadow-lg shadow-[#FF6600]/20 hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                     >
                       {isSubmitting ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Submitting...
+                        <span className="flex flex-col items-center justify-center gap-1">
+                          <span className="flex items-center gap-2">
+                            <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                            Submitting...
+                          </span>
+                          {retryCount > 0 && (
+                            <span className="text-[10px] opacity-75">Retry attempt {retryCount}...</span>
+                          )}
                         </span>
                       ) : (
                         <span className="flex items-center justify-center gap-2">
@@ -376,22 +550,30 @@ export default function ScheduleDemoPage() {
                       )}
                     </Button>
 
-                    {submitStatus === "success" && (
-                      <div className="flex items-start gap-3 p-4 bg-green-50 border border-green-200 rounded-xl">
+                    {/* Success Message */}
+                    {successMessage && (
+                      <div className="flex items-start gap-3 p-4 bg-green-50 border border-green-200 rounded-xl animate-in fade-in slide-in-from-top-2 duration-300">
                         <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <p className="font-semibold text-green-900 text-sm">Demo request received!</p>
-                          <p className="text-green-700 text-sm">We&apos;ll be in touch shortly to schedule your call.</p>
+                        <div className="flex-1">
+                          <p className="font-semibold text-green-900 text-sm">Success!</p>
+                          <p className="text-green-700 text-sm">{successMessage}</p>
                         </div>
                       </div>
                     )}
 
-                    {submitStatus === "error" && (
-                      <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl">
+                    {/* Error Message */}
+                    {strackerError && (
+                      <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl animate-in fade-in slide-in-from-top-2 duration-300">
                         <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <p className="font-semibold text-red-900 text-sm">Something went wrong</p>
-                          <p className="text-red-700 text-sm">Please try again or email us at hello@ser.vi</p>
+                        <div className="flex-1">
+                          <p className="font-semibold text-red-900 text-sm">Submission Failed</p>
+                          <p className="text-red-700 text-sm">{strackerError}</p>
+                          <p className="text-red-600 text-xs mt-1">
+                            Need help? Email us at{" "}
+                            <a href="mailto:hello@ser.vi" className="underline hover:text-red-800">
+                              hello@ser.vi
+                            </a>
+                          </p>
                         </div>
                       </div>
                     )}

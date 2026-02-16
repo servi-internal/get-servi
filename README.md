@@ -53,6 +53,18 @@
 
 Visit [get.ser.vi](https://get.ser.vi) to see the platform in action.
 
+## 🔗 Form Integration
+
+The site uses **Stracker** for form submission tracking and management. The `/schedule-demo` page (Book a Meeting form) is integrated with Stracker API.
+
+### Setup
+
+1. Copy `.env.example` to `.env.local`
+2. Add your Stracker API credentials
+3. Run `npm run dev`
+
+For detailed integration documentation, see [STRACKER_INTEGRATION.md](./STRACKER_INTEGRATION.md).
+
 ## 📄 License
 
 © 2026 Ser.vi. All rights reserved.

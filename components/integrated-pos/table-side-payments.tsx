@@ -31,7 +31,7 @@ export function TableSidePayments() {
               Fast <span className="text-[#FF6600]">table side payments</span>
             </h2>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 max-w-xl">
-              Save time by removing paper credit card receipts with manual tip lines. Take payments at the table on our mobile device.
+              Save back and forth trips to process payment and tip by using our mobile payment terminal for an efficient payment processing experience.
             </p>
             <div className="rounded-2xl bg-white/80 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 p-4 sm:p-5">
               <ul className="space-y-2 sm:space-y-2.5">

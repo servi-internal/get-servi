@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CardContainer, CardBody } from "@/components/ui/3d-card";
 
 const BULLETS = [
@@ -23,7 +24,7 @@ export function GiftCardSection() {
               Issue and redeem <span className="text-[#FF6600]">gift cards</span>
             </h2>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 max-w-xl">
-              Delight guests with gift cards you issue or sell. Redeem as a payment type, split payments, and top up balances.
+              Delight guests with custom printed physical gift cards that promote your brand and restaurant to their friends and family.
             </p>
             <div className="rounded-2xl bg-gray-50/80 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 p-4 sm:p-5">
               <ul className="space-y-2 sm:space-y-2.5">
@@ -41,18 +42,15 @@ export function GiftCardSection() {
               containerClassName="py-0 w-full flex justify-center lg:justify-end"
               className="w-full flex justify-center lg:justify-end"
             >
-              <CardBody className="h-[220px] w-[352px] sm:h-[260px] sm:w-[416px] lg:h-[300px] lg:w-[480px] rounded-xl sm:rounded-2xl">
-                <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-[#FF6600] to-[#E65C00] shadow-2xl shadow-[#FF6600]/25 border border-white/10">
-                  <div className="absolute top-5 left-5 sm:top-6 sm:left-6 font-bold text-white/80 text-sm sm:text-base">
-                    GIFT CARD
-                  </div>
-                  <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 font-bold text-white text-lg sm:text-xl tracking-widest">
-                    &bull;&bull;&bull;&bull; 4829
-                  </div>
-                  <div className="absolute bottom-5 right-5 sm:bottom-6 sm:right-6 font-black text-white text-xl sm:text-2xl italic">
-                    $50
-                  </div>
-                  <div className="absolute -right-10 -top-10 w-40 h-40 sm:w-48 sm:h-48 bg-white/20 rounded-full blur-xl" />
+              <CardBody className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto aspect-[16/9]">
+                <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
+                  <Image
+                    src="/pos/giftcard-generated-image-upscaled.png"
+                    alt="Restaurant gift card"
+                    fill
+                    className="object-cover scale-100"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 448px, 512px"
+                  />
                 </div>
               </CardBody>
             </CardContainer>

@@ -6,6 +6,7 @@ import { POSFeaturesGrid } from "@/components/integrated-pos/pos-features-grid";
 import { ConnectedHub } from "@/components/integrated-pos/connected-hub";
 import { TableSidePayments } from "@/components/integrated-pos/table-side-payments";
 import { GiftCardSection } from "@/components/integrated-pos/gift-card-section";
+import { OnlineOrderingSection } from "@/components/integrated-pos/online-ordering-section";
 
 export const metadata = {
   title: "Restaurant POS System - Works on Any Device | Ser.vi",
@@ -24,7 +25,10 @@ export default function IntegratedPOSPage() {
       <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
       <main className="flex min-w-0 flex-1 flex-col w-full overflow-x-hidden">
         <POSHero />
-        
+
+        {/* Integrated online ordering */}
+        <OnlineOrderingSection />
+
         {/* POS Features Grid */}
         <POSFeaturesGrid />
 

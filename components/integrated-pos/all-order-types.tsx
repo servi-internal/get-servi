@@ -1,14 +1,7 @@
-import { 
-  LayoutGrid, 
-  Users, 
-  Gift, 
-  CreditCard, 
-  Eye, 
-  Printer,
-  Zap,
-  Search,
-  RotateCcw,
-  BarChart3,
+import {
+  LayoutGrid,
+  Users,
+  Gift,
   Smartphone,
   Lock,
   UserCog,
@@ -50,26 +43,15 @@ const ORDER_TYPES = [
 ];
 
 const FEATURE_ICONS = [
-  { title: "Open Voids", desc: "See all items and transactions with open voids with quick search app", icon: Search, color: "blue" },
-  { title: "Refund Orders", desc: "Refund sales and update inventory without losing out", icon: RotateCcw, color: "purple" },
-  { title: "Comp Items", desc: "Manage comps and voids with custom comp/void reason", icon: Gift, color: "green" },
-  { title: "TODAYS TM", desc: "Track orders, items, sales, and labor with real-time reporting", icon: BarChart3, color: "red" },
-  { title: "Take Payments", desc: "Take payments quickly at the counter or tableside", icon: CreditCard, color: "orange" },
-  { title: "View Orders", desc: "See orders and their status including dine-in and online orders", icon: Eye, color: "blue" },
-  { title: "Print Receipts", desc: "Print kitchen tickets and customer receipts from any device", icon: Printer, color: "gray" },
-  { title: "Lightning Fast", desc: "Fast customer service and quick checkout", icon: Zap, color: "yellow" },
-  { title: "Table Side Payments", desc: "Reduce trips to the table with tableside payment mobile app", icon: Smartphone, color: "orange-featured" },
-];
-
-const FEATURE_BULLETS = [
-  { title: "Secure Staff Pin login", sub: "Track orders and cash drawer opens for each staff", icon: Lock },
-  { title: "POS Staff Manager", sub: "Quickly add and edit staff pins as a manager", icon: UserCog },
-  { title: "Multiple Service modes", sub: "Configure each device for specific service modes", icon: Settings },
-  { title: "Comp & Voids items on tabs", sub: "Track comp and voids track by servers", icon: FileCheck },
-  { title: "Split Payments", sub: "Take partial cash, credit or gift card payments up to 8 ways", icon: SplitSquareVertical },
-  { title: "Item options", sub: "Support variant (size) selection and required or optional modifiers", icon: ListChecks },
-  { title: "Limited Inventory Items", sub: "Set limited QOH on items that auto sell out as you take orders", icon: Package },
-  { title: "Gift Cards Issue and Redeem", sub: "Delight guests with gift cards that you issue or sell and redeem", icon: Gift },
+  { title: "Secure Staff Pin login", desc: "Track orders and cash drawer opens for each staff", icon: Lock, color: "blue" },
+  { title: "POS Staff Manager", desc: "Quickly add and edit staff pins as a manager", icon: UserCog, color: "purple" },
+  { title: "Multiple Service modes", desc: "Configure each device for specific service modes", icon: Settings, color: "green" },
+  { title: "Comp & Voids items on tabs", desc: "Track comp and voids track by servers", icon: FileCheck, color: "red" },
+  { title: "Split Payments", desc: "Take partial cash, credit or gift card payments up to 8 ways", icon: SplitSquareVertical, color: "orange" },
+  { title: "Item options", desc: "Support variant (size) selection and required or optional modifiers", icon: ListChecks, color: "blue" },
+  { title: "Limited Inventory Items", desc: "Set limited QOH on items that auto sell out as you take orders", icon: Package, color: "gray" },
+  { title: "Gift Cards Issue and Redeem", desc: "Delight guests with gift cards that you issue or sell and redeem", icon: Gift, color: "green" },
+  { title: "Fast table side payments", desc: "Reduce trips to the table with tableside payment mobile app", icon: Smartphone, color: "orange-featured" },
 ];
 
 const colorClasses: Record<string, string> = {
@@ -160,27 +142,6 @@ export function AllOrderTypes() {
           })}
         </div>
 
-        <div className="rounded-2xl bg-gray-50/80 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 p-4 sm:p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-4 sm:gap-y-5">
-            {FEATURE_BULLETS.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 min-w-0 group"
-                >
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FF6600]/10 text-[#FF6600] group-hover:bg-[#FF6600]/20 transition-colors">
-                    <Icon className="w-4 h-4" />
-                  </span>
-                  <div className="min-w-0">
-                    <h4 className="font-semibold text-sm text-gray-900 dark:text-white">{item.title}</h4>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5 leading-relaxed">{item.sub}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );

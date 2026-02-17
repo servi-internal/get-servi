@@ -3,18 +3,6 @@ import { Check, Star } from "lucide-react";
 export function SocialMediaTable() {
   const plans = [
     {
-      name: "Basic",
-      popular: false,
-      bestFor: "Posts and Stories to get started",
-      price: "$99",
-      features: [
-        "10 Posts",
-        "10 Stories",
-        "Comment responses",
-        "1 Network"
-      ]
-    },
-    {
       name: "Pro",
       popular: true,
       bestFor: "Add videos to engage and extend your reach",
@@ -71,7 +59,7 @@ export function SocialMediaTable() {
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}

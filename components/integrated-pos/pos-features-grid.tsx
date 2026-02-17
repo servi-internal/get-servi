@@ -96,40 +96,56 @@ export function POSFeaturesGrid() {
             </div>
           </div>
           
-          <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 lg:p-6 text-white overflow-hidden shadow-xl h-full flex flex-col min-h-0">
-            <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 bg-[#FF6600]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#FF6600]/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/4" />
-            <div className="relative z-10 flex flex-col h-full">
-              <div className="flex items-center gap-2 sm:gap-3 mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#FF6600] flex items-center justify-center flex-shrink-0">
-                  <Cpu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-black text-white">Robust Hardware</h3>
+          <div className="space-y-4">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#FF6600] flex items-center justify-center flex-shrink-0">
+                <Cpu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div className="space-y-3 flex-1">
-                <div className="bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/10">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Receipt className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6600] flex-shrink-0" />
-                    <h4 className="font-bold text-white text-xs sm:text-sm">Built for Restaurants</h4>
-                  </div>
-                  <ul className="text-[10px] sm:text-xs text-gray-400 space-y-0.5 ml-6">
-                    <li>Rugged and spill proof</li>
-                    <li>Sleek aesthetics & lockable cash drawer</li>
-                    <li>Reliable receipt & kitchen printers</li>
-                  </ul>
+              <h3 className="text-lg sm:text-xl font-black text-gray-900">Robust Hardware</h3>
+            </div>
+            <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gray-100 hover:border-[#FF6600]/30 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center flex-shrink-0">
+                  <Receipt className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6600]" />
                 </div>
-                <div className="bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/10">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Monitor className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6600] flex-shrink-0" />
-                    <h4 className="font-bold text-white text-xs sm:text-sm">Customer Facing Display</h4>
-                  </div>
-                  <ul className="text-[10px] sm:text-xs text-gray-400 space-y-0.5 ml-6">
-                    <li>Tilt screen or dedicated second display</li>
-                    <li>Easy for customers to tip</li>
-                    <li>Enter phone for marketing & loyalty</li>
-                  </ul>
-                </div>
+                <h4 className="font-bold text-sm sm:text-base text-gray-900">Built for Restaurants</h4>
               </div>
+              <ul className="text-xs sm:text-sm text-gray-600 space-y-1.5 ml-1">
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] mt-2 flex-shrink-0"></span>
+                  Rugged and spill proof
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] mt-2 flex-shrink-0"></span>
+                  Sleek aesthetics & lockable cash drawer
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] mt-2 flex-shrink-0"></span>
+                  Reliable receipt & kitchen printers
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gray-100 hover:border-[#FF6600]/30 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#FF6600]/10 flex items-center justify-center flex-shrink-0">
+                  <Monitor className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6600]" />
+                </div>
+                <h4 className="font-bold text-sm sm:text-base text-gray-900">Customer Facing Display</h4>
+              </div>
+              <ul className="text-xs sm:text-sm text-gray-600 space-y-1.5 ml-1">
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] mt-2 flex-shrink-0"></span>
+                  Tilt screen or dedicated second display
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] mt-2 flex-shrink-0"></span>
+                  Easy for customers to tip
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] mt-2 flex-shrink-0"></span>
+                  Enter phone for marketing & loyalty
+                </li>
+              </ul>
             </div>
           </div>
         </div>

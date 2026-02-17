@@ -26,14 +26,14 @@ const ORDER_TYPES = [
     bullets: [
       "Fast one order one payment",
       "Dedicated station mode",
-      "Available as button in tab mode",
+      "Put guest names on orders",
     ],
   },
   {
     title: "Table Tabs",
     icon: Users,
     bullets: [
-      "Open Table tabs",
+      "Open table tabs",
       "Transfer tables",
       "Split payments",
     ],
@@ -42,9 +42,9 @@ const ORDER_TYPES = [
     title: "Bar Tabs",
     icon: "bi-cup-straw",
     bullets: [
-      "Open manual tabs with guest names",
-      "Open card tabs with guest names",
-      "Quick Access to order history",
+      "Supports name only and card retained tabs",
+      "Support multiple bars per location",
+      "Transfer tab to table when guest is seated",
     ],
   },
 ];

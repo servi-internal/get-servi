@@ -27,10 +27,10 @@ export function POSHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a
-                href="#all-order-types"
+                href="/schedule-demo"
                 className="group inline-flex items-center justify-center gap-2 h-10 sm:h-11 px-5 sm:px-6 rounded-lg bg-[#FF6600] hover:bg-[#E65C00] text-white text-sm font-bold shadow-lg shadow-[#FF6600]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all min-h-[44px]"
               >
-                See How It Works
+                Request A Demo
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

@@ -103,7 +103,7 @@ export function PerfectSetup() {
           <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
             <div className="h-28 sm:h-40 bg-gray-200 relative min-h-[112px]">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/special.jpeg"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771413910/special_vklf2g.webp"
                 alt="Daily specials"
                 fill
                 className="object-cover"

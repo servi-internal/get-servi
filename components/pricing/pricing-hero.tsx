@@ -1,4 +1,4 @@
-import { ArrowDown, Calculator, CheckCircle } from "lucide-react";
+import { ArrowDown, Calculator } from "lucide-react";
 
 export function PricingHero() {
   return (
@@ -6,18 +6,12 @@ export function PricingHero() {
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] bg-[#ff7043]/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[150px] h-[150px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] bg-[#ff7043]/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 rounded-full bg-[#ff7043]/10 text-[#ff7043] text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4 lg:mb-6">
-          <span className="size-1.5 sm:size-2 rounded-full bg-[#ff7043] animate-pulse"></span>
-          Transparent Pricing Model
-        </div>
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-black text-[#263238] tracking-tight mb-3 sm:mb-4 lg:mb-6 leading-[1.1]">
-          Pay <span className="text-[#ff7043] underline decoration-2 sm:decoration-4 decoration-[#ff7043]/20 underline-offset-4">$0</span> in Fixed Fees.
-          <br />
-          Keep Your Profits.
+          Transparent <span className="text-[#ff7043]">Pricing.</span>
         </h1>
         <p className="text-sm sm:text-base lg:text-lg text-[#64748b] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-          Stop renting your own success. Ser.vi is the free restaurant operating
-          system that runs on devices you already own.
+          Ser.vi is the free restaurant operating system that runs on devices
+          you already own. No Monthly Subscription and Cancel Anytime.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 lg:mb-14">
           <a
@@ -34,22 +28,6 @@ export function PricingHero() {
             <Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043]" />
             Calculate Savings
           </a>
-        </div>
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-6 opacity-80">
-          <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-white rounded-full shadow-sm border border-[#e2e8f0]/50">
-            <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500" />
-            <span className="text-[10px] sm:text-xs lg:text-sm font-bold text-[#263238]">
-              No Monthly Subscription
-            </span>
-          </div>
-          <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-white rounded-full shadow-sm border border-[#e2e8f0]/50">
-            <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500" />
-            <span className="text-[10px] sm:text-xs lg:text-sm font-bold text-[#263238]">No Setup Fees</span>
-          </div>
-          <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-white rounded-full shadow-sm border border-[#e2e8f0]/50">
-            <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500" />
-            <span className="text-[10px] sm:text-xs lg:text-sm font-bold text-[#263238]">Cancel Anytime</span>
-          </div>
         </div>
       </div>
     </section>

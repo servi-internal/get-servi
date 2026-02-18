@@ -12,7 +12,7 @@ export function PerfectSetup() {
           <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
             <div className="h-28 sm:h-40 bg-gray-200 relative min-h-[112px]">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/table-service.png"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403094/table-service_g49zl3.png"
                 alt="Table service restaurant interior"
                 fill
                 className="object-cover"
@@ -34,7 +34,7 @@ export function PerfectSetup() {
           <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
             <div className="h-32 sm:h-40 bg-gray-200 relative">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/bar-counter.png"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403093/counter-service_hfcbms.png"
                 alt="Counter with stools"
                 fill
                 className="object-cover"
@@ -56,7 +56,7 @@ export function PerfectSetup() {
           <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
             <div className="h-32 sm:h-40 bg-gray-200 relative">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/quick-service.png"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403268/quick-service_x3tma9.png"
                 alt="Fast casual burger joint"
                 fill
                 className="object-cover"
@@ -81,7 +81,7 @@ export function PerfectSetup() {
           <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
             <div className="h-28 sm:h-40 bg-gray-200 relative min-h-[112px]">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/sold-out.jpg"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403674/sold-out_xghwut.png"
                 alt="Sold out menu control"
                 fill
                 className="object-cover"

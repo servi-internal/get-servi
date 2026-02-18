@@ -16,8 +16,12 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "file.cdn.sunmi.com",
       },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
     ],
-    qualities: [100, 70, 75],
+    qualities: [100],
   },
   env: {
     NEXT_PUBLIC_RECAPTCHA_SITE_KEY: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,

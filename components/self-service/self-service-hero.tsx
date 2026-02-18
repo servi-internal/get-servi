@@ -5,28 +5,13 @@ import { ArrowRight } from "lucide-react";
 export function SelfServiceHero() {
   return (
     <section className="relative py-10 sm:py-14 lg:py-20 overflow-hidden">
-      {/* Background: base + warm band (sections/hero) + dot pattern (ordering-hero) + accent gradient */}
-      <div className="absolute inset-0 z-0 bg-[#FAFAFA] dark:bg-zinc-950" aria-hidden />
       <div
-        className="absolute inset-0 z-0 bg-gradient-to-b from-white via-[#FFF3EE]/50 to-[#FAFAFA] dark:from-transparent dark:via-[#FF6600]/5 dark:to-transparent"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 z-0 opacity-25 dark:opacity-15"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "radial-gradient(#FF6600 0.5px, transparent 0.5px)",
-          backgroundSize: "20px 20px",
+          background: "linear-gradient(180deg, #ffffff 0%, #FAFAFA 100%)",
         }}
-        aria-hidden
       />
-      <div
-        className="absolute top-0 right-0 z-0 w-1/2 h-full bg-gradient-to-l from-[#FF6600]/8 to-transparent dark:from-[#FF6600]/12 dark:to-transparent"
-        aria-hidden
-      />
-      <div
-        className="absolute bottom-0 left-0 z-0 w-full h-1/3 bg-gradient-to-t from-transparent to-[#FFF3EE]/40 dark:to-transparent"
-        aria-hidden
-      />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF6600]/5 to-transparent pointer-events-none" aria-hidden />
 
       <div className="relative z-10 mx-auto max-w-7xl w-full min-w-0 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center min-w-0">
@@ -53,7 +38,7 @@ export function SelfServiceHero() {
           <div className="relative flex justify-center lg:justify-end items-center min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] min-w-0 w-full">
             <div className="relative w-full max-w-[85vw] sm:max-w-xl aspect-[4/3] lg:max-w-2xl overflow-hidden rounded-2xl sm:rounded-3xl">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/feature_image/self-service-hero.png"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403841/self-service-hero_auey5r.png"
                 alt="Self-service ordering at a restaurant"
                 fill
                 className="object-cover"

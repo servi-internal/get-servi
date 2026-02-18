@@ -13,40 +13,8 @@ export function OnlineOrderingSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-w-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 lg:items-center">
 
-          {/* Left — copy */}
-          <div className="min-w-0">
-            <span className="text-[#FF6600] font-semibold tracking-widest uppercase text-xs">
-              Integrated online ordering
-            </span>
-            <h2 className="mt-2 text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-3">
-              Take orders online with your{" "}
-              <span className="text-[#FF6600]">Integrated POS</span>
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-xl">
-              Easily take orders online when you use the Integrated POS. We have a superior online ordering system experience your guests will love.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {BULLETS.map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={i}
-                    className="flex items-start gap-3 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 p-3 sm:p-4 hover:border-[#FF6600]/30 hover:shadow-md transition-all"
-                  >
-                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${item.color}`}>
-                      <Icon className="w-4 h-4" />
-                    </div>
-                    <p className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 leading-snug mt-1">
-                      {item.text}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Right — visual mockup */}
-          <div className="flex justify-center lg:justify-end min-w-0">
+          {/* Left — visual mockup */}
+          <div className="flex justify-center lg:justify-start min-w-0 order-2 lg:order-1">
             <div className="w-full max-w-sm sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl overflow-hidden">
               {/* Browser chrome */}
               <div className="flex items-center gap-1.5 px-3 sm:px-4 py-2.5 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
@@ -146,6 +114,38 @@ export function OnlineOrderingSection() {
                   View Cart · $45.97
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Right — copy */}
+          <div className="min-w-0 order-1 lg:order-2">
+            <span className="text-[#FF6600] font-semibold tracking-widest uppercase text-xs">
+              Integrated online ordering
+            </span>
+            <h2 className="mt-2 text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-3">
+              Take orders online with your{" "}
+              <span className="text-[#FF6600]">Integrated POS</span>
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-xl">
+              Easily take orders online when you use the Integrated POS. We have a superior online ordering system experience your guests will love.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {BULLETS.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 p-3 sm:p-4 hover:border-[#FF6600]/30 hover:shadow-md transition-all"
+                  >
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${item.color}`}>
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <p className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 leading-snug mt-1">
+                      {item.text}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

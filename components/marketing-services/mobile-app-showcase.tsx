@@ -14,7 +14,7 @@ export function MobileAppShowcase() {
           <div className="lg:w-1/2 order-2 lg:order-1 relative">
             <div className="relative w-[220px] sm:w-[260px] lg:w-[280px] h-[440px] sm:h-[520px] lg:h-[560px] rounded-[2.5rem] sm:rounded-[3rem] mx-auto overflow-hidden">
               <Image
-                src="https://assets2.ser.vi/brand/saltestco/screenshot/dangelos-screen.png"
+                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771404055/dangelos-screen_ndvejy.png"
                 alt="Mobile app screenshot"
                 fill
                 className="object-contain"

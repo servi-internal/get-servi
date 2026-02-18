@@ -42,10 +42,10 @@ export function GiftCardSection() {
               containerClassName="py-0 w-full flex justify-center lg:justify-end"
               className="w-full flex justify-center lg:justify-end"
             >
-              <CardBody className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto aspect-[16/9]">
+              <CardBody className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto aspect-[16/10]">
                 <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
                   <Image
-                    src="/pos/giftcard-generated-image-upscaled.png"
+                    src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771408516/gift-card_wkuuln.png"
                     alt="Restaurant gift card"
                     fill
                     className="object-cover scale-100"

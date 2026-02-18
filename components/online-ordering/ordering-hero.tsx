@@ -6,9 +6,9 @@ export function OrderingHero() {
   return (
     <section className="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <div
-        className="absolute inset-0 z-0 dark:bg-zinc-950"
+        className="absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(180deg, #ffffff 0%, #FFF8F5 40%, #FFF3EE 100%)",
+          background: "linear-gradient(180deg, #ffffff 0%, #FAFAFA 100%)",
         }}
       />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#FF6600]/5 to-transparent pointer-events-none" aria-hidden />
@@ -29,13 +29,13 @@ export function OrderingHero() {
             </div>
           </div>
           <div className="relative flex justify-center mt-6 sm:mt-8 lg:mt-0">
-            <div className="relative w-full max-w-xs sm:max-w-sm overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-200/80 bg-white shadow-2xl shadow-gray-300/40 ring-1 ring-black/5">
-              <div className="relative aspect-square">
+            <div className="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-200/80 bg-white shadow-2xl shadow-gray-300/40 ring-1 ring-black/5">
+              <div className="relative aspect-video">
                 <Image
-                  src="https://assets2.ser.vi/brand/saltestco/feature_image/online.png"
+                  src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771402165/online-hero_gfsuwn.png"
                   alt="Direct online ordering platform"
                   fill
-                  className="object-cover scale-110"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />

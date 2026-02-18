@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const advantages = [
@@ -9,7 +8,7 @@ const advantages = [
       "Add delivery on demand without payment delivery app commissions. Take the order and they deliver it. The customer pays the delivery fee.",
       "Branded website and mobile app allow your customers to return and order again easily.",
     ],
-    image: "https://assets2.ser.vi/brand/saltestco/feature_image/online.png",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771401556/online-direct_gypg4p.png",
     color: "#FF6600",
     buttonText: "Learn More",
     buttonLink: "/online-ordering",
@@ -21,7 +20,7 @@ const advantages = [
       "Easy to use for all guests, captures the order quickly without issues.",
       "Prints to your existing network or bluetooth printers.",
     ],
-    image: "https://assets2.ser.vi/brand/saltestco/feature_image/counter.png",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771401557/counter_lk476j.png",
     color: "#10B981",
     buttonText: "Learn More",
     buttonLink: "/self-service",
@@ -33,7 +32,7 @@ const advantages = [
       "Connected to your online and self-service catalog and ordering.",
       "Supports phone, table tabs and walk up counter orders.",
     ],
-    image: "https://assets2.ser.vi/brand/saltestco/feature_image/pos-card.png",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771401560/pos_vjbkox.png",
     color: "#3B82F6",
     buttonText: "Learn More",
     buttonLink: "/integrated-pos",
@@ -45,7 +44,7 @@ const advantages = [
       "Advertise on Google Maps for real time impulse demand sales.",
       "SEO website and retargeting campaigns drive traffic and repeat business.",
     ],
-    image: "https://assets2.ser.vi/brand/saltestco/logo/marketing.png",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771401557/marketing_f3ppgg.png",
     color: "#8B5CF6",
     buttonText: "Learn More",
     buttonLink: "/marketing-services",
@@ -73,15 +72,11 @@ export function AdvantageFeatures() {
             >
               {/* Image */}
               <div className="relative h-40 sm:h-44 w-full overflow-hidden">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={item.image}
                   alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                  style={{ backgroundColor: item.color }}
+                  className="w-full h-full object-cover"
                 />
               </div>
               

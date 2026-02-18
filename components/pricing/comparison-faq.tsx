@@ -8,14 +8,19 @@ export function ComparisonFAQ() {
 
   const faqs = [
     {
-      question: "What is the cost of the program?",
+      question: "How much does the POS cost?",
       answer:
-        "The program is performance based so it depends on how much business you get from the Google ads. Overall, it often costs around 20% of the new, top line revenue generated in a given month. Then it costs you nothing for returning customers.",
+        "The POS has no monthly subscription fee. You only pay 1.5% of the order total plus credit card processing fees. Tax and tips only pay credit card fees. You can use your existing credit card provider or one of our value priced partners for the best deal.",
     },
     {
-      question: "Do you have a free trial?",
+      question: "What does the customer pay?",
       answer:
-        "There is a small program setup fee, however you don't pay for the first month until after ads have run and orders and revenue is realized.",
+        "A small convenience fee of 4-5% is added at checkout and paid by your customer. This covers the Ser.vi platform fee and credit card processing. You pay $0 in monthly software fees.",
+    },
+    {
+      question: "What are the Online Ordering & Marketing plans?",
+      answer:
+        "We offer three optional plans to grow your business: Promote ($249/mo) for direct ordering with phone ordering service, SEO website, and Google Ads; Grow & Retain ($449/mo) adds engagement programs, email marketing, branded mobile app, and retargeting; Inspire & Connect ($749/mo) adds professional social content, review responses, and custom campaigns.",
     },
     {
       question: "Is there a contract?",
@@ -25,7 +30,7 @@ export function ComparisonFAQ() {
     {
       question: "Do you provide hardware?",
       answer:
-        "Yes, for restaurants that need it, we can provide tablets and printers at cost. If you own an Android tablet, you can use it. Our app prints to most existing printers so you can use your own printers as well.",
+        "Yes, for restaurants that need it, we can provide tablets and printers at cost. You can also use your own iPads, Android tablets, phones, or PCs. Our app prints to most existing printers so you can use your own printers as well.",
     },
     {
       question: "Do you provide credit card processing?",
@@ -41,6 +46,11 @@ export function ComparisonFAQ() {
       question: "Does this replace the delivery apps?",
       answer:
         "If you do not do in-house delivery, then you will want to continue with the delivery apps to provide this service. Ser.vi can take delivery orders and automatically send Doordash drivers to pick up the orders.",
+    },
+    {
+      question: "How fast can I get set up?",
+      answer:
+        "We guarantee a 1 week setup from the time we receive all required information from you. We will have your program live and ready to take orders.",
     },
   ];
 

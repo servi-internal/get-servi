@@ -7,7 +7,7 @@ export function ResultsStats() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-xl sm:text-2xl font-bold mb-2">
-            Real Results from Real Restaurants
+            Real Results from <span className="text-[#FF6600]">Real Restaurants</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base">
             Average performance metrics after 6 months with Ser.vi

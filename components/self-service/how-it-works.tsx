@@ -5,28 +5,28 @@ import { QrCode, Smartphone, CreditCard, Printer, BarChart3 } from "lucide-react
 const STEPS = [
   {
     icon: QrCode,
-    title: "QR Menu",
-    description: "No app download required. Customers use their native camera.",
+    title: "Scan",
+    description: "No app download required. Menu loads instantly on their phone.",
   },
   {
     icon: Smartphone,
-    title: "Ordering",
-    description: "Guests browse a visual menu, customize orders, and add to cart.",
+    title: "Order",
+    description: "Guests enjoy an easy use, low stress ordering experience.",
   },
   {
     icon: CreditCard,
-    title: "Payment",
-    description: "Pay instantly with Apple Pay, Google Pay, or card.",
+    title: "Pay",
+    description: "Cards are securely stored for easy reordering.",
   },
   {
     icon: Printer,
-    title: "Printing",
-    description: "Orders print directly to your kitchen printer—no staff touch screen.",
+    title: "Serve",
+    description: "Orders print directly to your kitchen printer so you can serve faster.",
   },
   {
     icon: BarChart3,
     title: "Control",
-    description: "Manage menus, sell-outs, and daily specials from your tablet.",
+    description: "Manage menus, sell outs items, and daily specials from your tablet.",
   },
 ];
 
@@ -43,10 +43,10 @@ export function HowItWorks() {
             How it works
           </span>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
-            From Scan to <span className="text-[#ff7043]">Kitchen in Seconds</span>
+            From seated to <span className="text-[#ff7043]">served in record time</span>
           </h2>
           <p className="mt-2 text-gray-400 text-sm sm:text-base max-w-xl">
-            Five simple steps. No training, no apps, no friction.
+            Most customers place their order with <span className="text-[#ff7043] font-semibold">ser.vi</span> in under 4 minutes. Even first time users.
           </p>
         </header>
 
@@ -76,6 +76,16 @@ export function HowItWorks() {
               );
             })}
           </div>
+        </div>
+
+        {/* Why are we different */}
+        <div className="mt-12 sm:mt-16 max-w-3xl">
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3">
+            Why are we different from any other QR ordering solution?
+          </h3>
+          <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+            Your staff has access to inventory controls right in our app. Whenever there is a sell out or a daily special change that makes the menu incorrect, your staff can update the menu as needed with a single click. This allows the system to be trusted to not take orders for items that are not available. That trust allows your staff to not have to attend to the tablet for each order, so they can truly spend more time providing better service to more guests.
+          </p>
         </div>
       </div>
     </section>

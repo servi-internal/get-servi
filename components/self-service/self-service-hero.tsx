@@ -23,6 +23,9 @@ export function SelfServiceHero() {
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
               Nothing is worse than when your customers can&apos;t get it.
             </p>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              The problem isn&apos;t your staff, it&apos;s the technology you&apos;re using. Unlock useful connectivity between your guest and your business with QR Ordering for self-service.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-1">
               <Link

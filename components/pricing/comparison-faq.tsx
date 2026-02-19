@@ -10,17 +10,17 @@ export function ComparisonFAQ() {
     {
       question: "How much does the POS cost?",
       answer:
-        "The POS has no monthly subscription fee. You only pay 1.5% of the order total plus credit card processing fees. Tax and tips only pay credit card fees. You can use your existing credit card provider or one of our value priced partners for the best deal.",
+        "The POS has $0 monthly subscription fees. Your customer pays a small 5% convenience fee at checkout which covers Ser.vi platform fees and credit card processing. You can use your existing devices or contact us for our hardware options.",
     },
     {
-      question: "What does the customer pay?",
+      question: "What is the convenience fee?",
       answer:
-        "A small convenience fee of 4-5% is added at checkout and paid by your customer. This covers the Ser.vi platform fee and credit card processing. You pay $0 in monthly software fees.",
+        "A 5% convenience fee is added at checkout and paid by your customer. This fee goes to you and covers your credit card and Ser.vi platform fees. You pay $0 in monthly software fees.",
     },
     {
       question: "What are the Online Ordering & Marketing plans?",
       answer:
-        "We offer three optional plans to grow your business: Promote ($249/mo) for direct ordering with phone ordering service, SEO website, and Google Ads; Grow & Retain ($449/mo) adds engagement programs, email marketing, branded mobile app, and retargeting; Inspire & Connect ($749/mo) adds professional social content, review responses, and custom campaigns.",
+        "We offer three optional plans to grow your business: Save & Promote ($249/mo) for online ordering, phone ordering service, SEO website, and Google Ads; Grow & Retain ($449/mo) adds engagement programs, email marketing, branded mobile app, retargeting ads, and a professional photoshoot; Inspire & Connect ($749/mo) adds professional social content, review responses, and custom campaigns.",
     },
     {
       question: "Is there a contract?",
@@ -30,7 +30,7 @@ export function ComparisonFAQ() {
     {
       question: "Do you provide hardware?",
       answer:
-        "Yes, for restaurants that need it, we can provide tablets and printers at cost. You can also use your own iPads, Android tablets, phones, or PCs. Our app prints to most existing printers so you can use your own printers as well.",
+        "Yes, for restaurants that need it, we can provide tablets and printers. You can also use your own iPads, Android tablets, phones, or PCs. Our app prints to most existing printers so you can use your own printers as well.",
     },
     {
       question: "Do you provide credit card processing?",

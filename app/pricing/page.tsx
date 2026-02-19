@@ -1,6 +1,5 @@
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
-import { PricingHero } from "@/components/pricing/pricing-hero";
 import { SavingsCalculator } from "@/components/pricing/savings-calculator";
 import { MarketingAddons } from "@/components/pricing/marketing-addons";
 import { SocialMediaTable } from "@/components/pricing/social-media-table";
@@ -22,129 +21,130 @@ export default function PricingPage() {
       <Header />
       <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
       <main className="flex min-w-0 flex-1 flex-col w-full">
-        <PricingHero />
-
-        {/* Marketing Add-ons (first) */}
+        {/* Online Marketing Plans */}
         <MarketingAddons />
 
-        {/* Platform Pricing Cards (POS pricing next) */}
-        <section className="py-10 sm:py-14 lg:py-20 bg-white overflow-hidden" id="platform-fees">
+        {/* POS Pricing */}
+        <section className="py-10 sm:py-14 lg:py-20 bg-white overflow-hidden" id="pos-pricing">
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-14">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#263238] mb-2 sm:mb-3">
-                Ser.vi <span className="text-[#ff7043]">Fees</span>
+                Integrated POS <span className="text-[#ff7043]">Pricing</span>
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-[#64748b]">
-                You pay <span className="font-bold text-[#263238]">$0</span> in software fees. <span className="font-bold text-[#263238]">Runs on the devices you already own</span>.
+                Use your existing devices or contact us for our hardware options.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
               {/* POS Only */}
-              <div className="group relative flex flex-col p-5 sm:p-6 lg:p-8 bg-[#f8fafc] rounded-xl sm:rounded-2xl border border-[#e2e8f0] hover:border-[#ff7043]/30 hover:shadow-xl transition-all duration-300">
-                <div className="mb-3 sm:mb-4">
-                  <h3 className="text-base sm:text-lg font-bold text-[#263238]">POS</h3>
-                  <p className="text-xs sm:text-sm text-[#64748b] mt-1">
-                    In-store POS &amp; payments only
-                  </p>
-                </div>
-                <div className="flex items-baseline gap-1 mb-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-[#e2e8f0] hover:shadow-xl transition-all">
+                <h3 className="text-base sm:text-lg font-bold text-[#263238]">POS</h3>
+                <div className="mt-3 sm:mt-4 flex items-baseline gap-1">
                   <span className="text-3xl sm:text-4xl font-black text-[#263238]">$0</span>
                   <span className="text-xs sm:text-sm font-medium text-[#64748b]">/mo</span>
                 </div>
-                <p className="text-[10px] sm:text-xs font-bold text-[#ff7043] uppercase tracking-wide mb-3 sm:mb-4">
-                  What You Pay Monthly
+                <p className="mt-2 text-xs sm:text-sm text-[#64748b]">
+                  In-store POS &amp; payments only
                 </p>
-                <hr className="my-4 sm:my-5 border-[#e2e8f0]" />
-                <div className="space-y-2 sm:space-y-2.5">
-                  <div className="bg-white rounded-lg border border-[#e2e8f0] p-2.5 sm:p-3">
-                    <span className="text-[10px] sm:text-xs font-bold text-[#64748b] uppercase">Customer Pays per Order</span>
-                    <div className="text-sm sm:text-base font-black text-[#263238]">4.0%</div>
-                  </div>
-                  <div className="bg-[#f8fafc] rounded-lg border border-[#e2e8f0] p-2.5 sm:p-3">
-                    <div className="text-[10px] sm:text-xs font-bold text-[#64748b] uppercase mb-1">Breakdown</div>
-                    <div className="space-y-0.5 text-[10px] sm:text-xs text-[#263238]">
-                      <div>1.5% Ser.vi fee</div>
-                      <div>+ 2.5% <span className="underline decoration-dotted">Zift</span> (card)</div>
-                    </div>
-                  </div>
-                </div>
+                <hr className="my-5 sm:my-6 border-[#e2e8f0]" />
+                <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Customer pays 5% convenience fee
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Unlimited devices
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    All order types included
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Kitchen display system
+                  </li>
+                </ul>
               </div>
 
               {/* POS Bundle */}
-              <div className="group relative flex flex-col p-5 sm:p-6 lg:p-8 bg-[#f8fafc] rounded-xl sm:rounded-2xl border border-[#e2e8f0] hover:border-[#ff7043]/30 hover:shadow-xl transition-all duration-300">
-                <div className="mb-3 sm:mb-4">
-                  <h3 className="text-base sm:text-lg font-bold text-[#263238]">POS Bundle</h3>
-                  <p className="text-xs sm:text-sm text-[#64748b] mt-1">
-                    POS + Online Ordering + Self-Service together
-                  </p>
+              <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border-2 border-[#ff7043] shadow-xl relative">
+                <div className="absolute top-0 right-0 bg-[#ff7043] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-bl-lg rounded-tr-xl sm:rounded-tr-2xl uppercase">
+                  Most Popular
                 </div>
-                <div className="flex items-baseline gap-1 mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-[#263238]">POS Bundle</h3>
+                <div className="mt-3 sm:mt-4 flex items-baseline gap-1">
                   <span className="text-3xl sm:text-4xl font-black text-[#263238]">$0</span>
                   <span className="text-xs sm:text-sm font-medium text-[#64748b]">/mo</span>
                 </div>
-                <p className="text-[10px] sm:text-xs font-bold text-[#ff7043] uppercase tracking-wide mb-3 sm:mb-4">
-                  What You Pay Monthly
+                <p className="mt-2 text-xs sm:text-sm text-[#64748b]">
+                  POS + Online Ordering + Self-Service
                 </p>
-                <hr className="my-4 sm:my-5 border-[#e2e8f0]" />
-                <div className="space-y-2 sm:space-y-2.5">
-                  <div className="bg-white rounded-lg border border-[#e2e8f0] p-2.5 sm:p-3">
-                    <span className="text-[10px] sm:text-xs font-bold text-[#64748b] uppercase">Customer Pays per Order</span>
-                    <div className="text-sm sm:text-base font-black text-[#263238]">4.0%</div>
-                  </div>
-                  <div className="bg-[#f8fafc] rounded-lg border border-[#e2e8f0] p-2.5 sm:p-3">
-                    <div className="text-[10px] sm:text-xs font-bold text-[#64748b] uppercase mb-1">Breakdown</div>
-                    <div className="space-y-0.5 text-[10px] sm:text-xs text-[#263238]">
-                      <div>1.5% Ser.vi fee</div>
-                      <div>+ 2.5% <span className="underline decoration-dotted">Zift</span> (card)</div>
-                    </div>
-                  </div>
-                </div>
+                <hr className="my-5 sm:my-6 border-[#ff7043]/20" />
+                <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Customer pays 5% convenience fee
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Everything in POS
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Online ordering website
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Self-service QR ordering
+                  </li>
+                </ul>
               </div>
 
               {/* Online & Self-Service */}
-              <div className="group relative flex flex-col p-5 sm:p-6 lg:p-8 bg-[#f8fafc] rounded-xl sm:rounded-2xl border border-[#e2e8f0] hover:border-[#ff7043]/30 hover:shadow-xl transition-all duration-300">
-                <div className="mb-3 sm:mb-4">
-                  <h3 className="text-base sm:text-lg font-bold text-[#263238]">Online &amp; Self-Service</h3>
-                  <p className="text-xs sm:text-sm text-[#64748b] mt-1">
-                    Online ordering + Self-Service, no POS
-                  </p>
-                </div>
-                <div className="flex items-baseline gap-1 mb-2">
+              <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-[#e2e8f0] hover:shadow-xl transition-all">
+                <h3 className="text-base sm:text-lg font-bold text-[#263238]">Online &amp; Self-Service</h3>
+                <div className="mt-3 sm:mt-4 flex items-baseline gap-1">
                   <span className="text-3xl sm:text-4xl font-black text-[#263238]">$0</span>
                   <span className="text-xs sm:text-sm font-medium text-[#64748b]">/mo</span>
                 </div>
-                <p className="text-[10px] sm:text-xs font-bold text-[#ff7043] uppercase tracking-wide mb-3 sm:mb-4">
-                  What You Pay Monthly
+                <p className="mt-2 text-xs sm:text-sm text-[#64748b]">
+                  Online ordering + Self-Service, no POS
                 </p>
-                <hr className="my-4 sm:my-5 border-[#e2e8f0]" />
-                <div className="space-y-2 sm:space-y-2.5">
-                  <div className="bg-white rounded-lg border border-[#e2e8f0] p-2.5 sm:p-3">
-                    <span className="text-[10px] sm:text-xs font-bold text-[#64748b] uppercase">Customer Pays per Order</span>
-                    <div className="text-sm sm:text-base font-black text-[#263238]">5.0%</div>
-                  </div>
-                  <div className="bg-[#f8fafc] rounded-lg border border-[#e2e8f0] p-2.5 sm:p-3">
-                    <div className="text-[10px] sm:text-xs font-bold text-[#64748b] uppercase mb-1">Breakdown</div>
-                    <div className="space-y-0.5 text-[10px] sm:text-xs text-[#263238]">
-                      <div>2.5% Ser.vi fee</div>
-                      <div>+ 2.5% <span className="underline decoration-dotted">Zift</span> (card)</div>
-                    </div>
-                  </div>
-                </div>
+                <hr className="my-5 sm:my-6 border-[#e2e8f0]" />
+                <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Customer pays 5% convenience fee
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Online ordering website
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Self-service QR ordering
+                  </li>
+                  <li className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
+                    Delivery integration
+                  </li>
+                </ul>
               </div>
             </div>
 
-            {/* Hardware & Device Info */}
+            {/* Convenience Fee Note */}
             <div className="mt-6 sm:mt-8 lg:mt-10 max-w-6xl mx-auto">
               <div className="bg-gradient-to-br from-[#f8fafc] to-white rounded-xl sm:rounded-2xl border border-[#e2e8f0] p-4 sm:p-5 text-center">
                 <p className="text-xs sm:text-sm text-[#64748b] leading-relaxed">
-                  Use your iPads, Android tablets, phones, or PCs. No forced hardware purchases. We offer a complete line of robust wired POS hardware to suit your needs and budget. A small convenience fee is added at checkout and paid by your customer.
+                  *Convenience Fee goes to you and covers your credit card and ser.vi platform fees.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Social Media Table */}
+        {/* Social Media Plans */}
         <SocialMediaTable />
 
         {/* Savings Calculator */}

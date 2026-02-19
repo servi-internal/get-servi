@@ -6,7 +6,7 @@ export function GrowthTriad() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-14">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
-            The Growth Triad
+            The Growth <span className="text-[#FF6600]">Triad</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base">
             Our marketing program uses proven channels to drive new customers

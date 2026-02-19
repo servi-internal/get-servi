@@ -23,14 +23,14 @@ export function ServicesDetail() {
     { id: "mobile-app" as ServiceTab, label: "Branded Mobile App" },
     { id: "retargeting" as ServiceTab, label: "Retargeting Ads" },
     { id: "email-sms" as ServiceTab, label: "Email Campaigns" },
-    { id: "social-media" as ServiceTab, label: "Social Media (Optional)" },
     { id: "photoshoot" as ServiceTab, label: "Professional Photoshoot" },
+    { id: "social-media" as ServiceTab, label: "Social Media (Optional)" },
   ];
 
   const content = {
     "google-ads": {
       title: "Google Ads Management",
-      badge: "Included in Promote",
+      badge: "Included in Promote & Save",
       description:
         'Stop wasting money on ineffective boosts. Our AI-driven system places your restaurant at the top of Google searches for high-intent keywords like "best italian food near me" or "pizza delivery open now".',
       features: [
@@ -42,7 +42,7 @@ export function ServicesDetail() {
     },
     "seo-website": {
       title: "SEO Optimized Website",
-      badge: "Included in Promote",
+      badge: "Included in Promote & Save",
       description:
         "Your digital storefront optimized for search engines. We build fast-loading, mobile-responsive websites that rank high on Google and convert visitors into customers without paying commission fees.",
       features: [
@@ -81,11 +81,12 @@ export function ServicesDetail() {
       title: "Branded Mobile App",
       badge: "Included in Grow & Retain",
       description:
-        "Give your customers a dedicated app with your logo on their home screen. Enable most convenient ordering, push notifications for promotions, and a built-in loyalty rewards program.",
+        "Give your customers a dedicated app with your logo on their home screen. Enable the most convenient ordering with a built-in loyalty rewards and offers program.",
       features: [
         "iOS & Android native apps",
-        "Push notifications for promotions",
+        "Special offers & promotions",
         "Loyalty rewards program",
+        "Incentivize the installation of the app",
         "Your logo is the app icon",
       ],
     },
@@ -105,7 +106,7 @@ export function ServicesDetail() {
       title: "Retargeting Ads for App Installs",
       badge: "Included in Grow & Retain",
       description:
-        "Your branded app is only valuable if customers know it exists. We run targeted social media campaigns to promote your app to existing customers and website visitors — because without active promotion, app installs simply won't happen.",
+        "We use state of the art visitor and customer tracking to show your first time and potential customers your ads that follow them online, to get them back for more and build loyalty.",
       features: [
         "Facebook & Instagram app install ads",
         "Target your existing customer base",
@@ -115,7 +116,7 @@ export function ServicesDetail() {
     },
     "photoshoot": {
       title: "Professional Photoshoot",
-      badge: "One-Time Service",
+      badge: "Included in Grow & Retain",
       description:
         "First impressions matter. When you sign up with Ser.vi, we send a professional photographer to capture stunning images of your dishes, interior, and team — ready to use across all your marketing channels.",
       features: [
@@ -134,7 +135,7 @@ export function ServicesDetail() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 sm:mb-8 lg:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
-            Everything You Need to Scale
+            Everything You Need to <span className="text-[#FF6600]">Scale</span>
           </h2>
           <p className="text-gray-600 mt-2 text-xs sm:text-sm lg:text-base">
             Comprehensive tools included in our marketing plans.
@@ -199,9 +200,7 @@ export function ServicesDetail() {
                   className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide w-fit ${
                     currentContent.badge === "Premium Add-on"
                       ? "bg-purple-100 text-purple-800"
-                      : currentContent.badge === "One-Time Service"
-                      ? "bg-blue-100 text-blue-800"
-                      : currentContent.badge === "Optional Add-on"
+                      : currentContent.badge === "Optional Add-ons"
                       ? "bg-gray-100 text-gray-800"
                       : "bg-orange-100 text-orange-800"
                   }`}

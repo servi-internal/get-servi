@@ -5,9 +5,9 @@ import Link from "next/link";
 import { TrendingUp } from "lucide-react";
 
 export function SavingsCalculator() {
-  const [orderVolume, setOrderVolume] = useState(1250);
-  const [ticketSize, setTicketSize] = useState(45);
-  const [commissionRate, setCommissionRate] = useState(30);
+  const [orderVolume, setOrderVolume] = useState(500);
+  const [ticketSize, setTicketSize] = useState(30);
+  const [commissionRate, setCommissionRate] = useState(25);
   const [annualSavings, setAnnualSavings] = useState(0);
 
   useEffect(() => {
@@ -70,16 +70,16 @@ export function SavingsCalculator() {
                 </div>
                 <input
                   type="range"
-                  min="100"
-                  max="10000"
+                  min="200"
+                  max="1000"
                   step="50"
                   value={orderVolume}
                   onChange={(e) => setOrderVolume(parseInt(e.target.value))}
                   className="w-full h-1 bg-[#455a64] rounded-lg appearance-none cursor-pointer slider"
                 />
                 <div className="flex justify-between mt-1 text-xs text-gray-500">
-                  <span>100</span>
-                  <span>10,000+</span>
+                  <span>200</span>
+                  <span>1,000</span>
                 </div>
               </div>
 
@@ -94,7 +94,7 @@ export function SavingsCalculator() {
                 <input
                   type="range"
                   min="10"
-                  max="500"
+                  max="50"
                   step="5"
                   value={ticketSize}
                   onChange={(e) => setTicketSize(parseInt(e.target.value))}
@@ -102,7 +102,7 @@ export function SavingsCalculator() {
                 />
                 <div className="flex justify-between mt-1 text-xs text-gray-500">
                   <span>$10</span>
-                  <span>$500+</span>
+                  <span>$50</span>
                 </div>
               </div>
 
@@ -116,16 +116,16 @@ export function SavingsCalculator() {
                 </div>
                 <input
                   type="range"
-                  min="0"
-                  max="40"
+                  min="20"
+                  max="35"
                   step="1"
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
                   className="w-full h-1 bg-[#455a64] rounded-lg appearance-none cursor-pointer slider"
                 />
                 <div className="flex justify-between mt-1 text-xs text-gray-500">
-                  <span>0%</span>
-                  <span>40%</span>
+                  <span>20%</span>
+                  <span>35%</span>
                 </div>
               </div>
             </div>

@@ -1,9 +1,3 @@
-import {
-  Bell,
-  Award,
-  Palette,
-  Smartphone,
-} from "lucide-react";
 import Image from "next/image";
 
 export function MobileAppShowcase() {
@@ -32,7 +26,7 @@ export function MobileAppShowcase() {
               Branded Mobile App
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 mt-2 mb-4 sm:mb-6 leading-tight">
-              Your Logo on Their Home Screen
+              Your Logo on Their <span className="text-[#FF6600]">Home Screen</span>
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8">
               Compete with the big chains. Give your customers a dedicated app to
@@ -42,7 +36,7 @@ export function MobileAppShowcase() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
               <div className="flex gap-3 sm:gap-4">
                 <div className="bg-[#FF6600]/10 p-2 rounded-lg h-fit">
-                  <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600]" />
+                  <i className="bi bi-phone text-lg sm:text-xl text-[#FF6600]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-sm sm:text-base">iOS & Android Apps</h4>
@@ -51,7 +45,7 @@ export function MobileAppShowcase() {
               </div>
               <div className="flex gap-3 sm:gap-4">
                 <div className="bg-[#FF6600]/10 p-2 rounded-lg h-fit">
-                  <Bell className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600]" />
+                  <i className="bi bi-bell-fill text-lg sm:text-xl text-[#FF6600]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-sm sm:text-base">Push Notifications</h4>
@@ -60,7 +54,7 @@ export function MobileAppShowcase() {
               </div>
               <div className="flex gap-3 sm:gap-4">
                 <div className="bg-[#FF6600]/10 p-2 rounded-lg h-fit">
-                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600]" />
+                  <i className="bi bi-trophy-fill text-lg sm:text-xl text-[#FF6600]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-sm sm:text-base">Loyalty System</h4>
@@ -69,7 +63,7 @@ export function MobileAppShowcase() {
               </div>
               <div className="flex gap-3 sm:gap-4">
                 <div className="bg-[#FF6600]/10 p-2 rounded-lg h-fit">
-                  <Palette className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6600]" />
+                  <i className="bi bi-palette-fill text-lg sm:text-xl text-[#FF6600]" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-sm sm:text-base">Fully Branded</h4>

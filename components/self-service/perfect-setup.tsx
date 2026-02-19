@@ -1,127 +1,67 @@
-import { UtensilsCrossed, Wine, Sandwich, Tag, Sparkles } from "lucide-react";
 import Image from "next/image";
+
+const VENUE_TYPES = [
+  {
+    title: "Casual Dining",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771504691/table-service_kj8wcx.jpg",
+    alt: "Casual dining restaurant interior",
+  },
+  {
+    title: "Venues with Bars",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771504154/bustling-bar_an8ckt.jpg",
+    alt: "Bustling bar with bartenders serving customers",
+  },
+  {
+    title: "Entertainment",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771504392/entertainment_o6wqlv.jpg",
+    alt: "Live entertainment venue with people at tables",
+  },
+  {
+    title: "Coffee Shops & Counter",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771504452/coffee_o5fzz0.jpg",
+    alt: "Coffee shop counter service",
+  },
+  {
+    title: "Outdoor Focused",
+    image: "https://res.cloudinary.com/dxax8yrgb/image/upload/v1771504420/outdoor_dzmv5m.jpg",
+    alt: "Outdoor patio restaurant with beach scene",
+  },
+];
 
 export function PerfectSetup() {
   return (
-    <section className="py-8 sm:py-14 lg:py-16 bg-gray-50 dark:bg-zinc-950 overflow-hidden">
+    <section className="py-8 sm:py-14 lg:py-16 bg-gray-50 overflow-hidden">
       <div className="mx-auto max-w-7xl w-full min-w-0 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-lg sm:text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-5 sm:mb-8 text-center break-words">
-          A <span className="text-[#FF6600]">Win-Win Solution</span> for Restaurants and Customers
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 min-w-0">
-          <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
-            <div className="h-28 sm:h-40 bg-gray-200 relative min-h-[112px]">
-              <Image
-                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403094/table-service_g49zl3.png"
-                alt="Table service restaurant interior"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col flex-grow">
-              <h3 className="text-base sm:text-lg font-bold mb-1.5 flex items-center gap-2 text-gray-900 dark:text-white">
-                <UtensilsCrossed className="w-4 h-4 text-[#FF6600]" />
-                Table Service
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2 flex-grow">
-                Guests sit down, scan, and order without waiting for a server to bring a menu.
-              </p>
-              <div className="text-[10px] sm:text-xs font-bold text-[#FF6600] uppercase tracking-wide">
-                Key Benefit: Faster Table Turns
-              </div>
-            </div>
-          </div>
-          <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
-            <div className="h-32 sm:h-40 bg-gray-200 relative">
-              <Image
-                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403093/counter-service_hfcbms.png"
-                alt="Counter with stools"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col flex-grow">
-              <h3 className="text-base sm:text-lg font-bold mb-1.5 flex items-center gap-2 text-gray-900 dark:text-white">
-                <Wine className="w-4 h-4 text-[#FF6600]" />
-                Counter
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2 flex-grow">
-                Reduce long lines and reallocate staff to making and serving food and drink.
-              </p>
-              <div className="text-[10px] sm:text-xs font-bold text-[#FF6600] uppercase tracking-wide">
-                Key Benefit: Reduced Crowding
-              </div>
-            </div>
-          </div>
-          <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
-            <div className="h-32 sm:h-40 bg-gray-200 relative">
-              <Image
-                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403268/quick-service_x3tma9.png"
-                alt="Fast casual burger joint"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col flex-grow">
-              <h3 className="text-base sm:text-lg font-bold mb-1.5 flex items-center gap-2 text-gray-900 dark:text-white">
-                <Sandwich className="w-4 h-4 text-[#FF6600]" />
-                Quick Service
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2 flex-grow">
-                Perfect for food courts and fast casual. Order ahead or at the table to skip the line.
-              </p>
-              <div className="text-[10px] sm:text-xs font-bold text-[#FF6600] uppercase tracking-wide">
-                Key Benefit: Line Busting
-              </div>
-            </div>
-          </div>
+        <div className="text-center mb-6 sm:mb-10">
+          <span className="text-[#FF6600] font-bold uppercase tracking-wider text-[10px] sm:text-xs">
+            Never miss an order
+          </span>
+          <h2 className="mt-2 text-lg sm:text-2xl md:text-3xl font-black text-gray-900 break-words">
+            A <span className="text-[#FF6600]">Win-Win Solution</span> for Restaurants and Customers
+          </h2>
         </div>
-        {/* Emphasize control: Sell out + Daily specials */}
-        <div className="mt-6 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto min-w-0">
-          <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
-            <div className="h-28 sm:h-40 bg-gray-200 relative min-h-[112px]">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 min-w-0">
+          {VENUE_TYPES.map((venue, index) => (
+            <div
+              key={index}
+              className="group relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[3/4] cursor-default ring-2 ring-transparent hover:ring-[#FF6600] transition-all duration-300"
+            >
               <Image
-                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771403674/sold-out_xghwut.png"
-                alt="Sold out menu control"
+                src={venue.image}
+                alt={venue.alt}
                 fill
                 className="object-cover"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
               />
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col flex-grow">
-              <h3 className="text-base sm:text-lg font-bold mb-1.5 flex items-center gap-2 text-gray-900 dark:text-white">
-                <Tag className="w-4 h-4 text-[#FF6600]" />
-                Sell out
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2 flex-grow">
-                Don&apos;t receive orders for things you can&apos;t make. One-click sell out and restock of any item on your menu.
-              </p>
-              <div className="text-[10px] sm:text-xs font-bold text-[#FF6600] uppercase tracking-wide">
-                Key Benefit: Menu control
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                <h3 className="text-sm sm:text-base font-bold text-white">
+                  {venue.title}
+                </h3>
               </div>
             </div>
-          </div>
-          <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-md transition-shadow min-w-0">
-            <div className="h-28 sm:h-40 bg-gray-200 relative min-h-[112px]">
-              <Image
-                src="https://res.cloudinary.com/dxax8yrgb/image/upload/v1771413910/special_vklf2g.webp"
-                alt="Daily specials"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4 sm:p-5 flex flex-col flex-grow">
-              <h3 className="text-base sm:text-lg font-bold mb-1.5 flex items-center gap-2 text-gray-900 dark:text-white">
-                <Sparkles className="w-4 h-4 text-[#FF6600]" />
-                Daily specials
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-2 flex-grow">
-                Set up on the fly—unscheduled special items at special prices to move your inventory.
-              </p>
-              <div className="text-[10px] sm:text-xs font-bold text-[#FF6600] uppercase tracking-wide">
-                Key Benefit: Move inventory
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

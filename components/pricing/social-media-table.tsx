@@ -1,10 +1,8 @@
-import { CheckCircle } from "lucide-react";
-
 export function SocialMediaTable() {
   const plans = [
     {
       name: "Pro",
-      popular: true,
+      popular: false,
       bestFor: "Add videos to engage and extend your reach",
       price: "$199",
       features: [
@@ -17,7 +15,7 @@ export function SocialMediaTable() {
     },
     {
       name: "Premium",
-      popular: false,
+      popular: true,
       bestFor: "Increase your content, reach and boost with ads",
       price: "$399",
       features: [
@@ -91,7 +89,7 @@ export function SocialMediaTable() {
               <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 flex-1">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-[#263238]">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff7043] flex-shrink-0" />
+                    <i className="bi bi-check-circle-fill text-[#ff7043] flex-shrink-0" />
                     <span dangerouslySetInnerHTML={{ __html: feature }} />
                   </li>
                 ))}

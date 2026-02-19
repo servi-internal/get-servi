@@ -109,7 +109,7 @@ export function CustomerJourney() {
       <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10 lg:mb-14">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
-            From stranger to loyal regular in 5 steps.
+            From stranger to <span className="text-[#FF6600]">loyal regular</span> in 5 steps.
           </h2>
         </div>
 

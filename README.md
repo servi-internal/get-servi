@@ -22,19 +22,25 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Framework:** Next.js 16 (App Router)
+- **Framework:** Next.js 16 (App Router, React Server Components)
 - **UI Library:** React 19
-- **Language:** TypeScript
+- **Language:** TypeScript 5
 - **Styling:** Tailwind CSS 4
-- **Components:** shadcn/ui
+- **Components:** shadcn/ui (Radix UI primitives)
 - **Icons:** Lucide React, Bootstrap Icons
+- **Linting:** ESLint 9 + eslint-config-next
+
+### Integrations
+- **Form Submissions:** Stracker API (server-side proxy at `/api/stracker`)
+- **Analytics:** Vercel Analytics + Vercel Speed Insights + Google Analytics (gtag)
+- **Deployment:** Vercel
 
 ### Features
-- ⚡ Server-side rendering (SSR)
+- ⚡ Server-side rendering (SSR) + React Server Components
 - 🎨 Modern, responsive design
 - 🔍 SEO optimized
 - 📱 Mobile-first approach
-- ♿ Accessible components
+- ♿ Accessible components (Radix UI)
 - 🎭 Smooth animations
 
 ## 📍 Main Pages
@@ -53,17 +59,21 @@
 
 Visit [get.ser.vi](https://get.ser.vi) to see the platform in action.
 
-## 🔗 Form Integration
+## 🔗 Form Integration (Stracker)
 
-The site uses **Stracker** for form submission tracking and management. The `/schedule-demo` page (Book a Meeting form) is integrated with Stracker API.
+The `/schedule-demo` page (Book a Meeting form) submits to the **Stracker** API for lead tracking and management.
 
-### Setup
+### How it works
+1. Client-side form with validation (`lib/validation/formValidation.ts`)
+2. `useStrackerForm` hook (`lib/hooks/useStrackerForm.ts`) handles submission with retry logic (exponential backoff), client-side rate limiting, and Google Analytics event tracking
+3. Submissions are proxied through a Next.js API route (`app/api/stracker/route.ts`) to keep the API key server-side
+4. The server route applies IP-based rate limiting (5 req/min) before forwarding to the Stracker API
 
-1. Copy `.env.example` to `.env.local`
-2. Add your Stracker API credentials
-3. Run `npm run dev`
-
-For detailed integration documentation, see [STRACKER_INTEGRATION.md](./STRACKER_INTEGRATION.md).
+### Environment Variables
+| Variable | Scope | Description |
+|---|---|---|
+| `STRACKER_API_URL` | Server | Stracker API endpoint |
+| `STRACKER_API_KEY` | Server | Stracker API key (never exposed to client) |
 
 ## 📄 License
 

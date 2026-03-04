@@ -39,8 +39,6 @@ export default function ScheduleDemoPage() {
         window.location.href = redirectUrl;
       } else {
         setSuccessMessage("Demo request received! We'll be in touch shortly to schedule your call.");
-        setFormData(INITIAL_FORM_DATA);
-        setTimeout(() => setSuccessMessage(null), 8000);
       }
     },
     onError: (error) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -78,6 +78,20 @@ export function DemoForm({
   onInterestedInChange,
   onShowPrivacy,
 }: DemoFormProps) {
+  if (successMessage) {
+    return (
+      <div className="rounded-2xl border border-gray-200 bg-white p-8 sm:p-10 shadow-lg flex flex-col items-center justify-center text-center min-h-[400px] gap-5">
+        <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center">
+          <CheckCircle className="w-9 h-9 text-green-500" />
+        </div>
+        <div>
+          <h2 className="text-xl sm:text-2xl font-bold text-[#333333] mb-2">You're booked in!</h2>
+          <p className="text-sm sm:text-base text-gray-500 max-w-sm">{successMessage}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 lg:p-8 shadow-lg">
       <h2 className="text-lg sm:text-xl font-bold text-[#333333] mb-5 sm:mb-6">

@@ -1,6 +1,8 @@
 "use client";
 
+import { useRef } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -58,6 +60,7 @@ interface DemoFormProps {
   retryCount: number;
   successMessage: string | null;
   strackerError: string | null;
+  recaptchaRef: React.RefObject<ReCAPTCHA | null>;
   onSubmit: (e: React.FormEvent) => void;
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   onSelectChange: (field: keyof DemoFormData, value: string) => void;
@@ -72,6 +75,7 @@ export function DemoForm({
   retryCount,
   successMessage,
   strackerError,
+  recaptchaRef,
   onSubmit,
   onChange,
   onSelectChange,
@@ -271,6 +275,12 @@ export function DemoForm({
             </span>
           )}
         </Button>
+
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+        />
 
         <FormStatusMessage success={successMessage} error={strackerError} />
       </form>

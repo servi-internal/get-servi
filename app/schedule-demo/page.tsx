@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 import { DemoBenefits } from "@/components/schedule-demo/demo-benefits";
@@ -31,6 +32,7 @@ export default function ScheduleDemoPage() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
   const { submitToStracker, isSubmitting, error: strackerError, retryCount } = useStrackerForm({
     formSlug: "book-a-meeting",
@@ -59,6 +61,14 @@ export default function ScheduleDemoPage() {
       return;
     }
 
+    const recaptchaToken = await recaptchaRef.current?.executeAsync();
+    recaptchaRef.current?.reset();
+
+    if (!recaptchaToken) {
+      setValidationErrors({ firstName: "reCAPTCHA verification failed. Please try again." });
+      return;
+    }
+
     const submissionData: Record<string, unknown> = {
       name: `${formData.firstName} ${formData.lastName}`.trim(),
       email: formData.email,
@@ -69,6 +79,7 @@ export default function ScheduleDemoPage() {
       best_time: formData.bestTime,
       hear_about: formData.hearAbout,
       ...(formData.interestedIn.length > 0 && { interested_in: formData.interestedIn.join(", ") }),
+      recaptcha_token: recaptchaToken,
     };
 
     await submitToStracker(submissionData);
@@ -114,6 +125,7 @@ export default function ScheduleDemoPage() {
                   retryCount={retryCount}
                   successMessage={successMessage}
                   strackerError={strackerError}
+                  recaptchaRef={recaptchaRef}
                   onSubmit={handleSubmit}
                   onChange={handleChange}
                   onSelectChange={handleSelectChange}

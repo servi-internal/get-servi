@@ -114,14 +114,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify reCAPTCHA token
+    // Verify reCAPTCHA token (log only — does not block submission)
     const recaptchaToken = body.fields.recaptcha_token as string | undefined;
-    if (!recaptchaToken) {
-      return NextResponse.json({ success: false, error: "reCAPTCHA verification required." }, { status: 400 });
-    }
-    const recaptchaVerified = await verifyRecaptcha(recaptchaToken);
-    if (!recaptchaVerified) {
-      return NextResponse.json({ success: false, error: "reCAPTCHA verification failed. Please try again." }, { status: 400 });
+    if (recaptchaToken) {
+      const recaptchaVerified = await verifyRecaptcha(recaptchaToken);
+      if (!recaptchaVerified) {
+        console.warn("reCAPTCHA verification failed — submission allowed (rate limiting still active)");
+      }
     }
 
     // Strip token before forwarding to Stracker

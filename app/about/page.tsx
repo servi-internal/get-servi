@@ -1,0 +1,39 @@
+import { Header } from "@/components/sections/header";
+import { Footer } from "@/components/sections/footer";
+import { AboutHero } from "@/components/about/about-hero";
+import { MissionSection } from "@/components/about/mission-section";
+import { ValuesSection } from "@/components/about/values-section";
+import { LocationsMap } from "@/components/about/locations-map";
+import { TechnologyPlatform } from "@/components/about/technology-platform";
+import { OurStory } from "@/components/about/our-story";
+import { FinalCTAAbout } from "@/components/about/final-cta-about";
+
+export const metadata = {
+  title: "About Us - Empowering Independent Restaurants | Ser.vi",
+  description: "Learn about Ser.vi's mission to help independent restaurants compete with zero-commission technology. Discover our story, values, and commitment to restaurant success.",
+  openGraph: {
+    title: "About Ser.vi - Empowering Independent Restaurants",
+    description: "Our mission is to help independent restaurants thrive with affordable, zero-commission technology solutions.",
+    url: "https://get.ser.vi/about",
+  },
+};
+
+export default function AboutPage() {
+  return (
+    <div className="relative flex min-h-screen w-full min-w-0 flex-col overflow-x-hidden bg-[#f9fafb]">
+      <Header />
+      <div className="h-[60px] sm:h-[68px] lg:h-[72px] shrink-0" aria-hidden />
+      <main className="flex min-w-0 flex-1 flex-col w-full">
+        <AboutHero />
+        <MissionSection />
+        <ValuesSection />
+        <LocationsMap />
+        <TechnologyPlatform />
+        <OurStory />
+        <FinalCTAAbout />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+

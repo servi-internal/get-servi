@@ -1,0 +1,220 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { TrendingUp } from "lucide-react";
+
+export function SavingsCalculator() {
+  const [orderVolume, setOrderVolume] = useState(500);
+  const [ticketSize, setTicketSize] = useState(30);
+  const [commissionRate, setCommissionRate] = useState(25);
+  const [annualSavings, setAnnualSavings] = useState(0);
+
+  useEffect(() => {
+    // Calculate annual savings
+    // Monthly revenue from third-party orders
+    const monthlyRevenue = orderVolume * ticketSize;
+
+    // Commission lost to third-party platforms
+    const monthlyCommission = monthlyRevenue * (commissionRate / 100);
+
+    // Ser.vi fee (5% commission on order totals)
+    const monthlyServiFee = monthlyRevenue * 0.05;
+
+    // Monthly savings
+    const monthlySavings = monthlyCommission - monthlyServiFee;
+
+    // Annual savings
+    const annual = Math.max(0, monthlySavings * 12);
+
+    setAnnualSavings(Math.round(annual));
+  }, [orderVolume, ticketSize, commissionRate]);
+
+  const formatCurrency = (value: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(value);
+  };
+
+  return (
+    <section className="py-10 sm:py-14 lg:py-20 bg-[#263238] text-white relative overflow-hidden" id="calculator">
+      <div className="absolute top-0 right-0 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] bg-[#ff7043]/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] lg:w-[300px] lg:h-[300px] bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+          {/* Left side - Controls */}
+          <div>
+            <span className="text-[#ff7043] font-bold tracking-wider uppercase text-[10px] sm:text-xs lg:text-sm mb-2 block">
+              Savings Estimator
+            </span>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6">
+              How much can you save with{" "}
+              <span className="text-[#ff7043]">Ser.vi</span> Marketing Plans vs Doordash Premium*
+            </h2>
+            <p className="text-gray-400 text-xs sm:text-sm lg:text-base mb-5 sm:mb-6 lg:mb-8">
+              *Doordash premium or equivalent in app promotional plan with your current delivery app provider
+            </p>
+
+            <div className="space-y-5 sm:space-y-6 lg:space-y-8 pr-0 md:pr-8 lg:pr-12">
+              {/* Order Volume Slider */}
+              <div>
+                <div className="flex justify-between mb-2">
+                  <label className="text-sm sm:text-base font-bold text-gray-200">Monthly Order Volume</label>
+                  <span className="text-[#ff7043] font-mono text-sm sm:text-base font-bold">
+                    {orderVolume.toLocaleString()}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="200"
+                  max="1000"
+                  step="50"
+                  value={orderVolume}
+                  onChange={(e) => setOrderVolume(parseInt(e.target.value))}
+                  className="w-full h-1 bg-[#455a64] rounded-lg appearance-none cursor-pointer slider"
+                />
+                <div className="flex justify-between mt-1 text-xs text-gray-500">
+                  <span>200</span>
+                  <span>1,000</span>
+                </div>
+              </div>
+
+              {/* Ticket Size Slider */}
+              <div>
+                <div className="flex justify-between mb-2">
+                  <label className="text-sm sm:text-base font-bold text-gray-200">Average Ticket Size</label>
+                  <span className="text-[#ff7043] font-mono text-sm sm:text-base font-bold">
+                    ${ticketSize}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="50"
+                  step="5"
+                  value={ticketSize}
+                  onChange={(e) => setTicketSize(parseInt(e.target.value))}
+                  className="w-full h-1 bg-[#455a64] rounded-lg appearance-none cursor-pointer slider"
+                />
+                <div className="flex justify-between mt-1 text-xs text-gray-500">
+                  <span>$10</span>
+                  <span>$50</span>
+                </div>
+              </div>
+
+              {/* Commission Rate Slider */}
+              <div>
+                <div className="flex justify-between mb-2">
+                  <label className="text-sm sm:text-base font-bold text-gray-200">Current Commission Rate</label>
+                  <span className="text-[#ff7043] font-mono text-sm sm:text-base font-bold">
+                    {commissionRate}%
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="20"
+                  max="35"
+                  step="1"
+                  value={commissionRate}
+                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
+                  className="w-full h-1 bg-[#455a64] rounded-lg appearance-none cursor-pointer slider"
+                />
+                <div className="flex justify-between mt-1 text-xs text-gray-500">
+                  <span>20%</span>
+                  <span>35%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Results */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-[#ff7043] blur-2xl opacity-20 rounded-3xl"></div>
+            <div className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-10 text-center">
+              <p className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium mb-2 sm:mb-3 lg:mb-4">
+                Estimated Annual Savings
+              </p>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-3 sm:mb-4 lg:mb-6 tracking-tight transition-all duration-300">
+                {formatCurrency(annualSavings)}
+              </div>
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-green-500/20 text-green-400 rounded-full text-[10px] sm:text-xs lg:text-sm font-bold mb-4 sm:mb-6 lg:mb-8">
+                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" />
+                That&apos;s pure profit
+              </div>
+              <Link
+                href="/schedule-demo"
+                className="block w-full py-3 sm:py-4 bg-[#ff7043] hover:bg-[#e64a19] text-white text-sm sm:text-base font-bold rounded-xl transition-colors shadow-lg shadow-[#ff7043]/20 text-center"
+              >
+                Request a Demo
+              </Link>
+              <p className="mt-3 sm:mt-4 text-xs text-gray-400">
+                *Estimates based on converting 3rd party delivery volume to Ser.vi direct ordering. Assumes Ser.vi commission of 5%.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .slider {
+          -webkit-appearance: none;
+          appearance: none;
+          background: transparent;
+        }
+
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #ff7043;
+          cursor: pointer;
+          box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.2);
+          transition: box-shadow 0.2s;
+          margin-top: -8px;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+          box-shadow: 0 0 0 8px rgba(255, 112, 67, 0.2);
+        }
+
+        .slider::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #ff7043;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.2);
+          transition: box-shadow 0.2s;
+        }
+
+        .slider::-moz-range-thumb:hover {
+          box-shadow: 0 0 0 8px rgba(255, 112, 67, 0.2);
+        }
+
+        .slider::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 4px;
+          cursor: pointer;
+          background: #455a64;
+          border-radius: 2px;
+        }
+
+        .slider::-moz-range-track {
+          width: 100%;
+          height: 4px;
+          cursor: pointer;
+          background: #455a64;
+          border-radius: 2px;
+        }
+      `}</style>
+    </section>
+  );
+}
+
